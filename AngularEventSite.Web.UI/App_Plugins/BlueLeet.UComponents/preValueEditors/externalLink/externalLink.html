@@ -1,0 +1,27 @@
+<div ng-controller="BlueLeet.PreValueEditors.ExternalLinkController as vm" class="umb-editor">
+    <umb-control-group label="@content_urls">
+        <input type="text"
+               localize="placeholder" 
+               placeholder="@general_url" 
+               class="umb-editor umb-textstring" 
+               ng-model="vm.target.url"
+        />
+    </umb-control-group>
+
+    <umb-control-group label="@content_nodeName">
+        <input type="text"
+               localize="placeholder" 
+               placeholder="@placeholders_entername" 
+               class="umb-editor umb-textstring" 
+               ng-model="vm.target.name" />
+    </umb-control-group>
+
+    <umb-control-group label="@content_target">
+        <select class="umb-editor umb-dropdown" ng-model="vm.target.target">
+            <option value=""></option>
+            <option value="_blank">Opens the linked document in a new window or tab</option>
+            <option value="_top">Opens the linked document in the full body of the window</option>
+            <option value="_parent">Opens the linked document in the parent frame</option>
+        </select>
+    </umb-control-group>
+</div>

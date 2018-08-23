@@ -1,0 +1,22 @@
+﻿ 2018-01-09 13:29:12,999 [P1204/D6/T167] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-01-08 13:29:12
+ 2018-01-09 13:32:19,907 [P1204/D6/T173] INFO  Umbraco.Core.MainDom - Stopping...
+ 2018-01-09 13:32:19,918 [P1204/D6/T173] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2018-01-09 13:32:19,920 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Terminating
+ 2018-01-09 13:32:19,920 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Waiting for tasks to complete
+ 2018-01-09 13:32:19,921 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Tasks completed, terminated
+ 2018-01-09 13:32:19,935 [P1204/D6/T192] INFO  Hangfire.BackgroundJobServer - Hangfire Server stopped.
+ 2018-01-09 13:32:19,941 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2018-01-09 13:32:19,941 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2018-01-09 13:32:19,942 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2018-01-09 13:32:19,942 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2018-01-09 13:32:19,942 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2018-01-09 13:32:19,942 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2018-01-09 13:32:19,943 [P1204/D6/T102] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2018-01-09 13:32:19,943 [P1204/D6/T105] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2018-01-09 13:32:19,943 [P1204/D6/T124] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2018-01-09 13:32:19,949 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2018-01-09 13:32:19,949 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2018-01-09 13:32:19,949 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2018-01-09 13:32:19,949 [P1204/D6/T173] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2018-01-09 13:32:19,950 [P1204/D6/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2018-01-09 13:32:19,950 [P1204/D6/T175] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated

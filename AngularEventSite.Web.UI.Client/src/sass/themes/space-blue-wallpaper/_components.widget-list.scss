@@ -1,0 +1,30 @@
+﻿/// <reference path="../_bootstrap.space-blue-wallpaper.scss" />
+
+/*!
+ *  Widget list component
+ */
+
+.widget .widget-list.list-bordered {
+    .list-item {
+        border-color: darken(#F8F8F8, 20%);
+        border-bottom: 1px solid;
+        border-color: rgba(255,255,255,.1);
+    }
+}
+
+/* ToDo: Move this to its own quick links file (_components.widget-list-quick-links) */
+.widget .widget-list.list-quick-links {
+    .list-item .list-item-link {
+        padding-left: 10px;
+    }
+
+    .list-item .list-item-link::after {
+        content: "\f125";
+        font-family: "Ionicons";
+        position: absolute;
+        top: 3px;
+        left: 15px;
+        display: block;
+        font-size: 8px;
+    }
+}

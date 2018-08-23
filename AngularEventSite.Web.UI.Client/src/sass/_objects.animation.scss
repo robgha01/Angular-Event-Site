@@ -1,0 +1,13 @@
+﻿/// <reference path="_settings.animation.scss" />
+/*!
+ *  animation object
+ */
+
+.animated {
+    animation-fill-mode: both;
+    animation-duration: $animation-duration;
+
+    &.infinite {
+        animation-iteration-count: infinite;
+    }
+}

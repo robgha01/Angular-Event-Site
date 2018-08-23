@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="sv" intName="Swedish" localName="Svenska" lcid="" culture="sv-SE">
+	<area alias="sections">
+		<key alias="blueleet">BlueLeet</key>
+	</area>
+	<area alias="treeHeaders">
+		<key alias="blueleet">BlueLeet</key>
+	</area>
+	<area alias="blueleet-trees">
+		<key alias="Database">Database</key>
+	</area>
+	<area alias="blueleet-menu-item-names">
+		<key alias="Import Database">Import Database</key>
+		<key alias="Export Database">Export Database</key>
+	</area>
+	<area alias="blueleet-info-pages">
+		<key alias="Welcome">
+			<![CDATA[
+        <p>
+            Welcome to BlueLeet.
+        </p>
+        <p>
+            For general information, refer to the documentation at
+            <a href="http://www.blueleet.com/" target="_blank">www.blueleet.com</a>.
+        </p>
+    ]]>
+		</key>
+	</area>
+	<area alias="blueleet-placeholders">
+		<!--<key alias="Configured Form Name">Configured Form Name</key>-->
+	</area>
+	<area alias="blueleet-tabs">
+		<!--<key alias="Configured Form">Configured Form</key>-->
+	</area>
+</language>

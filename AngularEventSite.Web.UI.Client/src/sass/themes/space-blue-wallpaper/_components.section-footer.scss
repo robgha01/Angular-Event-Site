@@ -1,0 +1,29 @@
+﻿/// <reference path="../_bootstrap.space-blue-wallpaper.scss" />
+
+/*!
+ *  Section footer component
+ */
+
+.section-footer {
+    color: #f0f3f4;
+    color: rgba(240,243,244,1);
+    background-color: #0b5a9c;
+    background-color: rgba(11,90,156,1);
+
+    .footer-column.columns-2 [class*=col-sm-]:last-child {
+        text-align: right;
+    }
+
+    .widget {
+        margin-bottom: 24px;
+    }
+
+    .widget:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-small .widget > * {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}

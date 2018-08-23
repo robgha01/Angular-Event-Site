@@ -1,0 +1,29 @@
+﻿/*!
+ *  Widget social component
+ */
+
+.widget .widget-social {
+    position: relative;
+    z-index: 1;
+    list-style-type: none;
+
+    .social-item {
+        line-height: 24px;
+        height: 24px;
+    }
+
+    .social-item .social-item__link {
+        @extend %link;
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 50%;
+        transition: all .2s;
+        vertical-align: top;
+    }
+
+    &.social-inline .social-item {
+        display: inline-flex;
+        flex-direction: column;
+    }
+}

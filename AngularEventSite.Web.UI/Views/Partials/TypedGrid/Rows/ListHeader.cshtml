@@ -1,0 +1,92 @@
+﻿@using AngularEventSite.Web.Extensions
+@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<Skybrud.Umbraco.GridData.GridRow>
+
+<div class="row" @Model.RenderElementAttributes()>
+    @foreach (var area in Model.Areas.Take(1))
+    {
+        <div class="col-md-12" @area.RenderElementAttributes()>
+            @foreach (var control in area.Controls)
+            {
+                switch (control.Editor.Alias)
+                {
+                    case UComponentsConstants.GridEditors.GoogleMapsAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/GoogleMaps")
+                        break;
+                    case UComponentsConstants.GridEditors.GoToTopAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/GoToTop")
+                        break;
+                    case UComponentsConstants.GridEditors.HeadlineAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/Headline")
+                        break;
+                    case UComponentsConstants.GridEditors.HeadlineNLeadAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/HeadlineLead")
+                        break;
+                    case UComponentsConstants.GridEditors.CardAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/Card")
+                        break;
+                    case UComponentsConstants.GridEditors.ImageAndTextAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/ImageText")
+                        break;
+                    case UComponentsConstants.GridEditors.QuoteAlias:
+                        @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/Quote")
+                        break;
+                    default:
+                        var viewName = control.Editor.Alias;
+                        var altPath = string.Empty;
+                        if (!string.IsNullOrEmpty(control.Editor.Render))
+                        {
+                            viewName = Path.GetFileNameWithoutExtension(control.Editor.Render);
+                            altPath = control.Editor.Render.Substring(0, control.Editor.Render.LastIndexOf(viewName, StringComparison.OrdinalIgnoreCase));
+                            var paths = altPath.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                            if (paths.Any() && paths[0].Equals("views", StringComparison.OrdinalIgnoreCase))
+                            {
+                                paths.RemoveAt(0);
+                            }
+
+                            if (paths.Any() && paths[0].Equals("partials", StringComparison.OrdinalIgnoreCase))
+                            {
+                                paths.RemoveAt(0);
+                            }
+
+                            altPath = string.Join("/", paths).EnsureEndsWith("/");
+                        }
+
+                        if (!string.IsNullOrEmpty(altPath))
+                        {
+                            var typedView = altPath.Replace("Grid/Editors/", "TypedGrid/Editors/") + viewName;
+                            if (Html.ViewExists(typedView))
+                            {
+                                @Html.RenderGridControl(control, typedView)
+                                break;
+                            }
+                        }
+                        else if (Html.ViewExists(string.Format("TypedGrid/Editors/{0}", viewName)))
+                        {
+                            @Html.RenderGridControl(control, string.Format("TypedGrid/Editors/{0}", viewName))
+                            break;
+                        }
+
+                        @Html.Partial("grid/editors/base", control.JObject)
+                        break;
+                }
+            }
+        </div>
+    }
+
+    @foreach (var area in Model.Areas.Skip(1))
+    {
+        <div class="col-12">
+            <div class="card-deck" @area.RenderElementAttributes()>
+                <div class="row">
+                    @foreach (var control in area.Controls)
+                    {
+                        <div class="col-xs-12 col-sm-3">
+                            @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/Card")
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,23 @@
+﻿/// <reference path="_settings.bootstrap.scss" />
+/*!
+ * Html & Body base
+ */
+
+html, body {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    min-height: 100vh;
+}
+
+html {
+    font-size: 16px;
+}
+
+/*@include media-breakpoint-up(xs) {
+    html {
+        font-size: responsive 16px 21px;
+        font-range: 0px 1280px;
+        line-height: responsive 16px 21px;
+        line-height-range: 0px 1280px;
+    }
+}*/

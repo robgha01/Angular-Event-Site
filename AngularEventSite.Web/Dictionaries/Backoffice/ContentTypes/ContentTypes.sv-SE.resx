@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BrowserTabText name" xml:space="preserve">
+    <value>Sidans titel</value>
+  </data>
+  <data name="BrowserTabText description" xml:space="preserve">
+    <value>Titeln på den här sidan i webbläsarens tab, bokmärken etc. Bör hållas under 70 tecken. Om detta är tom, kommer "Meny titeln" från "Navigation" -fliken användas i stället. Om det är tomt också kommer dokumentnamnet användas.</value>
+  </data>
+  <data name="MainBody name" xml:space="preserve">
+    <value>Brödtext</value>
+  </data>
+  <data name="MainBody description" xml:space="preserve">
+    <value>Detta är sidans brödtext</value>
+  </data>
+  <data name="MainHeader name" xml:space="preserve">
+    <value>Rubrik</value>
+  </data>
+  <data name="MainHeader description" xml:space="preserve">
+    <value>Detta är sidans &lt;h1&gt;</value>
+  </data>
+  <data name="MainPreamble name" xml:space="preserve">
+    <value>Ingress</value>
+  </data>
+  <data name="MainPreamble description" xml:space="preserve">
+    <value>Detta är sidans ingress</value>
+  </data>
+  <data name="NotifyOnNewMemberSignup description" xml:space="preserve">
+    <value>Meddela när en ny medlem registrerat sig</value>
+  </data>
+  <data name="NotifyOnNewMemberSignup name" xml:space="preserve">
+    <value>Meddela medlem registreringar</value>
+  </data>
+  <data name="NotificationEmailAddress description" xml:space="preserve">
+    <value>Den e-postadress som ska få meddelanden om någon notifiering är påslagen.</value>
+  </data>
+  <data name="NotificationEmailAddress name" xml:space="preserve">
+    <value>Notifierings e-postadress</value>
+  </data>
+  <data name="FooterLogotype name" xml:space="preserve">
+    <value>Sidfot Logotyp</value>
+  </data>
+  <data name="FooterLogotype description" xml:space="preserve">
+    <value>Sajtens logga i footern</value>
+  </data>
+  <data name="EventName name" xml:space="preserve">
+    <value>Kursnamn</value>
+  </data>
+  <data name="EventDescription name" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="EventName description" xml:space="preserve">
+    <value>Namn på kursen.</value>
+  </data>
+  <data name="EventDescription description" xml:space="preserve">
+    <value>Kursens beskrivning.</value>
+  </data>
+  <data name="EventStartDate name" xml:space="preserve">
+    <value>Startdaum</value>
+  </data>
+  <data name="EventStartDate description" xml:space="preserve">
+    <value>Kursens startdatum.</value>
+  </data>
+  <data name="EventEndDate name" xml:space="preserve">
+    <value>Slutdatum</value>
+  </data>
+  <data name="EventEndDate description" xml:space="preserve">
+    <value>Kursens slutdatum i tid</value>
+  </data>
+  <data name="EventAddress name" xml:space="preserve">
+    <value>Adress</value>
+  </data>
+  <data name="EventAddress description" xml:space="preserve">
+    <value>Kursens adress.</value>
+  </data>
+  <data name="EventZip name" xml:space="preserve">
+    <value>Postnummer</value>
+  </data>
+  <data name="EventZip description" xml:space="preserve">
+    <value>Kursens postnummer.</value>
+  </data>
+  <data name="EventCity name" xml:space="preserve">
+    <value>Postort</value>
+  </data>
+  <data name="EventCity description" xml:space="preserve">
+    <value>Kursens postort.</value>
+  </data>
+  <data name="EventAdditionalInfo name" xml:space="preserve">
+    <value>Extra information</value>
+  </data>
+  <data name="EventAdditionalInfo description" xml:space="preserve">
+    <value>Eventuella ytterligare information för kursen.</value>
+  </data>
+  <data name="CourseSpots name" xml:space="preserve">
+    <value>Antal platser</value>
+  </data>
+  <data name="CourseSpots description" xml:space="preserve">
+    <value>Kursens antal platser.</value>
+  </data>
+  <data name="CompanyName name" xml:space="preserve">
+    <value>Företag</value>
+  </data>
+  <data name="CompanyName description" xml:space="preserve">
+    <value>Företaget som håller i kursen.</value>
+  </data>
+  <data name="AdvancedSeoPreview description" xml:space="preserve">
+    <value>Sökmotorns förhandsvisning resultatsida. Detta är här sidan kan se ut i Googles sökresultat, om innehållet på sidan matchar SEO.</value>
+  </data>
+  <data name="AdvancedSeoPreview name" xml:space="preserve">
+    <value>SERP Preview</value>
+  </data>
+  <data name="MetaKeywords name" xml:space="preserve">
+    <value>Nyckelord</value>
+  </data>
+  <data name="MetaKeywords description" xml:space="preserve">
+    <value>De viktigaste orden för denna sida. Bör vara en kort lista, och inte innehålla några specialtecken.</value>
+  </data>
+  <data name="MetaDescription description" xml:space="preserve">
+    <value>En kort sammanfattning av innehållet på sidan. Tekniskt sett är detta meta beskrivning, men den används i SERP också. Måste inkludera sökord ovan.</value>
+  </data>
+  <data name="MetaDescription name" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="GridFrontPage name" xml:space="preserve">
+    <value>Innehålls Moduler</value>
+  </data>
+  <data name="GridFrontPage description" xml:space="preserve">
+    <value>Detta är hur sidan ser ut.</value>
+  </data>
+  <data name="HideInNavigation description" xml:space="preserve">
+    <value>Dölj den här sidan från alla menyer på webbplatsen. Sidan kan fortfarande nås på alla andra sätt.</value>
+  </data>
+  <data name="HideInNavigation name" xml:space="preserve">
+    <value>Göm från menu</value>
+  </data>
+  <data name="Redirect name" xml:space="preserve">
+    <value>Omdirigering till</value>
+  </data>
+  <data name="Redirect description" xml:space="preserve">
+    <value>Omdirigera användaren från aktuell sida till vald sida.</value>
+  </data>
+  <data name="UmbracoUrlAlias name" xml:space="preserve">
+    <value>Url Alias</value>
+  </data>
+  <data name="UmbracoUrlAlias description" xml:space="preserve">
+    <value>Lägg till ytterligare aliases som ska gå till den här sidan.</value>
+  </data>
+  <data name="UmbracoUrlName name" xml:space="preserve">
+    <value>Url Namn</value>
+  </data>
+  <data name="UmbracoUrlName description" xml:space="preserve">
+    <value>Ändra url adressen som går till den här sidan.</value>
+  </data>
+  <data name="ShowInSitemap name" xml:space="preserve">
+    <value>Visa i sitemap.xml</value>
+  </data>
+  <data name="ShowInSitemap description" xml:space="preserve">
+    <value>Detta gör det möjligt för sökmotorer att enkelt hitta sidan.</value>
+  </data>
+  <data name="ChangeFrequency name" xml:space="preserve">
+    <value>Sitemap frekvensändring</value>
+  </data>
+  <data name="ChangeFrequency description" xml:space="preserve">
+    <value>En hint till sökmotorer på hur ofta sidan ändras.</value>
+  </data>
+  <data name="SitemapPriority name" xml:space="preserve">
+    <value>Sitemap prioritet</value>
+  </data>
+  <data name="SitemapPriority description" xml:space="preserve">
+    <value>En hint till sökmotorer på hur viktigt detta är jämfört med andra sidor på siten.</value>
+  </data>
+  <data name="BlockInRobots name" xml:space="preserve">
+    <value>Block in robots.txt</value>
+  </data>
+  <data name="BlockInRobots description" xml:space="preserve">
+    <value>Om detta är inställt på "block", sökmotorer kommer inte att indexera denna sida.</value>
+  </data>
+  <data name="GridStartPage name" xml:space="preserve">
+    <value>Startsidans Innehålls Moduler</value>
+  </data>
+  <data name="GridStartPage description" xml:space="preserve">
+    <value>Detta är hur sidan ser ut.</value>
+  </data>
+  <data name="UnitPrice name" xml:space="preserve">
+    <value>Styckpris</value>
+  </data>
+  <data name="UnitPrice description" xml:space="preserve">
+    <value>Styckpris för den här tjänsten</value>
+  </data>
+  <data name="DiscountRate name" xml:space="preserve">
+    <value>Rabattsats</value>
+  </data>
+  <data name="DiscountRate description" xml:space="preserve">
+    <value>Optional: Ange en rabattsats ex 0.5 för 50% rabatt</value>
+  </data>
+  <data name="IncVat name" xml:space="preserve">
+    <value>Inklusive Moms</value>
+  </data>
+  <data name="IncVat description" xml:space="preserve">
+    <value>Är styckpris inklusive moms ?</value>
+  </data>
+  <data name="VatRate name" xml:space="preserve">
+    <value>Momssats</value>
+  </data>
+  <data name="VatRate description" xml:space="preserve">
+    <value>Vilken momssats ska användas vid beräkning av pris ? ex: 0.25</value>
+  </data>
+  <data name="MaterialVat name" xml:space="preserve">
+    <value>Material Moms</value>
+  </data>
+  <data name="MaterialVat description" xml:space="preserve">
+    <value>Hur mycket är momsen för material ?</value>
+  </data>
+  <data name="TravelCost name" xml:space="preserve">
+    <value>Resekostnad</value>
+  </data>
+  <data name="TravelCost description" xml:space="preserve">
+    <value>Hur mycket är Resekostnaden ?</value>
+  </data>
+  <data name="PriceConfiguration name" xml:space="preserve">
+    <value>Service pris Inställningar</value>
+  </data>
+  <data name="PriceConfiguration description" xml:space="preserve">
+    <value>Pris Inställningar för tjänster</value>
+  </data>
+  <data name="PriceVariations name" xml:space="preserve">
+    <value>Prislägen</value>
+  </data>
+  <data name="PriceVariations description" xml:space="preserve">
+    <value>Pris variationer</value>
+  </data>
+  <data name="HourPriceConfiguration name" xml:space="preserve">
+    <value>Service: Pris per timme</value>
+  </data>
+  <data name="HourPriceConfiguration description" xml:space="preserve">
+    <value>Priskonfiguration för timbaserade tjänster</value>
+  </data>
+  <data name="HomeOccasions name" xml:space="preserve">
+    <value>Städtillfällen per månad</value>
+  </data>
+  <data name="HomeOccasions description" xml:space="preserve">
+    <value>En lista med Städtillfällen</value>
+  </data>
+  <data name="HoursSqm name" xml:space="preserve">
+    <value>Timmar kvadratmeter</value>
+  </data>
+  <data name="HoursSqm description" xml:space="preserve">
+    <value>Ange vilka timmar som ska användas för varje kvadratmeter nivå</value>
+  </data>
+  <data name="SQMPriceConfigurationPageModel name" xml:space="preserve">
+    <value>Service: Pris per kvadratmeter</value>
+  </data>
+  <data name="SQMPriceConfigurationPageModel description" xml:space="preserve">
+    <value>Konfigurationsuppsättning för kvadratmeter baserad prisberäkningar</value>
+  </data>
+  <data name="GridSearchPageEmptyResultNote name" xml:space="preserve">
+    <value>Område: Tomma resultat</value>
+  </data>
+</root>

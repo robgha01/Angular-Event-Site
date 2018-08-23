@@ -1,0 +1,100 @@
+﻿namespace AngularEventSite.Web.Controllers.PageControllers
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Mvc;
+
+    using BlueLeet.UCodeFirst.ContentTypes;
+    using BlueLeet.UCodeFirst.Controllers;
+    using BlueLeet.UCodeFirst.Extensions;
+
+    using AngularEventSite.Web.Models;
+
+    using Umbraco.Core.Models;
+    using Umbraco.Web;
+    using Umbraco.Web.Models;
+
+    /// <summary>
+    /// The profile page model controller.
+    /// </summary>
+    public class ProfilePageModelController : UCodeFirstController
+    {
+        /// <inheritdoc />
+        public override ActionResult Index(RenderModel model)
+        {
+            IMember member = null;
+
+            // Get strongly typed model
+            var m = model.Content.ToModel<ProfilePageModel>();
+            var usernameSegment = string.Empty;
+
+            var urlSegments = GetUrlSegments().ToList();
+            if (urlSegments.Skip(1).Any())
+            {
+                usernameSegment = urlSegments[1];
+            }
+
+            if (!string.IsNullOrEmpty(usernameSegment))
+            {
+                RouteData.Values["username"] = usernameSegment;
+                member = Services.MemberService.GetByUsername(usernameSegment);
+            }
+            else
+            {
+                var memberId = Members.GetCurrentMemberId();
+                if (memberId != -1)
+                {
+                    member = Services.MemberService.GetById(memberId);
+                }
+            }
+
+            if (member == null)
+            {
+                // return new NotFoundResult();
+                return HttpNotFound();
+            }
+
+            m.Member = m.AppContext.MembershipHelper.MapMember(member);
+            return CurrentTemplate<UCodeFirstContentTypeBase>(m);
+        }
+
+        protected IEnumerable<string> GetUrlSegments()
+        {
+            var requestUrl = Request.Url;
+            if (requestUrl != null)
+            {
+                var currentUrl = requestUrl.AbsolutePath;
+                currentUrl = currentUrl.TrimStart('/');
+                return currentUrl.Split(new[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+            }
+
+            return null;
+        }
+    }
+
+    // TODO: Refactor this to UCodeFirst controller.
+    public class NotFoundResult : HttpNotFoundResult
+    {
+        public override void ExecuteResult(ControllerContext context)
+        {
+            // Discover the 404 page for the current site.
+            IPublishedContent notFoundContent = null;
+            if (UmbracoContext.Current.PageId.HasValue)
+            {
+                var currentPage = UmbracoContext.Current.PublishedContentRequest.PublishedContent;
+                var startPage = currentPage.AncestorOrSelf(nameof(StartPageModel));
+                notFoundContent = startPage.Descendants(nameof(ErrorPageModel)).FirstOrDefault(x => x.Name == "404");
+            }
+
+            var notFoundUrl = "/not-found"; // Have a default value for the url.
+            if (notFoundContent != null)
+            {
+                var notFoundPublishedContent = UmbracoContext.Current.ContentCache.GetById(notFoundContent.Id);
+                notFoundUrl = notFoundPublishedContent.Url;
+            }
+
+            context.HttpContext.Server.TransferRequest(notFoundUrl, true);
+        }
+    }
+}

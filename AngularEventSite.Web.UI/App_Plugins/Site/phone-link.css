@@ -1,0 +1,8 @@
+﻿.phone-link i {
+    display: inline-block !important;
+    font-size: inherit !important;
+}
+
+.phone-link * {
+    margin: 0 !important;
+}

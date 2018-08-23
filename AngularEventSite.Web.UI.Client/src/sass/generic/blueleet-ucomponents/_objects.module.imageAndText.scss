@@ -1,0 +1,38 @@
+/// <reference path="_objects.module.scss" />
+/*!
+ *  Module image-and-text object
+ */
+
+.module.module-imageAndText {
+    .imageAndText-row {
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .imageAndText-titleSection h2 {
+        font-size: 36px;
+        line-height: 36px;
+        margin-bottom: 15px;
+    }
+
+    .imageAndText-titleSection a h2 {
+        color: #212121;
+    }
+
+    .imageAndText-titleSection a:hover,
+    .imageAndText-titleSection a:focus {
+        text-decoration: none;
+    }
+
+    .imageAndText-imageSection img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .richTextStyle {
+        margin: 0;
+    }
+}

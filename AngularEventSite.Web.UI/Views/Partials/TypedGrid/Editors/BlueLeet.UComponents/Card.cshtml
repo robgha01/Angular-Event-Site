@@ -1,0 +1,13 @@
+﻿@using BlueLeet.Common.Extensions;
+@using Skybrud.Umbraco.GridData.Rendering;
+@using BlueLeet.UComponents.Core.GridValues;
+@inherits UmbracoViewPage<GridControlWrapper<GridControlCardValue>>
+
+<div class="module-card card-linked card">
+    @Html.IfNotNull(model => model.Value.Link, @<a class="card-link" href="@item.Url" target="@item.Target"></a>)
+    @Html.IfNotNull(model => model.Value.Image, @<img class="card-img-top img-fluid" src="@item.Url?height=180" alt="@item.AltText">)
+    <div class="card-block">
+        @Html.IfNotNull(wrapper => wrapper.Value.Title, @<h4 class="card-title">@item</h4>)
+        @Html.IfNotNull(wrapper => wrapper.Value.Text, @<p class="card-text">@item</p>)
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿/*!
+ *  Loader object
+ */
+
+.loader {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    background: image('loading.gif') no-repeat;
+}
+
+.loader.loader-default {
+    position: absolute;
+    top: 43%;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}

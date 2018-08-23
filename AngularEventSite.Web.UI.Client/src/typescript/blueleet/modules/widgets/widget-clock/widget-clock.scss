@@ -1,0 +1,36 @@
+﻿/// <reference path="_tools.asset-helper.scss" />
+
+.widget-clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 0 auto;
+    background: url('./clock.png') no-repeat;
+    list-style: none;
+
+    .ticker-sec {
+        background: url('./analog-seconds.png') center center no-repeat;
+        z-index: 3;
+        background-size: 170px;
+    }
+
+    .ticker-min {
+        background: url('./analog-minutes.png') center center no-repeat;
+        z-index: 2;
+        background-size: 170px;
+    }
+
+    .ticker-hour {
+        background: url('./analog-hours.png') center center no-repeat;
+        z-index: 1;
+        background-size: 170px;
+    }
+
+    .ticker-sec, .ticker-min, .ticker-hour {
+        position: absolute;
+        width: 30px;
+        height: 200px;
+        top: 0px;
+        left: 87px;
+    }
+}

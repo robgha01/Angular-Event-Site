@@ -1,0 +1,69 @@
+<div class="bl-module bl-module-card bl-module-default clearfix" data-ng-controller="BlueLeet.GridEditors.CardController as vm">
+    <!-- Control is active -->
+    <div ng-show="control.active && !vm.loading">
+        <div class="bl-column bl-column-link col-xs-12">
+            <div data-ng-if="vm.renderModel.link" data-ng-click="vm.editLink()" class="umb-editor-placeholder addimage">
+                <i class="{{vm.renderModel.link.icon}} hover-hide"></i>
+                <div class="help-text">
+                    Click to edit link {{vm.renderModel.link.name}}
+                </div>
+            </div>
+            <div data-ng-if="!vm.renderModel.link" data-ng-click="vm.editLink()" class="umb-editor-placeholder addimage">
+                <i class="icon icon-link"></i>
+                <div class="help-text">Click to select link</div>
+            </div>
+        </div>
+        <div class="bl-column bl-column-image col-xs-12">
+            <div data-ng-if="vm.renderModel.image.url" data-ng-click="vm.selectImage()" class="image">
+                <a class="bl-link bl-link-default" href="javascript:void(0);">
+                    <img class="bl-image bl-image-size-full" data-ng-src="{{vm.renderModel.image.url}}" alt="vm.renderModel.image.altText">
+                </a>
+            </div>
+            <div data-ng-if="!vm.renderModel.image.url" data-ng-click="vm.selectImage()" class="umb-editor-placeholder addimage">
+                <i class="icon icon-picture"></i>
+                <div class="help-text">Click to select image</div>
+            </div>
+        </div>
+        <div class="bl-column bl-column-title col-xs-12" data-id="{{control.$uniqueId+1}}">
+            <div extended-grid-rte
+                 on-init="vm.onTitleInit(editor)"
+                 on-blur="vm.onTitleBlur()"
+                 configuration="vm.rteConfig"
+                 value="vm.renderModel.title"
+                 unique-id="control.$uniqueId+1">
+            </div>
+        </div>
+        <div class="bl-column bl-column-content col-xs-12" data-id="{{control.$uniqueId+2}}">
+            <div extended-grid-rte
+                 on-init="vm.onContentInit(editor)"
+                 on-blur="vm.onContentBlur()"
+                 configuration="vm.rteConfigContent"
+                 value="vm.renderModel.content"
+                 unique-id="control.$uniqueId+2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Control is not active -->
+    <div ng-show="!control.active && !vm.loading" class="bl-column-preview">
+        <div class="umb-editor-placeholder addimage" ng-show="vm.isEmptyModel">
+            <i class="icon icon-edit"></i>
+            <div class="help-text">Click to edit</div>
+        </div>
+        <div class="bl-column bl-column-image col-xs-12">
+            <div data-ng-if="vm.renderModel.image.url" class="image">
+                <img class="bl-image bl-image-size-full" data-ng-src="{{vm.renderModel.image.url}}" alt="vm.renderModel.image.caption.alt">
+            </div>
+        </div>
+        <div class="bl-column bl-column-title col-xs-12">
+            <h3 ng-bind-html="vm.renderModel.title"></h3>
+        </div>
+        <div class="bl-column bl-column-content col-xs-12" ng-bind-html="vm.renderModel.content"></div>
+    </div>
+    <umb-overlay ng-if="vm.overlay.show"
+                 model="vm.overlay"
+                 view="vm.overlay.view"
+                 position="right">
+    </umb-overlay>
+    <div ng-init="vm.init()"></div>
+</div>

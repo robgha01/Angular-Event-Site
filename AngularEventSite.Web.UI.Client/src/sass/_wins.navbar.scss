@@ -1,0 +1,31 @@
+﻿/// <reference path="_settings.navbar-fixed-top.scss" />
+/// <reference path="_settings.bootstrap.scss" />
+/// <reference path="_settings.navbar.scss" />
+/*!
+ *  Navbar wins (https://getbootstrap.com/components/#navbar-fixed-top)
+ */
+
+.form-inline input {
+	width:auto;
+}
+
+.navbar-top .navbar.navbar-light {
+    margin-bottom: 0;
+}
+
+// Hack to fix incorrect right margin for bootstrap has flaggid this bugg as wontfix! https://github.com/twbs/bootstrap/issues/18362
+.navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
+
+.navbar-top {
+    .navbar-logo {
+        /*width: 96px !important;*/
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .navbar-top .navbar .navbar-brand-linkImage {
+        margin-left: $navbar-padding-x;
+    }
+}

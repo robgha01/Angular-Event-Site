@@ -1,0 +1,52 @@
+﻿/// <reference path="../../_settings.global.scss" />
+/// <reference path="../../_settings.bootstrap.scss" />
+/// <reference path="../../_tools.theme-helper.scss" />
+/// <reference path="../../_tools.mixins.scss" />
+/// <reference path="../_bootstrap.default.scss" />
+
+/*!
+ *  Space blue theme bootstrapping
+ */
+$theme: "spaceBlue-wallpaper";
+
+//** Background color for `<body>`.
+$body-bg: #EEEEF2; //#6BA0AF;
+
+//** Global text color on `<body>`.
+$body-color: #323c46; //$outerSpace;
+$body-fluid-color: $white;
+$body-fluid-bg: #EEEEF2;
+
+//== Typography
+//
+$font-family-base: "museo-sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; //"Roboto", sans-serif;
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family: "museo-sans", "Roboto Slab", sans-serif;
+//$headings-font-weight:    400;
+
+/// Header middle margin
+/// @access public
+$header-middle-margin: 60px;
+
+//== Widget Search
+//
+
+// Input colors for search box.
+$widget-search-input-bg: $outerSpace;
+$widget-search-input-color: darken($white, 15%);
+$widget-search-input-placeholder-color: darken($white, 15%);
+
+// Icon colors.
+$widget-search-icon-color: $outerSpace;
+$widget-search-icon-bg: $white;
+
+// Active icon colors.
+$widget-search-icon-active-color: $outerSpace;
+$widget-search-icon-active-bg: $white;
+
+// IE needs this transparency color is not working set it to the background color of this widget.
+$widget-search-transparent-fix-bg: $white;
+
+// import the default configuration.
+@import "../bootstrap.default";

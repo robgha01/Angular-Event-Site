@@ -1,0 +1,31 @@
+﻿/*!
+ *  Asset helper tools
+ *  Source: https://css-tricks.com/snippets/sass/simple-asset-helper-functions/
+ */
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function themeAsset($type, $file) {
+  @return url($asset-base-path + '/themes/' + $theme + '/' + $type + '/' + $file);
+}
+
+/// Image asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+@function themeImage($file) {
+  @return themeAsset('images', $file);
+}
+
+/// Font asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+@function themeFont($file) {
+  @return themeAsset('fonts', $file);
+}

@@ -1,0 +1,53 @@
+﻿/// <reference path="../bootstrap.scss" />
+/// <reference path="../../_tools.theme-helper.scss" />
+
+/*!
+ *  fluid background object
+ */
+
+.container__fluid-background {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .jumbotron .heading {
+        animation-delay: 0.2s;
+    }
+
+    .jumbotron .lead {
+        margin: 6px auto;
+        display: inline-block;
+        padding: 10px 0;
+        border-top: solid 1px #fff;
+        animation-delay: 0.6s;
+        font-size: inherit;
+    }
+
+    .lead-link {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -85px;
+        padding: 5px 0;
+        width: 170px;
+        z-index: 100;
+    }
+}
+
+@media (min-width: 768px) {
+    .container__fluid-background {
+        .lead-link {
+            background: white;
+            color: #323C46;
+
+            &:hover {
+                color: #5e696f;
+            }
+
+            .fa-arrow-down {
+                display: block;
+                color: inherit;
+            }
+        }
+    }
+}

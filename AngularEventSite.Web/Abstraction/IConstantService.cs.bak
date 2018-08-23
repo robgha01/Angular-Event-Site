@@ -1,0 +1,192 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="IConstantService.cs" company="BlueLeet">
+//   Copyright (C) BlueLeet - All Rights Reserved
+//   Unauthorized copying of this file, via any medium is strictly prohibited
+//   Proprietary and confidential
+// </copyright>
+// <summary>
+//   Describes all constants for <c>this</c> project.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace AngularEventSite.Web.Abstraction
+{
+    /// <summary>
+    /// Describes all constants for <c>this</c> project.
+    /// </summary>
+    public interface IConstantService
+    {
+        /// <summary>
+        /// Gets the common identifier for <c>this</c> project. (used to mark caches, sessions...)
+        /// </summary>
+        string CommonIdentifier { get; }
+
+        /// <summary>
+        /// Gets the message view bag name.
+        /// </summary>
+        string MessageViewBagName { get; }
+
+        /// <summary>
+        /// Gets the facebook API version.
+        /// </summary>
+        string FacebookApiVersion { get; }
+
+        /// <summary>
+        /// Gets the facebook app id.
+        /// </summary>
+        string FacebookAppId { get; }
+
+        /// <summary>
+        /// Gets the facebook app secret.
+        /// </summary>
+        string FacebookAppSecret { get; }
+
+        /// <summary>
+        /// Gets the facebook <c>OAuth</c> surface <c>url</c>.
+        /// </summary>
+        string FacebookOAuthSurfaceUrl { get; }
+
+        /// <summary>
+        /// Gets the member signature.
+        /// </summary>
+        string MemberSignature { get; }
+
+        /// <summary>
+        /// Gets the prop isApprovedMember.
+        /// </summary>
+        string PropIsApprovedMember { get; }
+
+        /// <summary>
+        /// Gets the prop is email confirmed.
+        /// </summary>
+        string PropIsEmailConfirmed { get; }
+
+        /// <summary>
+        /// Gets the member avatar.
+        /// </summary>
+        string PropMemberAvatar { get; }
+
+        /// <summary>
+        /// Gets the prop first name.
+        /// </summary>
+        string PropFirstName { get; }
+
+        /// <summary>
+        /// Gets the prop last name.
+        /// </summary>
+        string PropLastName { get; }
+
+        /// <summary>
+        /// Gets the member login type.
+        /// </summary>
+        string PropMemberLoginType { get; }
+
+        /// <summary>
+        /// Gets the facebook access token.
+        /// </summary>
+        string PropMemberFacebookAccessToken { get; }
+
+        /// <summary>
+        /// Gets the member disable email notifications.
+        /// </summary>
+        string PropMemberDisableEmailNotifications { get; }
+
+        /// <summary>
+        /// Gets the member facebook id.
+        /// </summary>
+        string PropMemberFacebookId { get; }
+
+        /// <summary>
+        /// Gets the prop security token.
+        /// </summary>
+        string PropSecurityToken { get; }
+
+        /// <summary>
+        /// Gets the prop security token expire date.
+        /// </summary>
+        string PropSecurityTokenExpireDate { get; }
+
+        /// <summary>
+        /// Gets the prop member profile data.
+        /// </summary>
+        /// <remarks>
+        /// Profile data is stored as json.
+        /// </remarks>
+        string PropMemberProfileData { get; }
+
+        /// <summary>
+        /// Gets the member logged in message.
+        /// </summary>
+        string MemberLoggedInMessage { get; }
+
+        /// <summary>
+        /// Gets the member email confirmation cookie name.
+        /// </summary>
+        string MembersEmailConfirmationCookieName { get; }
+
+        /// <summary>
+        /// Gets a value indicating whether manually authorize new members.
+        /// </summary>
+        bool ManuallyAuthorizeNewMembers { get; }
+
+        /// <summary>
+        /// Gets a value indicating whether new members must confirm there email.
+        /// </summary>
+        bool NewMembersMustConfirmEmail { get; }
+        
+        /// <summary>
+        /// Gets the default email address to send from.
+        /// </summary>
+        string DefaultEmailAddress { get; }
+
+        /// <summary>
+        /// Gets the default email name.
+        /// </summary>
+        string DefaultEmailName { get; }
+
+        /// <summary>
+        /// Gets the email address which to send notifications to.
+        /// </summary>
+        string NotificationEmailAddress { get; }
+
+        /// <summary>
+        /// Gets the new member group.
+        /// </summary>
+        string NewMemberGroup { get; }
+
+        /// <summary>
+        /// Gets the member type alias.
+        /// </summary>
+        string MemberTypeAlias { get; }
+
+        /// <summary>
+        /// Gets the upload folder path.
+        /// </summary>
+        string UploadFolderPath { get; }
+
+        /// <summary>
+        /// Gets a value indicating whether use <c>webpack dev server</c>.
+        /// </summary>
+        bool UseWebpackDevServer { get; }
+
+        /// <summary>
+        /// Gets the <c>webpack dev</c> server root.
+        /// </summary>
+        string WebpackDevServerRoot { get; }
+
+        /// <summary>
+        /// Gets the prop member about me.
+        /// </summary>
+        string PropMemberAboutMe { get; }
+
+        /// <summary>
+        /// Gets the prop member bio.
+        /// </summary>
+        string PropMemberBio { get; }
+
+        /// <summary>
+        /// Gets the prop member field.
+        /// </summary>
+        string PropMemberField { get; }
+    }
+}

@@ -1,0 +1,427 @@
+{
+    "$schema": "http://json.schemastore.org/package.manifest",
+    "propertyEditors": [
+        {
+            "group": "BlueLeet",
+            "name": "Advanced Seo Preview",
+            "alias": "BlueLeet.AdvancedSEOPreview",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/advancedSEOPreview/advancedSEOPreview.html",
+                "valueType": "JSON"
+            }
+        },
+        {
+            "group": "BlueLeet",
+            "name": "Dropdown List",
+            "alias": "BlueLeet.Dropdown",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/dropdown/dropdown.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "Options",
+                        "description": "Defines the dropdown list key/values.",
+                        "key": "options",
+                        "view": "multivalues"
+                    }
+                ]
+            }
+        },
+        {
+            "group": "BlueLeet",
+            "name": "BlueLeet Robots",
+            "alias": "BlueLeet.Robots",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/robots/robots.html",
+                "valueType": "JSON"
+            }
+        },
+        {
+            "group": "BlueLeet",
+            "name": "Text with mode count",
+            "alias": "BlueLeet.TextWithModeCount",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/textWithModeCount/textWithModeCount.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "Max count",
+                        "description": "The character limit before it shows as invalid. (defaults to 156)",
+                        "key": "maxCount",
+                        "view": "number"
+                    },
+                    {
+                        "label": "Count limit with pixels",
+                        "description": "Determine if pixels should be uses to calculate character limit. (defaults to False)",
+                        "key": "countWithPixels",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Force max count limit",
+                        "description": "Determine if the max limit prevents character input when triggered, defaults to True",
+                        "key": "forceMaxCharacters",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Display as textbox",
+                        "description": "Determine if this should render as a textbox, defaults to False",
+                        "key": "displayAsTextbox",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Textarea rows",
+                        "description": "This sets the rows to use with a textarea, option is ignored if display as textbox is set. (defaults to 10)",
+                        "key": "rows",
+                        "view": "number"
+                    },
+                    {
+                        "label": "Warning on empty save",
+                        "description": "Determine if a wargning is triggered when value is empty on save, defaults to False",
+                        "key": "warnOnEmptySave",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Warning message",
+                        "description": "Set a text for the warning message format, defaults to the property label",
+                        "key": "warningMessage",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Info message",
+                        "description": "Set a text for the info message format, defaults to the property label",
+                        "key": "infoMessage",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Set as SEO Title",
+                        "description": "Determine if this should be treated as a SEO title, defaults to False",
+                        "key": "isSeoTitle",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Set as SEO Description",
+                        "description": "Determine if this should be treated as a SEO description, defaults to False",
+                        "key": "isSeoDescription",
+                        "view": "boolean"
+                    }
+                ]
+            },
+            "defaultConfig": {
+                "rows": "10",
+                "maxCount": "156",
+                "countWithPixels": "0",
+                "displayAsTextbox": "0",
+                "forceMaxCharacters": "1",
+                "warnOnEmptySave": "0",
+                "isSeoTitle": "0",
+                "isSeoDescription": "0"
+            }
+        },
+        {
+            "group": "BlueLeet",
+            "name": "Keyword Textbox",
+            "alias": "BlueLeet.TextBoxKeyword",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/textBoxKeyword/textboxKeyword.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "Set as SEO Keyword",
+                        "description": "Determine if this should be treated as a SEO Keyword, defaults to False",
+                        "key": "isSeoKeyword",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Align Vertical",
+                        "description": "If True aligns the tags vertical, defaults to False",
+                        "key": "alignVertical",
+                        "view": "boolean"
+                    }
+                ]
+            },
+            "defaultConfig": {
+                "alignVertical": "0",
+                "isSeoKeyword": "0"
+            }
+        },
+        {
+            "alias": "BlueLeet.ToggleBox",
+            "name": "Toggle Box",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "~/App_Plugins/BlueLeet.UComponents/propertyEditors/toggleBox/toggleBox.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "On Button Text",
+                        "description": "Set a text for the On button, defaults to Allow",
+                        "key": "onbuttontext",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Off Button Text",
+                        "description": "Set a text for the Off button, defaults to Block",
+                        "key": "offbuttontext",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Start On",
+                        "description": "Determine if the On button should be enabled if no value is set, defaults to True",
+                        "key": "default",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Inverse",
+                        "description": "Determine if the boolean value should be saved as it opposite true becomes false, defaults to False",
+                        "key": "inverse",
+                        "view": "boolean"
+                    }
+                ]
+            },
+            "defaultConfig": {
+                "onbuttontext": "Allow",
+                "offbuttontext": "Block",
+                "default": "1",
+                "inverse": "0" 
+            }
+        },
+        {
+            "alias": "BlueLeet.ToggleBoxAndSlider",
+            "name": "Toggle Box and slider",
+            "isParameterEditor": false,
+            "editor": {
+                "view": "~/App_Plugins/BlueLeet.UComponents/propertyEditors/toggleBoxAndSlider/toggleBoxAndSlider.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "On Button Text",
+                        "description": "Set a text for the On button, defaults to Allow",
+                        "key": "onbuttontext",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Off Button Text",
+                        "description": "Set a text for the Off button, defaults to Block",
+                        "key": "offbuttontext",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Start On",
+                        "description": "Determind if the On button should be enabled if no value is set, defaults to True",
+                        "key": "default",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Inverse",
+                        "description": "Determine if the boolean value should be saved as it opposite true becomes false, defaults to False",
+                        "key": "inverse",
+                        "view": "boolean"
+                    }
+                ]
+            },
+            "defaultConfig": {
+                "onbuttontext": "Allow",
+                "offbuttontext": "Block",
+                "default": "1",
+                "inverse": "0"
+            }
+        },
+        {
+            "group": "BlueLeet",
+            "name": "Multi Link Picker",
+            "alias": "BlueLeet.MultiLinkPicker",
+            "isParameterEditor": true,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/multiLinkPicker/multiLinkPicker.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "Min number of items",
+                        "description": "Set the minimum numbers of items required to be considered valid.",
+                        "key": "minNumberOfItems",
+                        "view": "number"
+                    },
+                    {
+                        "label": "Max number of items",
+                        "description": "Set the maximum numbers of items allowed to be considered valid.",
+                        "key": "maxNumberOfItems",
+                        "view": "number"
+                    },
+                    {
+                        "label": "Merge roots",
+                        "description": "Merge trees if selected root is child of another",
+                        "key": "mergeRoots",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Multi Picker",
+                        "description": "Allow adding of multiple items of a category",
+                        "key": "multiPicker",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "External Picker",
+                        "description": "Allow adding of external resources",
+                        "key": "externalPicker",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Tree sources",
+                        "description": "",
+                        "key": "treeSources",
+                        "view": "/App_Plugins/BlueLeet.UComponents/preValueEditors/multiTreeSource/multiTreeSource.html"
+                    }
+                ]
+            },
+            "defaultConfig": {
+                "minNumberOfItems": "0",
+                "maxNumberOfItems": "0",
+                "mergeRoots": "0",
+                "multiPicker": "0",
+                "externalPicker": "0"
+            }
+        },
+        {
+            "group": "BlueLeet",
+            "name": "Key value pair editor",
+            "alias": "BlueLeet.KeyValuePairEditor",
+            "isParameterEditor": true,
+            "editor": {
+                "view": "/App_Plugins/BlueLeet.UComponents/propertyEditors/keyValuePairEditor/keyValuePairEditor.html",
+                "valueType": "JSON"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "Key Title",
+                        "description": "Optional: Specify a title for the key field.",
+                        "key": "keyTitle",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Value Title",
+                        "description": "Optional: Specify a title for the value field.",
+                        "key": "valueTitle",
+                        "view": "textstring"
+                    },
+                    {
+                        "label": "Use Textarea",
+                        "description": "Optional: Check this to use a textarea insteed of a textbox for the value field.",
+                        "key": "useTextarea",
+                        "view": "boolean"
+                    },
+                    {
+                        "label": "Allow duplicate keys",
+                        "description": "Optional: Check this to allow creation of duplicate keys.",
+                        "key": "allowDuplicateKeys",
+                        "view": "boolean"
+                    }
+                ]
+            },
+            "defaultConfig": {
+                "keyTitle": "Key",
+                "valueTitle": "Value",
+                "useTextarea": "0",
+                "allowDuplicateKeys": "0"
+            }
+        }
+    ],
+    "gridEditors": [
+        {
+            "name": "BlueLeet Google-maps",
+            "alias": "BlueLeet.GoogleMaps",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/googleMaps/googleMaps.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/GoogleMaps.cshtml",
+            "icon": "icon-map-location",
+            "config": {
+                "hasSetting": "true",
+                "settingTemplate": "/App_Plugins/BlueLeet.UComponents/gridEditors/googleMaps/settings.html"
+            }
+        },
+        {
+            "name": "BlueLeet Go to top",
+            "alias": "BlueLeet.GoToTop",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/goToTop/goToTop.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/GoToTop.cshtml",
+            "icon": "icon-whhg-arrow-up"
+        },
+        {
+            "name": "BlueLeet Headline",
+            "alias": "BlueLeet.Headline",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/headline/headline.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/Headline.cshtml",
+            "icon": "icon-coin"
+        },
+        {
+            "name": "BlueLeet Headline and lead",
+            "alias": "BlueLeet.HeadlineAndLead",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/headlineLead/headlineLead.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/HeadlineLead.cshtml",
+            "icon": "icon-poker-chip"
+        },
+        {
+            "name": "BlueLeet Card",
+            "alias": "BlueLeet.Card",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/card/card.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/Card.cshtml",
+            "icon": "icon-playing-cards",
+            "config": {
+                "hasSetting": "true",
+                "settingTemplate": "/App_Plugins/BlueLeet.UComponents/gridEditors/card/settings.html"
+            }
+        },
+        {
+            "name": "BlueLeet Image and text",
+            "alias": "BlueLeet.ImageAndText",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/imageText/imageText.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/ImageText.cshtml",
+            "icon": "icon-whhg-switchoff",
+            "config": {
+                "hasSetting": "true",
+                "settingTemplate": "/App_Plugins/BlueLeet.UComponents/gridEditors/imageText/settings.html"
+            }
+        },
+        {
+            "name": "BlueLeet Quote",
+            "alias": "BlueLeet.Quote",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/quote/quote.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/Quote.cshtml",
+            "icon": "icon-quote",
+            "config": {}
+        },
+        {
+            "name": "BlueLeet Separator",
+            "alias": "BlueLeet.Separator",
+            "view": "/App_Plugins/BlueLeet.UComponents/gridEditors/separator/separator.html",
+            "render": "/Views/Partials/Grid/Editors/BlueLeet.UComponents/Separator.cshtml",
+            "icon": "icon-fa-ellipsis-h",
+            "config": {}
+        }
+    ],
+    "javascript": [
+        "/App_Plugins/BlueLeet.UComponents/assets/js/BlueLeet.UComponents.Initial.js",
+        "/App_Plugins/BlueLeet.UComponents/assets/js/BlueLeet.UComponents.Vendors.js",
+        "/App_Plugins/BlueLeet.UComponents/assets/js/BlueLeet.UComponents.Common.js",
+        "/App_Plugins/BlueLeet.UComponents/assets/js/BlueLeet.UComponents.js"
+    ],
+    "css": [
+        "/App_Plugins/BlueLeet.UComponents/assets/stylesheets/blueleet.ucomponents.css"
+    ]
+}

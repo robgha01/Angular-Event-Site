@@ -1,0 +1,38 @@
+﻿<ng-template [ngTemplateOutlet]="this.currentTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+<ng-template #DefaultTemplate>
+    <form [formGroup]="searchForm" class="col-12 my-4">
+        <bs-form-input formControlName="searchWord" type="text" name="searchWord" placeholder="Sök" [renderedInForm]="false"></bs-form-input>
+    </form>
+    <bl-search [searchTerm]="this?.searchWord" (onSearchUpdate)="this?.onSearchUpdate($event);" class="col-12">
+        <ng-template>
+            <div class="card-deck" *ngIf="this?.searchResult">
+                <div *ngFor="let result of this.searchResult?.results" class="col-sm-12 my-sm-2 col-md-4">
+                    <div class="module-card card-linked card">
+                        <ng-template [ngIf]="isContent(result?.type)">
+                            <a class="card-link" [href]="result.url"></a>
+                            <div class="card-block">
+                                <i class="fa fa-circle pull-right"></i>
+                                <h4 class="card-title">{{ result.nodeName }}</h4>
+                                <p class="card-text">{{ result.gridFrontPage | truncate: 100 }}</p>
+                            </div>
+                        </ng-template>
+                        <ng-template [ngIf]="isMedia(result?.type)">
+                            <a class="card-link" [href]="result.url"></a>
+                            <img class="card-img-top" src="" [alt]="result.nodeName">
+                            <div class="card-block">
+                                <h4 class="card-title">{{ result.nodeName }}</h4>
+                            </div>
+                        </ng-template>
+                        <ng-template [ngIf]="isFile(result?.type)">
+                            <a class="card-link" [href]="result.url"></a>
+                            <div class="card-block">
+                                <h4 class="card-title">{{ result.nodeName }}</h4>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+                <ng-template [ngTemplateOutlet]="this.searchResultEmpty?.currentTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+            </div>
+        </ng-template>
+    </bl-search>
+</ng-template>

@@ -1,0 +1,154 @@
+﻿@using Newtonsoft.Json.Linq
+@inherits UmbracoViewPage<dynamic>
+
+@* 
+    Razor helpers located at the bottom of this file
+*@
+
+@if (Model.sections != null)
+{
+    var oneColumn = ((System.Collections.ICollection)Model.sections).Count == 1;
+
+    <div class="umb-grid">
+        @if (oneColumn)
+        {
+            foreach (var section in Model.sections)
+            {
+                <div class="grid-section">
+                    @foreach (var row in section.rows)
+                    {
+                        @renderRow(row, true)
+                        ;
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            <div class="content-area">
+                <div class="row clearfix">
+                    @foreach (var s in Model.sections)
+                    {
+                        <div class="grid-section">
+                            <div class="col-md-@s.grid column">
+                                @foreach (var row in s.rows)
+                                {
+                                    @renderRow(row, false)
+                                    ;
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@helper renderRow(dynamic row, bool singleColumn)
+{
+    var columnOffset = 0;
+    string rowAttributes;
+
+    @Umbraco.If(HasElementAttributes(row, out rowAttributes), "<div " + rowAttributes + ">")
+    @Umbraco.If(singleColumn, "<div class='content-area'>")
+    <div class="row clearfix">
+        @foreach (var area in row.areas)
+        {
+            string areaAttributes;
+            if (!HasAreaValues(area, out areaAttributes))
+            {
+                columnOffset = area.grid;
+
+                continue;
+            }
+            <div class="col-md-@area.grid@( columnOffset != 0 ? " col-md-offset-" + columnOffset : string.Empty) column">
+                @Umbraco.If(!string.IsNullOrEmpty(areaAttributes), "<div " + areaAttributes + ">")
+                @foreach (var control in area.controls)
+                {
+                    if (control.editor == null || control.editor.view == null)
+                    {
+                        continue;
+                    }
+
+                    <text>@Html.Partial("grid/editors/base", (object)control)</text>
+                }
+                @Umbraco.If(!string.IsNullOrEmpty(areaAttributes), "</div>")
+            </div>
+        }
+    </div>
+    @Umbraco.If(singleColumn, "</div>")
+    @Umbraco.If(!string.IsNullOrEmpty(rowAttributes), "</div>")
+}
+
+@functions {
+
+    public bool HasAreaValues(dynamic area, out string areaAttr)
+    {
+        foreach (var control in area.controls)
+        {
+            if (control.editor == null || control.editor.view == null)
+            {
+                continue;
+            }
+
+            var content = Html.CachedPartial("grid/editors/base", (object)control, 900, true, true);
+    // var content = Html.Partial("grid/editors/base", (object) control);
+            if (!string.IsNullOrEmpty(content.ToHtmlString()))
+            {
+                areaAttr = RenderElementAttributes(area).ToHtmlString();
+                return true;
+            }
+        }
+
+        areaAttr = null;
+        return false;
+    }
+
+    public bool HasElementAttributes(dynamic contentItem, out string attr)
+    {
+        JObject cfg = contentItem.config;
+        JObject style = contentItem.styles;
+        if (cfg == null && style == null)
+        {
+            attr = null;
+            return false;
+        }
+
+        attr = RenderElementAttributes(contentItem).ToHtmlString();
+        return true;
+    }
+
+    public static MvcHtmlString RenderElementAttributes(dynamic contentItem)
+    {
+        var attrs = new List<string>();
+        JObject cfg = contentItem.config;
+
+        if (cfg != null)
+            foreach (var property in cfg.Properties())
+            {
+                var propertyValue = HttpUtility.HtmlAttributeEncode(property.Value.ToString());
+                attrs.Add(property.Name + "=\"" + propertyValue + "\"");
+            }
+
+        JObject style = contentItem.styles;
+
+        if (style != null)
+        {
+            var cssVals = new List<string>();
+            foreach (var property in style.Properties())
+            {
+                var propertyValue = property.Value.ToString();
+                if (string.IsNullOrWhiteSpace(propertyValue) == false)
+                {
+                    cssVals.Add(property.Name + ":" + propertyValue + ";");
+                }
+            }
+
+            if (cssVals.Any()) attrs.Add("style=\"" + HttpUtility.HtmlAttributeEncode(string.Join(" ", cssVals)) + "\"");
+        }
+
+        return new MvcHtmlString(string.Join(" ", attrs));
+    }
+
+}

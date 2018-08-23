@@ -1,0 +1,228 @@
+﻿@using System.Configuration
+@using BlueLeet.UWeb.HtmlHelpers
+@using AngularEventSite.Web.Abstraction
+@using AngularEventSite.Web.AssetResolver
+@using AngularEventSite.Web.Enums
+@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<AngularEventSite.Web.Models.BaseContentModel>
+@{
+    Layout = null;
+    string bodyCss = null;
+    var layoutSettings = ViewBag.layoutSettings as IViewLayoutSettings ?? DependencyResolver.Current.GetService<IViewLayoutSettings>();
+    switch (layoutSettings.LayoutType)
+    {
+        case LayoutType.BoxedLayout:
+            bodyCss = "container__boxed";
+            break;
+        case LayoutType.FluidLayout:
+            bodyCss = "container__fluid";
+            break;
+    }
+}
+
+<!doctype html>
+<html>
+<head lang="@Model.CurrentCulture.TwoLetterISOLanguageName" data-culture="@Model.CurrentCulture.Name" data-ajaxVerificationToken="@Html.AjaxAntiForgeryToken()">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="@Model.MetaDescription">
+    <meta name="keywords" content="@Model.MetaKeywords"/>
+    <meta name="author" content="">
+
+    <title>@(string.IsNullOrEmpty(Model.BrowserTabText) ? Model.Name : Model.BrowserTabText)</title>
+    <link rel="icon" href="@Html.StaticAssetUrl("images/favicon.jpg")">
+
+    @if (!Model.AppContext.Config.UseWebpackDevServer)
+    {
+        @Html.WebpackCssAsset("main")
+        @Html.WebpackCssThemeAsset("spaceBlue-wallpaper")
+    }
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom styles for this template -->
+    @*<link href="/css/carousel.css" rel="stylesheet">
+        <link href="/node_modules/angular2-calendar/dist/css/angular2-calendar.css" rel="stylesheet" />*@
+    <base href="/">
+
+    <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "message":
+                "This website uses cookies to give you a better user experience. Find out more about how we use cookies.<br />Please remember that if you turn cookies off, certain features of this website may not be available to you. Otherwise, by using this website, we’ll assume you’re OK to continue.",
+            "dismiss": "Got it!",
+            "learnMore": "More info",
+            "link": null,
+            "theme": "light-bottom"
+        };
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+    <!-- End Cookie Consent plugin -->
+
+    <style type="text/css">
+        .cc_message { text-align: center; }
+    </style>
+    @RenderSection("Head", false)
+</head>
+<body class="theme space-blue-wallpaper pace-on pace-dot @bodyCss">
+    <app-root>
+        <ng-template>
+            <app>
+                @if (Request.Url != null && Request.Url.Host.EndsWith(".local") && ConfigurationManager.AppSettings["Webpack:UseDevServer"].AsBool(false) == false)
+                {
+                    <div class="alert alert-warning" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning!</strong> This is a local environment but Webpack:UseDevServer is set to false!
+                    </div>
+                }
+            </app>
+            <noscript id="mainAppContent">
+                <pace-progress [options]="{ restartOnPushState: true }"></pace-progress>
+                @if (Model.AppContext.UserHelper.IsAuthenticated())
+                {
+                    <widget-quick-navigator></widget-quick-navigator>
+                }
+                @if (IsSectionDefined("FullSite"))
+                {
+                    @RenderSection("FullSite", false)
+                }
+                else
+                {
+                    if (IsSectionDefined("FullContent"))
+                    {
+                        @RenderSection("FullContent", false)
+                        @RenderBody()
+                    }
+                    else
+                    {
+                        @Html.Partial("~/Views/Partials/_Header.cshtml", Model)
+
+                        if (layoutSettings.LayoutType == LayoutType.BoxedLayout)
+                        {
+                            <div id="mainContent" class="container container__main">
+                                @RenderSection("MainContent", false)
+                                @Html.GetTypedGridHtml(Model.Content, "GridFrontPage", "ContentArea")
+                                @RenderBody()
+                            </div>
+                        }
+                        else
+                        {
+                            @RenderSection("MainContent", false)
+                            @Html.GetTypedGridHtml(Model.Content, "GridFrontPage", "ContentArea")
+                            @RenderBody()
+                        }
+                    }
+
+                    <a class="module-go-top go-top-circle" href="javascript:void(0)" style="bottom: 12px; opacity: 1;" *showAtScroll="108" [scroll-to]="0" [scroll-duration]="300">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+
+                    <footer class="section-footer" id="footer">
+                        <section class="section footer-big flex-item align-bottom">
+                            <div class="container">
+                                <div class="row footer-column">
+                                    <div class="col-lg-3 col-md-4 col-12">
+                                        <div class="widget widget-default">
+                                            <h3 class="widget-header">uSkinned</h3>
+                                            <p class="widget-text">
+                                                Studio 119 South Block
+                                                60 Osborne Street
+                                                Glasgow G1 5QH
+
+                                                Tel. 000-000-000
+
+                                                Email. mail@example.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-4 col-xs-12">
+                                        <div class="widget widget-default">
+                                            <h3 class="widget-header">Quick links</h3>
+                                            <ul class="widget-list list-quick-links row">
+                                                <li class="list-item col-lg-4 col-6">
+                                                    <a class="list-item-link" href="#">Art &amp; Culture</a>
+                                                </li>
+                                                <li class="list-item col-lg-4 col-6">
+                                                    <a class="list-item-link" href="#">Education</a>
+                                                </li>
+                                                <li class="list-item col-lg-4 col-6">
+                                                    <a class="list-item-link" href="#">Food &amp; Health</a>
+                                                </li>
+                                                <li class="list-item col-lg-4 col-6">
+                                                    <a class="list-item-link" href="#">Movies</a>
+                                                </li>
+                                                <li class="list-item col-lg-4 col-6">
+                                                    <a class="list-item-link" href="#">Sports</a>
+                                                </li>
+                                                <li class="list-item col-lg-4 col-6">
+                                                    <a class="list-item-link" href="#">Travel</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-xs-12">
+                                        @* Social Module *@
+                                        <div class="widget widget-default">
+                                            <h3 class="widget-header">Social pages</h3>
+                                            <ul class="widget-social social-inline">
+                                                <li class="social-item">
+                                                    <a class="social-item__link" icon-color="#00acee" href="https://www.facebook.com/AngularEventSite/">
+                                                        <i class="fa fa-facebook-square fa-3x"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social-item">
+                                                    <a class="social-item__link" icon-color="#00acee" href="http://twitter.com/AngularEventSite">
+                                                        <i class="fa fa-twitter-square fa-3x"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social-item">
+                                                    <a class="social-item__link" icon-color="#00acee" href="http://www.pinterest.com/AngularEventSite/">
+                                                        <i class="fa fa-pinterest-square fa-3x"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social-item">
+                                                    <a class="social-item__link" icon-color="#00acee" href="https://www.youtube.com/subscription_center?add_user=AngularEventSite">
+                                                        <i class="fa fa-youtube-square fa-3x"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="social-item">
+                                                    <a class="social-item__link" icon-color="#00acee" href="http://instagram.com/AngularEventSite">
+                                                        <i class="fa fa-instagram-square fa-3x"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        @*<section class="section footer-small">
+                        <div class="container">
+                            <div class="row footer-column">
+                                <div class="col-6">
+                                    <div class="widget widget-default d-flex justify-content-end">
+                                        <p class="widget-text">Copyright 2017</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>*@
+                    </footer>
+                }
+            </noscript>
+        </ng-template>
+    </app-root>
+    @Html.WebpackJsAsset("vendor", "common", "main")
+    @Html.WebpackJsThemeAsset("spaceBlue-wallpaper")
+    @RenderSection("scripts", false)
+</body>
+</html>

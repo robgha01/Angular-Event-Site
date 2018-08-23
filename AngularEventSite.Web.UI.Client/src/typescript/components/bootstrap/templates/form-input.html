@@ -1,0 +1,22 @@
+﻿<!--<label *ngIf="this.renderedInForm" class="col-md-3 form-control-label">{{label}}</label>
+<div *ngIf="this.renderedInForm" class="col-md-9">
+    <input #input [class]="cssClass" [name]="name" [type]="type" [placeholder]="placeholder" (blur)="onBlur($event.target.value)" (focus)="onFocus($event.target.value)" (focusout)="onFocusout($event.target.value)" [value]="inputValue" (input)="triggerUpdate($event.target.value, $event)">
+    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" *ngIf="hasError"></span>
+    <div *ngIf="showPasswordStrength" class="form-text progress password-progress">
+        <div #progressBar class="progress-bar" role="progressbar" style="width: 0;">
+            <p class="text-center">{{ progressBarModel?.message }}</p>
+        </div>
+    </div>
+    <small *ngIf="showPasswordStrength && errorMessage !== null" class="form-text" [innerHTML]="errorMessage"></small>
+    <span class="form-text" aria-hidden="true" [innerHTML]="errorMessage" *ngIf="!showPasswordStrength && control.touched && control.invalid && errorMessage !== null"></span>
+</div>
+<input *ngIf="!this.renderedInForm" #input [class]="cssClass" [name]="name" [type]="type" [placeholder]="placeholder" (blur)="onBlur($event.target.value)" (focus)="onFocus($event.target.value)" (focusout)="onFocusout($event.target.value)" [value]="inputValue" (input)="triggerUpdate($event.target.value, $event)">-->
+<input #input [class]="cssClass" [name]="name" [type]="type" [placeholder]="placeholder" (blur)="onBlur($event.target.value)" (focus)="onFocus($event.target.value)" (focusout)="onFocusout($event.target.value)" [value]="inputValue" (input)="triggerUpdate($event.target.value, $event)">
+<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" *ngIf="hasError"></span>
+<div *ngIf="showPasswordStrength" class="form-text progress password-progress">
+    <div #progressBar class="progress-bar" role="progressbar" style="width: 0;">
+        <p class="text-center">{{ progressBarModel?.message }}</p>
+    </div>
+</div>
+<small *ngIf="showPasswordStrength && errorMessage !== null" class="form-text" [innerHTML]="errorMessage"></small>
+<span class="form-text" aria-hidden="true" [innerHTML]="errorMessage" *ngIf="!showPasswordStrength && control.touched && control.invalid && errorMessage !== null"></span>

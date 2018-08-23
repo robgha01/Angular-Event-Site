@@ -1,0 +1,28 @@
+﻿/*!
+ * This file contains references to the main sass file for use outside.
+ */
+
+// Settings
+// --------------------------
+@import "sass/settings.colors";
+@import "sass/settings.global";
+@import "sass/settings.font-awesome";
+@import "sass/settings.ionicons";
+@import "sass/settings.bootstrap";
+@import "sass/settings.navbar";
+@import "sass/settings.widget";
+@import "sass/settings.widget-search";
+
+@if $env == "production" {
+    $asset-base-path: "/static/assets/components"
+}
+
+@if $env == "development" {
+    $asset-base-path: ".."
+}
+
+// Tools
+// --------------------------
+@import "sass/tools.base";
+@import "sass/tools.asset-helper";
+@import "sass/tools.mixins";

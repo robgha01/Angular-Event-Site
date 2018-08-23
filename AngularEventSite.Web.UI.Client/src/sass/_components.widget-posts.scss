@@ -1,0 +1,38 @@
+﻿/*!
+ *  Widget posts component
+ */
+
+.widget .widget-posts {
+    @extend .widget-list;
+
+    .post {
+        @extend .list-item;
+        padding-left: 48px;
+        min-height: 45px;        
+    }
+    
+    .post-icon {
+        background: rgba(0,0,0,.1);
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        margin-right: 8px;
+        top: 3px;
+        left: 0;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .post-link {
+        font-weight: 700;
+    }
+
+    .post-date {
+        display: block;
+        color: rgba(255,255,255,.6);
+    }
+}

@@ -1,0 +1,13 @@
+﻿/// <reference path="_tools.asset-helper.scss" />
+/*!
+ *  card component
+ */
+
+.card.card-inherit {
+    background-color: inherit;
+
+    .list-group-item {
+        background-color: inherit;
+        border: none;
+    }
+}

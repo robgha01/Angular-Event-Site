@@ -1,0 +1,14 @@
+﻿<ul class="widget-quickNavigator" *ngIf="menu">
+    <li class="quickNavigator-editLink">
+        <a href="{{menu.editLinkUrl}}" target="_self"><span>Umbraco</span></a>
+    </li>
+    <li class="quickNavigator-dropdown">
+        <a class="quickNavigator-dropdown-arrow" (click)="toggle($event)"></a>
+        <ul class="quickNavigator-menu" [ngClass]="{'menu-open': isMenuOpen }">
+            <li *ngFor="let value of menu?.items">
+                <a href="{{ value.url }}" target="{{ value.target }}">{{ value.name }}</a>
+            </li>
+            <ng-content></ng-content>
+        </ul>
+    </li>
+</ul>

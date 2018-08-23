@@ -1,0 +1,60 @@
+/*!
+ *  Module image-and-text wins
+ */
+.module-imageAndText {
+}
+
+/// Big mobile
+@media (min-width: 480px) {
+}
+
+/// Tablet
+@media (min-width: 768px) {
+    .module-imageAndText {
+        .imageAndText-row {
+            margin-bottom: 11px;
+        }
+
+        .imageAndText-titleSection h2 {
+            margin-bottom: 17px;
+        }
+    }
+}
+
+/// Small desktop
+@media (min-width: 992px) {
+    .module-imageAndText {
+        margin-top: 42px;
+        margin-bottom: 42px;
+
+        .imageAndText-row {
+            margin-bottom: 29px;
+        }
+
+        .imageAndText-titleSection h2 {
+            margin-top: -7px;
+            margin-bottom: 14px;
+        }
+        
+        .pull-right {
+            float: right;
+        }        
+    }
+}
+
+/// Large desktop
+@media (min-width: 1200px) {
+    .module-imageAndText {
+        .imageAndText-row {
+            margin-bottom: 52px;
+        }
+
+        .imageAndText-titleSection h2 {
+            margin-bottom: 24px;
+        }
+        
+        .pull-right {
+            float: right;
+        }        
+    }
+}

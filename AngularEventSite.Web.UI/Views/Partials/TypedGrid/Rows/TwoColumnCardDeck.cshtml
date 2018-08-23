@@ -1,0 +1,21 @@
+﻿@using AngularEventSite.Web.Extensions
+@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<Skybrud.Umbraco.GridData.GridRow>
+
+<div class="row">
+    @foreach (var area in Model.Areas)
+    {
+        <div class="col-12">
+            <div class="card-deck" @area.RenderElementAttributes()>
+                <div class="row">
+                    @foreach (var control in area.Controls)
+                    {
+                        <div class="col-4">
+                            @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/Card")
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

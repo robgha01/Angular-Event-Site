@@ -1,0 +1,69 @@
+﻿namespace AngularEventSite.Web.Converters
+{
+    using System.Reflection;
+
+    using BlueLeet.UCodeFirst.CacheBehaviors;
+    using BlueLeet.UCodeFirst.CacheBehaviors.Abstraction;
+    using BlueLeet.UCodeFirst.Converters;
+
+    using Umbraco.Web;
+
+    /// <summary>
+    /// The context aware converter.
+    /// </summary>
+    public abstract class ContextAwareConverter : IConverter, ISpecifyCacheMode
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ContextAwareConverter"/> class.
+        /// </summary>
+        /// <param name="mode">
+        /// If <see cref="CacheMode"/> is not set it will evaluate to ether Request if
+        /// <see cref="UmbracoHelper"/> is not null or to Runtime if its null.
+        /// </param>
+        protected ContextAwareConverter(CacheMode? mode = null)
+        {
+            if (mode.HasValue)
+            {
+                Mode = mode.Value;
+            }
+            else
+            {
+                Mode = !IsUmbracoContext ? CacheMode.Runtime : CacheMode.Request;
+            }
+        }
+
+        /// <summary>
+        /// The cache mode.
+        /// </summary>
+        public virtual CacheMode CacheMode => Mode;
+
+        /// <summary>
+        /// Is <c>umbraco</c> context not <see langword="null"/> ?.
+        /// </summary>
+        public bool IsUmbracoContext => UmbracoContext.Current != null;
+
+        /// <summary>
+        /// Gets the <c>umbraco</c>.
+        /// </summary>
+        public UmbracoHelper Umbraco
+        {
+            get
+            {
+                if (UmbracoContext.Current == null)
+                {
+                    return null;
+                }
+
+                return new UmbracoHelper(UmbracoContext.Current);
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the mode.
+        /// </summary>
+        protected CacheMode Mode { get; set; }
+
+        /// <inheritdoc />
+        public abstract object Read(PropertyInfo propertyInfo, object value);
+    }
+}

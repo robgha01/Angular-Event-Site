@@ -1,0 +1,34 @@
+<div class="bl-module bl-module-card bl-module-setting bl-module-default" data-ng-controller="BlueLeet.GridEditors.CardSettingController as vm">
+    <h5><localize key="blueleetGridCard_settingTitle">Image Settings</localize></h5>
+    <div class="bl-field">
+        <a class="bl-remove" href="javascript:void(0)" data-ng-click="model.value.url=''" data-ng-if="model.value.url">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="bl-component-fileSelector bl-component-default" data-ng-if="!model.value.url" data-ng-click="vm.selectImage()">
+            <i class="icon icon-picture"></i>
+            <a>
+                <localize key="blueleetGridCard_selectImagePicker">Click to select image</localize>
+            </a>
+        </div>
+        <div class="bl-component-fileSelector bl-component-default" data-ng-click="vm.selectImage()" data-ng-if="model.value.url">
+            <img data-ng-src="{{model.value.url}}" alt="{{model.value.altText}}" title="{{model.value.title}}" />
+        </div>
+    </div>
+    <div class="bl-field">
+        <label class="bl-field-label">
+            <localize key="blueleetGridCard_textboxImageTitleLabel">Title</localize>
+        </label>
+        <input class="bl-fieldValue" type="text" data-ng-model="model.value.title" localize="placeholder" placeholder="@blueleetGridCard_textboxImageTitlePlaceholder" />
+    </div>
+    <div class="bl-field">
+        <label class="bl-field-label">
+            <localize key="blueleetGridCard_textboxImageAltLabel">Alternative text</localize>
+        </label>
+        <input class="bl-fieldValue" type="text" data-ng-model="model.value.altText" localize="placeholder" placeholder="@blueleetGridCard_textboxImageAltPlaceholder" />
+    </div>
+    <umb-overlay ng-if="vm.overlay.show"
+                 model="vm.overlay"
+                 view="vm.overlay.view"
+                 position="right">
+    </umb-overlay>
+</div>

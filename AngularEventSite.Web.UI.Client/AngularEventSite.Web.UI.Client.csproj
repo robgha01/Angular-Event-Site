@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="false" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6CB335B9-322E-4B22-89D1-744469023F70}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularEventSite.UI.Client</RootNamespace>
+    <AssemblyName>AngularEventSite.UI.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="config\webpack.common.merges.js" />
+    <Content Include="config\constants.js" />
+    <Content Include="config\helpers.js" />
+    <Content Include="config\webpack.prod.js" />
+    <Content Include="config\webpack.dev.js" />
+    <Content Include="Gulpfile.js" />
+    <Content Include="gulp\config.js" />
+    <Content Include="gulp\tasks\clean\cleanTemp.js" />
+    <Content Include="gulp\tasks\copy-distToProject.js" />
+    <Content Include="gulp\tasks\copy-staticAssets.js" />
+    <Content Include="gulp\tasks\webpack.js" />
+    <Content Include="src\assets\fonts\bootstrap\glyphicons-halflings-regular.svg" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="src\assets\fonts\ionicons\ionicons.svg" />
+    <Content Include="src\assets\fonts\opensans-bold-webfont.svg" />
+    <Content Include="src\assets\fonts\opensans-light-webfont.svg" />
+    <Content Include="src\assets\fonts\opensans-regular-webfont.svg" />
+    <Content Include="src\assets\fonts\opensans-semibold-webfont.svg" />
+    <Content Include="src\assets\images\clock-preview.PNG" />
+    <Content Include="src\assets\images\close.png" />
+    <Content Include="src\assets\images\female.jpg" />
+    <Content Include="src\assets\images\loading.gif" />
+    <Content Include="src\assets\images\logo\AngularEventSite.svg" />
+    <Content Include="src\assets\images\logo\logga clarmontexplore test.png" />
+    <Content Include="src\assets\images\male.jpg" />
+    <Content Include="src\assets\images\news-top.png" />
+    <Content Include="src\assets\images\next.png" />
+    <Content Include="src\assets\images\prev.png" />
+    <Content Include="src\assets\images\search-top.png" />
+    <Content Include="src\assets\themes\spaceBlue-wallpaper\images\background.png" />
+    <Content Include="src\assets\stylesheets\bootstrap-reboot.css" />
+    <Content Include="src\assets\stylesheets\ie10-viewport-bug-workaround.css" />
+    <Content Include="src\assets\themes\spaceBlue-wallpaper\images\blueTexture.png" />
+    <Content Include="src\sass\themes\_bootstrap.default.scss" />
+    <Content Include="src\typescript\blueleet\components\fader\templates\fader.html" />
+    <Content Include="src\typescript\blueleet\components\load-indicator\templates\pace-progress.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\editor-base.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\datetime\datetime.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\password\password.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\text\text.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\textarea\textarea.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\numeric\numeric.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\editors\select\select.html" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\inline-editor-group.html" />
+    <Content Include="src\typescript\blueleet\modules\search\templates\search.html" />
+    <Content Include="src\typescript\components\bootstrap\templates\form-input.html" />
+    <Content Include="src\typescript\components\bootstrap\alert-box\templates\alert-box.html" />
+    <TypeScriptCompile Include="src\typescript\navigation.service.ts" />
+    <TypeScriptCompile Include="src\typescript\abstraction\IUser.ts" />
+    <TypeScriptCompile Include="src\typescript\components\event\event.service.ts" />
+    <TypeScriptCompile Include="src\typescript\components\event\event.component.ts" />
+    <Content Include="src\typescript\components\event\templates\code.html" />
+    <Content Include="src\typescript\components\event\templates\event.html" />
+    <Content Include="src\typescript\components\full-width-slider\templates\full-width-slider.html" />
+    <Content Include="src\typescript\components\bootstrap\alert-box\alert-box.scss" />
+    <Content Include="src\typescript\blueleet\modules\inline-editor\inline-editor.scss" />
+    <Content Include="src\sass\_base.p.scss" />
+    <Content Include="src\sass\_components.widget-card-list.scss" />
+    <Content Include="src\sass\_components.lightbox.scss" />
+    <Content Include="src\sass\_wins.bootstrap.scss" />
+    <Content Include="src\sass\_components.section-header.scss" />
+    <Content Include="src\sass\_base.htmlBody.scss" />
+    <Content Include="src\sass\_base.app.scss" />
+    <Content Include="src\sass\_base.global.scss" />
+    <Content Include="src\sass\_wins.widget-social.scss" />
+    <Content Include="src\sass\generic\bootstrap.scss" />
+    <Content Include="src\assets\fonts\museosans-500-webfont.woff" />
+    <Content Include="src\assets\fonts\museosans-500-webfont.woff2" />
+    <Content Include="src\assets\fonts\museosans-500italic-webfont.woff" />
+    <Content Include="src\assets\fonts\museosans-500italic-webfont.woff2" />
+    <Content Include="src\assets\fonts\ionicons\ionicons.eot" />
+    <Content Include="src\assets\fonts\ionicons\ionicons.ttf" />
+    <Content Include="src\assets\fonts\ionicons\ionicons.woff" />
+    <None Include="src\sass\generic\blueleet-ucomponents\ucomponents.scss" />
+    <Content Include="src\sass\generic\blueleet-ucomponents\_components.module.card.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.googleMaps.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.goToTop.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.headline.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.image.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.imageAndText.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.quote.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_components.module.scss" />
+    <Content Include="src\sass\generic\blueleet-ucomponents\_objects.module.card.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.googleMaps.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.goToTop.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.headline.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.image.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.imageAndText.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.quote.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_objects.module.scss" />
+    <Content Include="src\sass\generic\blueleet-ucomponents\_wins.module.card.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_wins.module.image.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_wins.module.imageAndText.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_wins.module.quote.scss" />
+    <None Include="src\sass\generic\blueleet-ucomponents\_wins.module.scss" />
+    <Content Include="src\sass\generic\blueleet-ucomponents.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_config.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.nav-tabs.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.navbar.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.section-footer.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.widget-list.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.widget-search.scss" />
+    <Content Include="src\sass\_components.container.scss" />
+    <Content Include="src\sass\_components.nav-tabs.scss" />
+    <Content Include="src\sass\_tools.theme-helper.scss" />
+    <Content Include="src\sass\_objects.animation-fadeIn.scss" />
+    <Content Include="src\sass\_objects.animation.scss" />
+    <Content Include="src\sass\_components.container-fluid-background.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.fluid-background.scss" />
+    <Content Include="src\typescript\components\full-width-slider\full-width-slider.scss" />
+    <Content Include="src\sass\_components.section.scss" />
+    <Content Include="src\sass\themes\space-blue-wallpaper\_components.strapbar.scss" />
+    <Content Include="src\sass\generic\pace-progress.scss" />
+    <Content Include="src\sass\_wins.section-header.scss" />
+    <Content Include="src\typescript\blueleet\modules\search\search.scss" />
+    <Content Include="src\typescript\components\message-box\templates\confirmed - Copy.html" />
+    <Content Include="src\typescript\components\message-box\templates\confirmed.html" />
+    <Content Include="src\typescript\components\search-wall\search-wall.scss" />
+    <Content Include="src\sass\_wins.section.scss" />
+    <Content Include="src\sass\generic\ionicons\ionicons.scss" />
+    <Content Include="src\sass\generic\ionicons\_ionicons-font.scss" />
+    <Content Include="src\sass\generic\ionicons\_ionicons-icons.scss" />
+    <Content Include="src\sass\generic\ionicons\_ionicons-variables.scss" />
+    <Content Include="src\sass\generic\font-ionicons.scss" />
+    <Content Include="src\sass\_settings.ionicons.scss" />
+    <Content Include="src\sass\_wins.a.scss" />
+    <Content Include="src\sass\_objects.link.scss" />
+    <Content Include="src\sass\_components.widget-video.scss" />
+    <Content Include="src\sass\_objects.animation-fadeOut.scss" />
+    <Content Include="src\sass\_settings.animation.scss" />
+    <Content Include="src\sass\_components.card.scss" />
+    <Content Include="src\sass\_components.countdown.scss" />
+    <Content Include="src\sass\_tools.rem.scss" />
+    <Content Include="src\typescript\components\event\event.scss" />
+    <None Include="src\typescript\components\search-box\search-box.scss" />
+    <Content Include="src\typescript\components\search-wall\templates\search-wall.html" />
+    <Content Include="src\typescript\components\simple-login\templates\simple-login.html" />
+    <Content Include="src\typescript\blueleet\modules\widgets\widget-clock\clock.png" />
+    <Content Include="src\typescript\blueleet\modules\widgets\widget-clock\templates\clock.html" />
+    <Content Include="src\typescript\components\widget-quickNavigator\quicknav-arrow.png" />
+    <Content Include="src\typescript\components\widget-quickNavigator\umbraco.svg" />
+    <Content Include="src\typescript\components\widget-quickNavigator\templates\quicknavigator.html" />
+    <Content Include="webpack.config.js" />
+    <Content Include="src\typescript\blueleet\modules\widgets\widget-clock\widget-clock.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".babelrc" />
+    <Content Include=".bootstraprc" />
+    <Content Include="package.json" />
+    <Content Include="src\sass\generic\font-awesome\_animated.scss" />
+    <Content Include="src\sass\generic\font-awesome\_bordered-pulled.scss" />
+    <Content Include="src\sass\generic\font-awesome\_core.scss" />
+    <Content Include="src\sass\generic\font-awesome\_fixed-width.scss" />
+    <Content Include="src\sass\generic\font-awesome\_font-awesome.scss" />
+    <Content Include="src\sass\generic\font-awesome\_icons.scss" />
+    <Content Include="src\sass\generic\font-awesome\_larger.scss" />
+    <Content Include="src\sass\generic\font-awesome\_list.scss" />
+    <Content Include="src\sass\generic\font-awesome\_mixins.scss" />
+    <Content Include="src\sass\generic\font-awesome\_path.scss" />
+    <Content Include="src\sass\generic\font-awesome\_rotated-flipped.scss" />
+    <Content Include="src\sass\generic\font-awesome\_screen-reader.scss" />
+    <Content Include="src\sass\generic\font-awesome\_stacked.scss" />
+    <Content Include="src\sass\generic\font-awesome\_variables.scss" />
+    <Content Include="src\sass\spaceBlue-wallpaper.scss" />
+    <Content Include="src\sass\_base.headings.scss" />
+    <Content Include="src\sass\_base.a.scss" />
+    <Content Include="src\sass\generic\font-awesome.scss" />
+    <Content Include="src\sass\generic\font-face.scss" />
+    <Content Include="src\sass\_settings.colors.scss" />
+    <Content Include="src\sass\_settings.font-awesome.scss" />
+    <Content Include="src\sass\_settings.global.scss" />
+    <Content Include="src\sass\_tools.asset-helper.scss" />
+    <Content Include="src\sass\_tools.base.scss" />
+    <Content Include="src\sass\_tools.mixins.scss" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\typings\rangeslider\rangeslider.d.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\cache\cache.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\cache\module.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\language\module.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\language\translator.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\commonDirectives\showAtScroll.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\commonDirectives\scrollTo.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\commonDirectives\waypointSticky.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\components\fader\fader.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\extensions\StringExtensions.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\commonDirectives\focus.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\commonDirectives\focus.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\commonDirectives\module.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\editors\datetime\datetime.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\editors\password\password.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\editors\text\text.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\editors\textarea\textarea.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\editors\numeric\numeric.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\editors\select\select.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\index.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\inline-editor-group.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\inline-editor.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\module.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\inline-editor\services\InlineEditorContext.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\search\index.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\search\module.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\search\search.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\widgets\module.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\search\search.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\pipes\truncate.pipe.ts" />
+    <TypeScriptCompile Include="src\typescript\apply-to-course.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\components\bootstrap\alert-box\alert-box.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\event\code.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\full-width-slider\full-width-slider.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\modules\widgets\widget-clock\widget-clock.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\search-wall\search-wall.component.ts" />
+    <TypeScriptCompile Include="src\typescript\enums\searchType.ts" />
+    <TypeScriptCompile Include="src\typescript\Generics\bootstrap.ts" />
+    <TypeScriptCompile Include="src\typescript\hoverable.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\abstraction\IBroadcastEventArgs.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\abstraction\IObservableValidatorFn.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\components\load-indicator\pace-progress.component.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\index.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\extensions\ObjectExtensions.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\config.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\ServiceEvent.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\umbraco-ajax-Service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\Validator\AsyncObservableValidator.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\abstraction\AbstractValueAccessor.ts" />
+    <TypeScriptCompile Include="src\typescript\components\abstraction\ITemplateBase.ts" />
+    <TypeScriptCompile Include="src\typescript\components\bootstrap\form-input.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\login-signup\login-signup-complete.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\login-signup\login-signup.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\abstraction\TemplateBaseComponent.ts" />
+    <TypeScriptCompile Include="src\typescript\components\login-signup\signout.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\search-box\search-box.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\forgot-password\forgot-password.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\simple-signup\simple-signup.component.ts" />
+    <TypeScriptCompile Include="src\typescript\components\simple-login\simple-login.component.ts" />
+    <TypeScriptCompile Include="src\typescript\declarations\IDescribeReflect.ts" />
+    <TypeScriptCompile Include="src\typescript\declarations\systemjs.d.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\typescript\decorators\Protected.ts" />
+    <TypeScriptCompile Include="src\typescript\decorators\Inherit.ts" />
+    <TypeScriptCompile Include="src\typescript\enums\default-view-state-enum.ts" />
+    <TypeScriptCompile Include="src\typescript\enums\password-verdict.ts" />
+    <TypeScriptCompile Include="src\typescript\log.pipe.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\broadcaster.service.ts" />
+    <TypeScriptCompile Include="src\typescript\alert-box.service.ts" />
+    <TypeScriptCompile Include="src\typescript\hoverableEvent.service.ts" />
+    <TypeScriptCompile Include="src\typescript\modules\widget\index.ts" />
+    <TypeScriptCompile Include="src\typescript\modules\widget\module.ts" />
+    <TypeScriptCompile Include="src\typescript\modules\widget\widgetContext.service.ts" />
+    <TypeScriptCompile Include="src\typescript\validation.service.ts" />
+    <TypeScriptCompile Include="src\typescript\loginEvent.service.ts" />
+    <TypeScriptCompile Include="src\typescript\user.service.ts" />
+    <TypeScriptCompile Include="src\typescript\abstraction\IMemberPayload.ts" />
+    <TypeScriptCompile Include="src\typescript\abstraction\IPayload.ts" />
+    <TypeScriptCompile Include="src\typescript\components\widget-quickNavigator\abstraction\IQuickNavigatorMenu.ts" />
+    <TypeScriptCompile Include="src\typescript\components\widget-quickNavigator\abstraction\IQuickNavigatorMenuItem.ts" />
+    <TypeScriptCompile Include="src\typescript\components\widget-quickNavigator\widget-quickNavigator.component.ts" />
+    <TypeScriptCompile Include="src\typescript\detectDevice.service.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\blueleet-umbraco.module.ts" />
+    <TypeScriptCompile Include="src\typescript\dev-helpers.ts" />
+    <TypeScriptCompile Include="src\typescript\enums\generic-messages-enum.ts" />
+    <TypeScriptCompile Include="src\typescript\enums\index.ts" />
+    <TypeScriptCompile Include="src\typescript\enums\member-status-enum.ts" />
+    <TypeScriptCompile Include="src\typescript\if-admin.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\widget-search.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\icon-color.directive.ts" />
+    <TypeScriptCompile Include="src\typescript\vendor.browser.ts" />
+    <TypeScriptCompile Include="src\typescript\polyfills.browser.ts" />
+    <TypeScriptCompile Include="src\typescript\_references.d.ts" />
+    <TypeScriptCompile Include="src\typescript\main.app.ts" />
+    <TypeScriptCompile Include="src\typescript\main.bootstraper.ts" />
+    <TypeScriptCompile Include="src\typescript\declarations\_nodeRequireExtension.d.ts" />
+    <TypeScriptCompile Include="src\typescript\blueleet\pipes\capitalize.pipe.ts" />
+    <TypeScriptCompile Include="src\typescript\main.browser.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\AngularEventSite\medium.woff" />
+    <Content Include="src\assets\fonts\AngularEventSite\thin.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\opensans-regular-webfont.eot" />
+    <Content Include="src\assets\fonts\opensans-regular-webfont.ttf" />
+    <Content Include="src\assets\fonts\opensans-regular-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\opensans-light-webfont.eot" />
+    <Content Include="src\assets\fonts\opensans-light-webfont.ttf" />
+    <Content Include="src\assets\fonts\opensans-light-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\opensans-bold-webfont.eot" />
+    <Content Include="src\assets\fonts\opensans-bold-webfont.ttf" />
+    <Content Include="src\assets\fonts\opensans-bold-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\opensans-semibold-webfont.eot" />
+    <Content Include="src\assets\fonts\opensans-semibold-webfont.ttf" />
+    <Content Include="src\assets\fonts\opensans-semibold-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\bootstrap\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\bootstrap\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\sass\_settings.bootstrap.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\sass\_settings.navbar.scss" />
+    <Content Include="src\sass\_components.navbar.scss" />
+    <Content Include="config\webpack.common.js" />
+    <Content Include="src\sass\_components.strapbar.scss" />
+    <Content Include="src\sass\_components.icon.scss" />
+    <Content Include="src\sass\_objects.icon.scss" />
+    <Content Include="src\sass\_objects.widget.scss" />
+    <Content Include="src\sass\_objects.section.scss" />
+    <Content Include="src\sass\_components.section-footer.scss" />
+    <Content Include="src\sass\_settings.widget.scss" />
+    <Content Include="src\assets\fonts\RobotoSlab\RobotoSlab-Bold.ttf" />
+    <Content Include="src\assets\fonts\RobotoSlab\RobotoSlab-Light.ttf" />
+    <Content Include="src\assets\fonts\RobotoSlab\RobotoSlab-Regular.ttf" />
+    <Content Include="src\assets\fonts\RobotoSlab\RobotoSlab-Thin.ttf" />
+    <Content Include="src\sass-how-to.md" />
+    <Content Include="src\sass\_components.widget-posts.scss" />
+    <Content Include="src\sass\_objects.widget-list.scss" />
+    <Content Include="src\sass\_components.widget-social.scss" />
+    <Content Include="src\sass\_components.widget-search.scss" />
+    <Content Include="src\sass\_settings.widget-search.scss" />
+    <Content Include="src\sass\_wins.mainContent.scss" />
+    <None Include="src\sass\_wins.navbar.scss" />
+    <Content Include="src\typescript\components\widget-quickNavigator\widget-quickNavigator.scss" />
+    <Content Include="src\typescript\components\login-signup\login-signup.scss" />
+    <Content Include="src\typescript\components\bootstrap\form-input.scss" />
+    <Content Include="src\sass-reference.scss" />
+    <Content Include="src\typescript\components\components.scss" />
+    <Content Include="src\typescript\components\login-signup\signout.scss" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'webprod|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="false" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:19987/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

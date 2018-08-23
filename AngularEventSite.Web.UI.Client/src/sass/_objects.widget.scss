@@ -1,0 +1,16 @@
+﻿/*!
+ *  Widget object
+ */
+
+%widget {
+    margin-bottom: 36px;
+
+    .widget-header {
+        margin-top: 0;
+        position: relative;
+    }
+
+    .widget-flat {
+        margin-bottom: 0;
+    }
+}

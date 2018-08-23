@@ -1,0 +1,29 @@
+/// <reference path="_objects.module.scss" />
+/*!
+ *  Module go-to-top object
+ */
+
+.module-go-top {
+    color: white;
+    background: rgba(32,38,40,.82);
+    position: fixed;
+    backface-visibility: hidden;
+    display: block;
+    font-size: 16px;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    bottom: -44px;
+    opacity: 0;
+    right: 12px;
+    transition: all .5s;
+    z-index: 100;
+
+    i {
+        line-height: 32px;
+    }
+
+    &.go-top-circle {
+        border-radius: 50%;
+    }
+}

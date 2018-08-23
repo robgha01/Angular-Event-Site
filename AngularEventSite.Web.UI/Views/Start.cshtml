@@ -1,0 +1,21 @@
+﻿@inherits UmbracoViewPage<AngularEventSite.Web.Models.StartPageModel>
+@*@{
+    ViewBag.layoutSettings = new ViewLayoutSettings(LayoutType.FluidLayout);
+}
+@section FullContent
+{
+    <div id="mainContent" class="container__fluid container__main">
+        @Html.GetTypedGridHtml(Model.Content, "GridStartPage", "ContentArea")
+    </div>
+    @Html.GetTypedGridHtml(Model.Content, "GridFrontPage", "ContentArea")
+}*@
+
+
+@*@section FullContent
+{
+    @{
+        var definition = UmbracoContext.Application.Services.DataTypeService.GetDataTypeDefinitionByName("Sida: Start - #GridStartPage name - Grid Front Page");
+        var preValues = umbraco.library.GetPreValues(definition.Id).Current.Value;
+        var t = preValues;
+    }
+}*@

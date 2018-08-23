@@ -1,0 +1,13 @@
+﻿@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.FormMacroType>
+@{
+    if (Macro.Form == null)
+    {
+        return;
+    }
+
+}
+@*@if (this.IsPreviewMode())
+{
+    return;
+}*@
+@Html.Partial("~/Views/Partials/FormEditor/NoScript.cshtml", Macro.Form.Content)

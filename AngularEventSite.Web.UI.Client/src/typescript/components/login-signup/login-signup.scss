@@ -1,0 +1,14 @@
+﻿login-signup {
+    .content-frame {
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+}
+
+.fluid-hight {
+    min-height: 100vh;
+}
+
+.loginPage {
+    background: #76b852; /* fallback for old browsers */
+    background: linear-gradient(to left, #76b852, #8DC26F);
+}

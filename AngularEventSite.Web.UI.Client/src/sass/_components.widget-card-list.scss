@@ -1,0 +1,41 @@
+﻿/*!
+ *  Widget card list component
+ */
+
+.widget .widget-card-list,
+.widget.widget-card-list {
+    padding: .5vw;
+    /*font-size: 0;*/
+    flex-flow: row wrap;
+    display: flex;
+
+    .widget-card {
+        flex: auto;
+        width: 200px;
+        margin: .5vw;
+    }
+
+    .widget-card {
+        .card-link {
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        padding: 0;
+
+        .widget-card {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+﻿/// <reference path="_settings.bootstrap.scss" />
+/*!
+ *  Navbar settings.
+ */
+
+$navbar-height-base: 100px;
+$navbar-height-sm-down: 100px;
+$navbar-height-stuck: 60px;
+$navbar-height-scrolled: 60px;
+$navbar-brand-height: $navbar-height-base;
+$navbar-light-color: rgba($white,.5);
+$navbar-bg-color: #2e89b6;

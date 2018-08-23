@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/package.manifest",
+    "javascript": [
+        "~/App_Plugins/BlueLeet/assets/js/BlueLeet.UCodeFirst.Initial.js",
+        "~/App_Plugins/BlueLeet/assets/js/BlueLeet.UCodeFirst.Common.js",
+        "~/App_Plugins/BlueLeet/assets/js/BlueLeet.UCodeFirst.Vendors.js",
+        "~/App_Plugins/BlueLeet/assets/js/BlueLeet.UCodeFirst.js"
+    ],
+    "css": [
+        "~/App_Plugins/BlueLeet/assets/stylesheets/blueleet.ucodefirst.css"
+    ]
+}

@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('/css/fonts/opensans-regular-webfont.eot');
+    src: url('/css/fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('/css/fonts/opensans-regular-webfont.woff') format('woff'),
+         url('/css/fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('/css/fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'opensans-light-webfont';
+    src: url('/css/fonts/opensans-light-webfont.eot');
+    src: url('/css/fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('/css/fonts/opensans-light-webfont.woff') format('woff'),
+         url('/css/fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('/css/fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('/css/fonts/opensans-bold-webfont.eot');
+    src: url('/css/fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('/css/fonts/opensans-bold-webfont.woff') format('woff'),
+         url('/css/fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('/css/fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('/css/fonts/opensans-semibold-webfont.eot');
+    src: url('/css/fonts/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/opensans-semibold-webfont.woff2') format('woff2'),
+         url('/css/fonts/opensans-semibold-webfont.woff') format('woff'),
+         url('/css/fonts/opensans-semibold-webfont.ttf') format('truetype'),
+         url('/css/fonts/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'noto_sansbold';
+    src: url('/css/fonts/notosans-bold-webfont.eot');
+    src: url('/css/fonts/notosans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/notosans-bold-webfont.woff2') format('woff2'),
+         url('/css/fonts/notosans-bold-webfont.woff') format('woff'),
+         url('/css/fonts/notosans-bold-webfont.ttf') format('truetype'),
+         url('/css/fonts/notosans-bold-webfont.svg#noto_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body.mce-content-body.darkTheme{
+    background:#4a4a4a;
+    color:#ffffff;
+    
+}
+
+#tinymce {
+	min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'opensans-light-webfont';
+    text-rendering: optimizeLegibility;
+    font-size:14px;
+    font-weight: normal;
+    /*color: #212121;*/
+}
+
+
+#tinymce h1,#tinymce h2,#tinymce h3,#tinymce h4{
+    margin-top:0;
+	font-weight: normal;
+
+}
+#tinymce h1{
+    font-family: 'open_sansregular';
+    color:#363636;
+    font-size:40px;
+    margin-bottom:14px;
+}
+
+#tinymce h2{
+    font-size:28px;
+    margin-bottom:17px;
+	font-weight: 100;
+}
+#tinymce h3{
+    font-family: 'open_sansregular';
+    font-size:19px;
+	margin-bottom: 10px;
+}
+#tinymce p,#tinymce ul,#tinymce ol{
+    line-height:24px;
+    margin-bottom:17px;
+}
+#tinymce a,#tinymce a:hover,#tinymce a:visited{
+    color:#9fce67;
+}
+#tinymce a h1,#tinymce a h2,#tinymce a h3{
+    color:#212121;
+}
+#tinymce b,#tinymce strong{
+    font-family: 'open_sansbold';
+}
+#tinymce ul li,#tinymce ol li{
+    padding-left:10px;
+}
+
+
+#tinymce hr{
+    border-top: 1px solid #d7d7d7;
+}
+#tinymce p{
+    margin: 0 0 10px;
+}
+ 
+@media (min-width: 480px) {
+    /*big mobile*/
+}
+
+@media (min-width: 768px) {
+    /*tablet*/
+    #tinymce h1{
+        margin-bottom:21px;
+    }
+    #tinymce h2{
+        margin-bottom:23px;
+    }
+    #tinymce p,#tinymce  ul,#tinymce  ol{
+        margin-bottom:23px;
+    }
+    #tinymce hr{
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+}
+
+@media (min-width: 992px) {
+    /*small desktop*/
+    #tinymce h1{
+        font-size:40px;
+    }
+  
+   
+}
+
+@media (min-width: 1200px) {
+    /*large desktop*/
+    #tinymce hr{
+        margin-top:40px;
+        margin-bottom:40px;
+    }
+    
+}
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+h1 {
+  font-family: 'open_sansregular';   color: #363636;   font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+font-size: 24px;
+}
+
+.colorHeader {
+color: #9fce67;
+}
+

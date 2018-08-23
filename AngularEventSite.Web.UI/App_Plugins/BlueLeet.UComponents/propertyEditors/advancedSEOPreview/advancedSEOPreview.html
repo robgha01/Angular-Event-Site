@@ -1,0 +1,17 @@
+<div class="bl-module bl-module-advancedSeoPreview bl-module-default" data-ng-controller="BlueLeet.PropertyEditors.AdvancedSeoPreviewController">
+    <div class="preview-wrapper">
+        <div class="preview-container preview-title">
+            <a class="bl-link bl-link-egyptian-blue bl-link-title" id="title-linkPreview" data-ng-if="title" data-ng-bind="title"></a>
+            <div data-ng-if="!title">
+                <localize key="blueleetAdvancedSEOPreview_placeholderTitlePreview">(No Title Added)</localize>
+            </div>
+        </div>
+        <div class="preview-container preview-info">
+            <div id="info-urlPreview" data-ng-bind="GetUrl()"></div>
+            <div id="info-descPreview" data-ng-if="description" data-ng-bind="description"></div>
+            <div data-ng-if="!description">
+                <localize key="blueleetAdvancedSEOPreview_placeholderDescriptionsPreview">(No Description Added)</localize>
+            </div>
+        </div>
+    </div>
+</div>

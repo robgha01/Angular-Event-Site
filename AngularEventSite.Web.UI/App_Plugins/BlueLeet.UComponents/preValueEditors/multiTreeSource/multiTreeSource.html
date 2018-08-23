@@ -1,0 +1,31 @@
+<div class="umb-contentpicker umb-editor bl-module-multiTreeSource" ng-controller="BlueLeet.PreValueEditors.MultiTreeSourceController as vm">
+    <ng-form name="multiTreeSourceForm">
+        <umb-load-indicator data-ng-if="vm.loading"></umb-load-indicator>
+        <ul class="unstyled list-icons" ui-sortable="vm.sortableOptions" ng-model="vm.treeSources" data-ng-if="!vm.loading">
+            <li ng-repeat="node in vm.treeSources" class="bl-link-list">
+                <div class="bl-link-container">
+                    <i ng-if="vm.showHandle()" class="icon icon-navigation handle bl-link-handle"></i>
+                    <i class="icon {{node.icon}} hover-hide bl-link-icon"></i>
+                    <a href="#" class="bl-link" ng-click="vm.edit($index)" prevent-default>
+                        <div class="bl-link-text">{{node.sourceName}} {{node.name}}</div>
+                    </a>
+                    <a href="#" class="hover-show bl-link-remove" ng-click="vm.remove($index)" prevent-default><i class="icon icon-delete red"></i></a>
+                </div>
+            </li>
+        </ul>
+        <ul class="unstyled list-icons">
+            <li>
+                <label>Source name: <input type="text" ng-model="vm.sourceName" class="umb-editor umb-textstring"/></label>
+                <i class="icon icon-add blue"></i>
+                <a href="#" ng-click="vm.addTreeSource()" prevent-default>
+                    <localize key="blueleetGeneral_add">Add</localize>
+                </a>
+            </li>
+        </ul>
+    </ng-form>
+    <umb-overlay ng-if="vm.overlay.show"
+                 model="vm.overlay"
+                 view="vm.overlay.view"
+                 position="right">
+    </umb-overlay>
+</div>

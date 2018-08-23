@@ -1,0 +1,115 @@
+﻿#tinymce {
+    min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'opensans-light-webfont';
+    text-rendering: optimizeLegibility;
+    font-size: 14px;
+    font-weight: normal;
+    color: #212121;
+}
+
+    #tinymce h1, #tinymce h2, #tinymce h3, #tinymce h4 {
+        margin-top: 0;
+        font-weight: normal;
+    }
+
+    #tinymce h1 {
+        font-family: 'open_sansregular';
+        color: #363636;
+        font-size: 40px;
+        margin-bottom: 14px;
+    }
+
+    #tinymce h2 {
+        /*font-size:28px;
+    margin-bottom:17px;
+	font-weight: 100;*/
+        font-family: 'open_sanssemibold';
+        font-size: 24px;
+        margin-bottom: 9px;
+    }
+
+    #tinymce h3 {
+        font-family: 'open_sansregular';
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    #tinymce p, #tinymce ul, #tinymce ol {
+        line-height: 24px;
+        margin-bottom: 17px;
+    }
+
+    #tinymce a, #tinymce a:hover, #tinymce a:visited {
+        color: #9fce67;
+    }
+
+    #tinymce b, #tinymce strong {
+        font-family: 'open_sansbold';
+    }
+
+    #tinymce ul li, #tinymce ol li {
+        padding-left: 10px;
+    }
+
+    #tinymce hr {
+        border-top: 1px solid #d7d7d7;
+    }
+
+    #tinymce p {
+        margin: 0 0 10px;
+        color: #878787;
+    }
+
+@media (min-width: 480px) {
+    /*big mobile*/
+}
+
+@media (min-width: 768px) {
+    /*tablet*/
+    #tinymce h1 {
+        margin-bottom: 21px;
+    }
+
+    #tinymce h2 {
+        margin-bottom: 23px;
+    }
+
+    #tinymce p, #tinymce ul, #tinymce ol {
+        margin-bottom: 23px;
+    }
+
+    #tinymce hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    /*small desktop*/
+    #tinymce h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*large desktop*/
+    #tinymce hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 19px;
+}

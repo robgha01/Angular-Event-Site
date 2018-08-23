@@ -1,0 +1,8 @@
+﻿/*!
+ * This file contains references to the sass reference file for use with components.
+ */
+
+// Override the asset-base-path and set it to component context.
+// $asset-base-path: $asset-components-path;
+
+@import "../src/sass-reference.scss";

@@ -1,0 +1,66 @@
+﻿@using AngularEventSite.Web.Extensions
+@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.WidgetMovieMacroType>
+@{
+    if (Macro.Source == null)
+    {
+        return;
+    }
+
+    var playsInline = "playsinline";
+    var muted = "muted";
+    var preload = "preload";
+    string autoplay = null;
+    string loop = null;
+    string controls = null;
+
+    if (Macro.AutoPlay)
+    {
+        autoplay = "autoplay";
+    }
+
+    if (Macro.Loop)
+    {
+        loop = "loop";
+    }
+
+    if (Macro.Controls)
+    {
+        controls = "controls";
+    }
+
+}
+
+@if (this.IsPreviewMode())
+{
+    <video src="@Macro.Source.Url" @playsInline @muted @autoplay @loop @controls></video>
+
+    return;
+}
+
+<div class="video">
+    <video class="video-player" src="@Macro.Source.Url" @playsInline @muted @autoplay @loop @preload @controls></video>
+
+    @if (!string.IsNullOrEmpty(Macro.Heading) || !string.IsNullOrEmpty(Macro.Text))
+    {
+        <div class="video-player-overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1 text-center">
+                        @if (!string.IsNullOrEmpty(Macro.Heading))
+                        {
+                            <h1 class="heading main c5-text os-animation animated fadeInUp" data-os-animation="fadeInUp" data-os-animation-delay="0.1s" style="animation-delay: 0.1s;">@Macro.Heading</h1>
+                        }
+                        @if (!string.IsNullOrEmpty(Macro.Text))
+                        {
+                            <div class="text c4-text os-animation animated fadeInUp" data-os-animation="fadeInUp" data-os-animation-delay="0.2s" style="animation-delay: 0.2s;">
+                                <p>
+                                    <span class="intro">@Macro.Text</span>
+                                </p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

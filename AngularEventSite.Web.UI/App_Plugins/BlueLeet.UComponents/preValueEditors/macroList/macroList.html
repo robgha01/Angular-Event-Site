@@ -1,0 +1,7 @@
+<div class="umb-editor bl-module-macroList" ng-controller="BlueLeet.PropertyEditors.MacroListController">
+    <ul>
+        <li ng-repeat="macro in macros">
+            <label>{{macro.name}}:</label> <input type="checkbox" ng-checked="isSelected(macro)" ng-click="toggleMacro(macro)">
+        </li>
+    </ul>
+</div>

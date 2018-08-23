@@ -1,0 +1,10 @@
+﻿@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.ContactLinkMacroType>
+<div class="phone-link">
+    <div class="container">
+        @if (string.IsNullOrEmpty(Macro.PhoneNumber) == false)
+        {
+            <a href="tel:@Macro.PhoneNumber">
+                <i class="fa fa-phone" aria-hidden="true"></i> @Macro.PhoneText</a>
+        }
+    </div>
+</div>

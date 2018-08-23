@@ -1,0 +1,22 @@
+﻿/*!
+ *  Visual wrapper object
+ */
+
+.visual-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .visual {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+
+        img {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+}

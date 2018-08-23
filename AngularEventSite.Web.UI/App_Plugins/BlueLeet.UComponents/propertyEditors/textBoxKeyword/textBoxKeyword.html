@@ -1,0 +1,11 @@
+<div class="bl-module bl-module-textboxKeyword bl-module-default" data-ng-controller="BlueLeet.PropertyEditors.TextBoxKeywordController as vm">
+    <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+    <div class="usky-editor-placeholder" ng-if="!vm.loading">
+        <div data-ng-class="{'bl-tagbox-vertical': vm.alignVertical}" class="bl-component bl-component-tagbox bl-component-default" data-ng-repeat="item in vm.keywordList track by $index">
+            <div class="bl-tagbox-tag">{{item}} <i class="fa fa-remove" data-ng-click="vm.remove($index)"></i></div>
+        </div>
+        <div class="bl-keyword-wrapper">
+            <input class="umb-editor umb-textstring textstring" type="text" data-ng-model="vm.keyword" data-ng-keyup="vm.process($event)" data-ng-keypress="vm.handleKeypress($event)" no-Dirty-Check>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@inherits UmbracoViewPage<dynamic>
+@{
+    string align = null;
+    if (Model.value.align == "Left")
+    {
+        align = "pull-right";
+    }
+}
+
+<div class="module-imageAndText module">
+    <div class="imageAndText-row row">
+        <div class="imageAndText-titleSection col-xs-12 col-md-6 @align">
+            @if (Model.value.link == null)
+            {
+                <h2>@Model.value.title</h2>
+            }
+            else
+            {
+                <a href="@Model.value.link.url" target="@Model.value.link.target">
+                    <h2>@Model.value.title</h2>
+                </a>
+            }
+        </div>
+        <div class="imageAndText-imageSection col-xs-12 col-md-6">
+            @if (Model.value.link == null)
+            {
+                <img src="@Model.value.image.url" alt="@Model.value.image.alt" title="@Model.value.image.title">
+            }
+            else
+            {
+                <a href="@Model.value.link.url" target="@Model.value.link.target">
+                    <img src="@Model.value.image.url" alt="@Model.value.image.alt" title="@Model.value.image.title">
+                </a>
+            }
+        </div>
+        <div class="imageAndText-textSection col-xs-12 col-md-6 @align">
+            <div class="richTextStyle">
+                @Model.value.text
+            </div>
+        </div>
+    </div>
+</div>

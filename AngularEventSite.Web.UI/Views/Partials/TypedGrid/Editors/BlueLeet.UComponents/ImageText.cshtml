@@ -1,0 +1,50 @@
+﻿@using BlueLeet.UComponents.Core.GridValues;
+@using BlueLeet.UComponents.Core.GridConfig;
+@using BlueLeet.UComponents.Core.GridValues.GridComponents
+@using Skybrud.Umbraco.GridData.Rendering;
+@inherits UmbracoViewPage<GridControlWrapper<GridControlImageTextValue, GridEditorImageTextConfig>>
+@{
+    string alignTitleSection = null;
+    string alignImageSection = null;
+    if (Model.Value.Alignment == ImageTextAlignmentComponent.Left)
+    {
+        alignTitleSection = "push-sm-6 push-md-6 push-lg-6";
+        alignImageSection = "pull-sm-6 pull-md-6 pull-lg-6";
+    }
+}
+
+<div class="module-imageAndText module">
+    <div class="imageAndText-row row">
+        <div class="imageAndText-titleSection col-xs-12 col-sm-6 col-md-6 col-lg-6 @alignTitleSection">
+            @if (Model.Value.Link == null)
+            {
+                <h2>@Model.Value.Title</h2>
+            }
+            else
+            {
+                <a href="@Model.Value.Link.Url" target="@Model.Value.Link.Target">
+                    <h2>@Model.Value.Title</h2>
+                </a>
+            }
+            <div class="row">
+                <div class="imageAndText-textSection col-xs-12 col-md-12">
+                    <div class="richTextStyle">
+                        @Model.Value.Text
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imageAndText-imageSection col-xs-12 col-sm-6 col-md-6 col-lg-6 @alignImageSection">
+            @if (Model.Value.Link == null)
+            {
+                <img src="@Model.Value.Image.Url" alt="@Model.Value.Image.AltText" title="@Model.Value.Image.Title">
+            }
+            else
+            {
+                <a href="@Model.Value.Link.Url" target="@Model.Value.Link.Target">
+                    <img src="@Model.Value.Image.Url" alt="@Model.Value.Image.AltText" title="@Model.Value.Image.Title">
+                </a>
+            }
+        </div>
+    </div>
+</div>

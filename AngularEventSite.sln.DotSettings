@@ -1,0 +1,832 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeEditing/GenerateMemberBody/DocumentationGenerationKind/@EntryValue">Inherit</s:String>
+	<s:Boolean x:Key="/Default/CodeEditing/Intellisense/CodeCompletion/IntelliSenseCompletingCharacters/CSharpCompletingCharacters/UpgradedFromVSSettings/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=BelleIconPack_002Ecs/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=bootstrap_002Ecs/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=_002Anode_005Fmodules_002A/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=_002Anode_005Fmodules_002A/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=_002A_002Ets/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=_002A_002Ets/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FileMasksToSkip/=bootstrap_002Ecss/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=5879A652_002DFB54_002D4BEF_002DBC58_002DF24CF0CA5FFE_002Fd_003AModels_002Ff_003ABelleIconPack_002Ecs/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=8F8B33FB_002D1289_002D4F6A_002DAEED_002DB572CF31D384_002Fd_003Adist/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=8F8B33FB_002D1289_002D4F6A_002DAEED_002DB572CF31D384_002Fd_003A_002Eawcache/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=8F8B33FB_002D1289_002D4F6A_002DAEED_002DB572CF31D384_002Fd_003A_002Eawcache/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=8F8B33FB_002D1289_002D4F6A_002DAEED_002DB572CF31D384_002Fd_003Anode_005Fmodules/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AApp_005FPlugins_002Fd_003ABlueLeet_002EUComponents/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AStatic_002Fd_003Aassets/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AApp_005FPlugins_002Fd_003ABelleIconPack/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AApp_005FPlugins_002Fd_003ADiploTraceLogViewer/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AApp_005FPlugins_002Fd_003AModelsBuilder/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AApp_005FPlugins_002Fd_003Atooorangey_002EEditorNotes/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/AnalysisEnabled/@EntryValue">SOLUTION</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ArrangeThisQualifier/@EntryIndexedValue"></s:String>
+	<s:Boolean x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ArrangeThisQualifier/@EntryIndexRemoved">True</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=Html_002ETagNotResolved/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=PrivateMembersMustHaveComments/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=PublicMembersMustHaveComments/@EntryIndexedValue">HINT</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=StyleCop_002ESA1101/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=StyleCop_002ESA1126/@EntryIndexedValue">DO_NOT_SHOW</s:String>
+	<s:String x:Key="/Default/CodeInspection/TypeScriptInspections/Level/@EntryValue">TypeScript22</s:String>
+	<s:String x:Key="/Default/CodeStyle/AgentSmith/Comment/DictionaryName/@EntryValue">en-US, en-GB</s:String>
+	<s:String x:Key="/Default/CodeStyle/AgentSmith/CustomDictionary/CustomDictionaries/=en_002DUS/@EntryIndexedValue">&lt;data Name="en-US" CaseSensitive="False" Encoded="True" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeCleanup/Profiles/=StyleCop/@EntryIndexedValue">&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Profile name="StyleCop"&gt;&lt;CSArrangeQualifiers&gt;True&lt;/CSArrangeQualifiers&gt;&lt;CSOptimizeUsings&gt;&lt;OptimizeUsings&gt;True&lt;/OptimizeUsings&gt;&lt;EmbraceInRegion&gt;False&lt;/EmbraceInRegion&gt;&lt;RegionName&gt;&lt;/RegionName&gt;&lt;/CSOptimizeUsings&gt;&lt;CSReformatCode&gt;True&lt;/CSReformatCode&gt;&lt;CSReorderTypeMembers&gt;True&lt;/CSReorderTypeMembers&gt;&lt;StyleCop&gt;&lt;FixViolations&gt;True&lt;/FixViolations&gt;&lt;CreateXmlDocStubs&gt;True&lt;/CreateXmlDocStubs&gt;&lt;/StyleCop&gt;&lt;CSEnforceVarKeywordUsageSettings&gt;True&lt;/CSEnforceVarKeywordUsageSettings&gt;&lt;RemoveCodeRedundancies&gt;True&lt;/RemoveCodeRedundancies&gt;&lt;CSUseAutoProperty&gt;True&lt;/CSUseAutoProperty&gt;&lt;RemoveRedundantQualifiersTs&gt;True&lt;/RemoveRedundantQualifiersTs&gt;&lt;OptimizeImportsTs&gt;True&lt;/OptimizeImportsTs&gt;&lt;OptimizeReferenceCommentsTs&gt;True&lt;/OptimizeReferenceCommentsTs&gt;&lt;PublicModifierStyleTs&gt;True&lt;/PublicModifierStyleTs&gt;&lt;ExplicitAnyTs&gt;True&lt;/ExplicitAnyTs&gt;&lt;TypeAnnotationStyleTs&gt;True&lt;/TypeAnnotationStyleTs&gt;&lt;RelativePathStyleTs&gt;True&lt;/RelativePathStyleTs&gt;&lt;CSCodeStyleAttributes ArrangeTypeAccessModifier="False" ArrangeTypeMemberAccessModifier="False" SortModifiers="False" RemoveRedundantParentheses="True" AddMissingParentheses="False" ArrangeBraces="False" ArrangeAttributes="False" ArrangeArgumentsStyle="False" /&gt;&lt;CSUpdateFileHeader&gt;True&lt;/CSUpdateFileHeader&gt;&lt;/Profile&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeCleanup/RecentlyUsedProfile/@EntryValue">StyleCop</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/CSharpCodeStyle/ThisQualifier/INSTANCE_MEMBERS_QUALIFY_MEMBERS/@EntryValue">None</s:String>
+	<s:String x:Key="/Default/CodeStyle/CodeFormatting/HtmlFormatter/TagsAreNotIndentedInside/@EntryValue">thead,tbody,tfoot</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/Generate/=EqualityMembers/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/CodeStyle/Generate/=EqualityMembers/Options/=ChangeEquals/@EntryIndexedValue">Skip</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=EqualityMembers/Options/=ChangeGetHashCode/@EntryIndexedValue">Replace</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=EqualityMembers/Options/=EqualityOperators/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/CodeStyle/Generate/=EqualityMembers/Options/=ImplementIEquatable/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FBLOCK_005FSCOPE_005FCONSTANT/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FBLOCK_005FSCOPE_005FFUNCTION/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FBLOCK_005FSCOPE_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FCLASS/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FCONSTRUCTOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FFUNCTION/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FGLOBAL_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FLABEL/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FLOCAL_005FCONSTRUCTOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FLOCAL_005FVARIABLE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FOBJECT_005FPROPERTY_005FOF_005FFUNCTION/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=JS_005FPARAMETER/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FCLASS/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FENUM/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FENUM_005FMEMBER/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FINTERFACE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="I" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FMODULE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FMODULE_005FEXPORTED/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FMODULE_005FLOCAL/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FMEMBER_005FACCESSOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FSTATIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPRIVATE_005FTYPE_005FMETHOD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FMEMBER_005FACCESSOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FSTATIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPROTECTED_005FTYPE_005FMETHOD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FMEMBER_005FACCESSOR/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FSTATIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FTYPE_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FPUBLIC_005FTYPE_005FMETHOD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/JavaScriptNaming/UserRules/=TS_005FTYPE_005FPARAMETER/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="T" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FHTML_005FCONTROL/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FTAG_005FNAME/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/WebNaming/UserRules/=ASP_005FTAG_005FPREFIX/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/XamlNaming/UserRules/=NAMESPACE_005FALIAS/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="aaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/XamlNaming/UserRules/=XAML_005FFIELD/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/Naming/XamlNaming/UserRules/=XAML_005FRESOURCE/@EntryIndexedValue">&lt;Policy Inspect="True" Prefix="" Suffix="" Style="AaBb" /&gt;</s:String>
+	<s:String x:Key="/Default/CodeStyle/TypeScriptCodeStyle/ImportReferenceStyle/@EntryValue">ECMAScript6</s:String>
+	<s:Boolean x:Key="/Default/CodeStyle/TypeScriptCodeStyle/PreferUsingAliases/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeStyle/TypeScriptCodeStyle/PreferUsingModuleAliases/@EntryValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/ExcludedFiles/FilesAndFoldersThirdParty/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AUmbraco/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/ExcludedFiles/FilesAndFoldersThirdParty/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AUmbraco/@EntryIndexRemoved">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/ExcludedFiles/FilesAndFoldersToSkip/=6CB335B9_002D322E_002D4B22_002D89D1_002D744469023F70_002Ff_003Atslint_002Ejson/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/ExcludedFiles/FilesAndFoldersToSkip/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AApp_005FPlugins/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/ExcludedFiles/FilesAndFoldersToSkip/=C21865A9_002DD208_002D410A_002DBFF3_002D7EEC4474F85E_002Fd_003AUmbraco/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/ExternalSources/PdbNavigation/FolderSubstitutions/=Bootstrap_00203/@EntryIndexedValue">https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css</s:String>
+	<s:String x:Key="/Default/Environment/Hierarchy/PsiConfigurationSettingsKey/CustomLocation/@EntryValue">C:\Users\rober\AppData\Local\JetBrains\Transient\ReSharperPlatformVs15\v09_0f400868\SolutionCaches</s:String>
+	<s:Int64 x:Key="/Default/Environment/SpellCheck/UserEntries/=bl/@EntryIndexedValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/Environment/SettingsMigration/IsMigratorApplied/=JetBrains_002EReSharper_002EPsi_002EJavaScript_002ECodeStyle_002ETypeScript_002ESettingsUpgrade_002ETsModuleAliasesSettingsUpgrader/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/Housekeeping/ProjectModelSynchronizer/UseMsbuildStrategy/@EntryValue">NEVER</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Description/@EntryValue">Code snippet for writing Gulp tasks</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Field/=file/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Field/=file/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Shortcut/@EntryValue">gulpwcb</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=04226B0D7B677543B22D098967B32981/Text/@EntryValue">gulp.watch("$file$", function(event) {&#xD;
+    console.log(" File "event.path+" was "+event.type+", running tasks...");&#xD;
+    $END$&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Description/@EntryValue">Angular 2 service snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Field/=ServiceName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Field/=ServiceName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Shortcut/@EntryValue">ng2Service</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1275AE81749DAD4C812E6B7171BB5E10/Text/@EntryValue">import { Injectable } from "@angular/core";&#xD;
+&#xD;
+@Injectable()&#xD;
+export class $ServiceName$Service {&#xD;
+	$END$&#xD;
+	constructor() { }&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Description/@EntryValue">Angular 2 [(ngModel)] snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Field/=binding/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Field/=binding/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Shortcut/@EntryValue">ng2Model</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=156E7513FF3C384A9AF47099B5B5E508/Text/@EntryValue">[(ngModel)]="$binding$"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Description/@EntryValue">Code snippet for writing Gulp tasks</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Field/=name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Field/=task/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Field/=task/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Shortcut/@EntryValue">gulptaskdep</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=172DB5C33B4B124A86B29AFAB10BA6FA/Text/@EntryValue">gulp.task("$name$", ["$task$"], function () {&#xD;
+    $END$&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Description/@EntryValue">Angular 2 @Output event snippet (import Output and EventEmitter from @angular/core to use)</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Field/=eventDataType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Field/=eventDataType/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Field/=eventName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Field/=eventName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Shortcut/@EntryValue">ng2OutputEvent</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=2184305D7095184EB4DFFD250486667C/Text/@EntryValue">@Output() $eventName$: EventEmitter&lt;$eventDataType$&gt; = new EventEmitter&lt;$eventDataType$&gt;();</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Description/@EntryValue">Angular 2 observable subscribe snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=functionName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=functionName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=paramName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=paramName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=paramType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=paramType/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=serviceName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Field/=serviceName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Shortcut/@EntryValue">ng2Subscribe</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=24A9613D48FD0B478E11050E0DE2AFD7/Text/@EntryValue">this.$serviceName$.$functionName$&#xD;
+	.subscribe(($paramName$: $paramType$) =&gt; {&#xD;
+		$END$&#xD;
+	});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Description/@EntryValue">Code snippet for writing Gulp tasks.</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Field/=name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Shortcut/@EntryValue">gulptask</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=26BCCCDD30B7024890E9109FC96DE437/Text/@EntryValue">gulp.task("$name$", function () {&#xD;
+    $END$&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Description/@EntryValue">Angular 2 @Input property snippet (import Input from @angular/core to use)</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Field/=propertyName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Field/=propertyName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Field/=propertyType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Field/=propertyType/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Shortcut/@EntryValue">ng2InputProperty</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32A75F6F08EFA14C8BF7C7DD89D235E9/Text/@EntryValue">@Input() $propertyName$: $propertyType$;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Description/@EntryValue">Angular 2 Http module import snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Shortcut/@EntryValue">ng2HttpImport</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=32CC870CEA6ADB46B5BB871084F791BB/Text/@EntryValue">import { Http, Response } from "@angular/http";</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Description/@EntryValue">Angular 2 routerLink with a route parameter snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Field/=routeParameterValue/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Field/=routeParameterValue/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Field/=routePath/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Field/=routePath/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Shortcut/@EntryValue">ng2RouterLinkWithParameter</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=339793736789F34EACE9D9EC7BDE4A74/Text/@EntryValue">[routerLink]="['$routePath$',$routeParameterValue$$END$]"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Description/@EntryValue">Angular 2 *ngFor snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Field/=item/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Field/=item/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Field/=list/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Field/=list/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Shortcut/@EntryValue">ng2For</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3AC0BD50149C1D4A9BE23F455A6F702C/Text/@EntryValue">*ngFor="let $item$ of $list$"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Description/@EntryValue">Angular 2 *ngIf snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Field/=expression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Field/=expression/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Shortcut/@EntryValue">ng2If</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=3B383FF46F9C9C418F736796E42697D9/Text/@EntryValue">*ngIf="$expression$"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Description/@EntryValue">Code snippet for gulpfile.js</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Field/=plugin/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Field/=plugin/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Field/=src/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Field/=src/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Shortcut/@EntryValue">gulpsrc</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=42E677AF97B7C74C967DE8306592E2D4/Text/@EntryValue">gulp.src("$src$")&#xD;
+        .pipe($plugin$)$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Description/@EntryValue">Angular 2 [style] binding snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Field/=expression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Field/=expression/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Field/=property/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Field/=property/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Shortcut/@EntryValue">ng2StyleBinding</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=448B22B6D9CB0541A1376306FD88BA8F/Text/@EntryValue">[style.$property$]="$expression$"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Description/@EntryValue">Angular 2 root app module (@NgModule) snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Shortcut/@EntryValue">ng2AppModule</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=4D03EFFE3A67B54EA4614181E3CCF320/Text/@EntryValue">import { NgModule } from '@angular/core';&#xD;
+import { BrowserModule } from '@angular/platform-browser';&#xD;
+import { ${appComponentName} } from './${path}/${fileName}.component';&#xD;
+$END$&#xD;
+@NgModule({&#xD;
+	imports: [ BrowserModule ],&#xD;
+	declarations: [ ${appComponentName} ],&#xD;
+	bootstrap:    [ ${appComponentName} ]&#xD;
+})&#xD;
+export class AppModule { }</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Description/@EntryValue">Angular 2 pipe snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=argsType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=argsType/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=PipeName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=PipeName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=valueType/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Field/=valueType/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Shortcut/@EntryValue">ng2Pipe</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=524E2CFE24F5F944BBEBF361169D3E47/Text/@EntryValue">import { Pipe, PipeTransform } from "@angular/core";&#xD;
+&#xD;
+@Pipe({&#xD;
+	name: "$name$"&#xD;
+})&#xD;
+export class $PipeName$Pipe implements PipeTransform {&#xD;
+	transform(value: $valueType$, args: $argsType$) {&#xD;
+		$END$&#xD;
+	}&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Description/@EntryValue">Angular 2 [ngStyle] snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Field/=expression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Field/=expression/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Field/=style/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Field/=style/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Shortcut/@EntryValue">ng2Style</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=528497F7FC8B124F859CB83571B73985/Text/@EntryValue">[ngStyle]="{$style$: $expression$}"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Description/@EntryValue">Angular 2 basic routerLink snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Field/=routeName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Field/=routeName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Shortcut/@EntryValue">ng2RouterLink</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=57C1F8BF0B9F214984080B355A3DB32D/Text/@EntryValue">routerLink="$routeName$"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Description/@EntryValue">Angular 2 [class] binding snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Field/=expression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Field/=expression/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Shortcut/@EntryValue">ng2ClassBinding</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=66D0B4BC4A4612489353278E03DBB182/Text/@EntryValue">[class]="$expression$"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Description/@EntryValue">Code snippet for gulpfile.js</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Field/=folder/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Field/=folder/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Shortcut/@EntryValue">gulpdest</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=7101F8113DC7BD4EBA6FAF2EB596E56D/Text/@EntryValue">.pipe(gulp.dest("$folder$"));$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Description/@EntryValue">Code snippet for gulpfile.js</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Shortcut/@EntryValue">gulpvar</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=89AE0E8AD776844B9836CDE6FE0BD149/Text/@EntryValue">var gulp = require("gulp");$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Categories/=angularjs/@EntryIndexedValue">angularjs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Categories/=angularjs_002Dscope/@EntryIndexedValue">angularjs-scope</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Description/@EntryValue">Define a $boradcast for a $scope inside an Angular Controller</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Field/=eventArgs/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Field/=eventArgs/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Field/=eventName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Field/=eventName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Scope/=004FB10A5C4D41449328DB4C9C27BED3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Scope/=004FB10A5C4D41449328DB4C9C27BED3/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Scope/=004FB10A5C4D41449328DB4C9C27BED3/Type/@EntryValue">InTypeScriptStatement</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Scope/=3C1322ECA9DA8846892FCF908DDAFEE7/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Scope/=3C1322ECA9DA8846892FCF908DDAFEE7/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Scope/=3C1322ECA9DA8846892FCF908DDAFEE7/Type/@EntryValue">InJavaScriptStatement</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Shortcut/@EntryValue">$b</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9A850F248340594A8C804BC3E9F48936/Text/@EntryValue">$scope.$broadcast('$eventName$', $eventArgs$);&#xD;
+$END$</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9ACA7095E1A3BA4987EC0D500E804AC6/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9ACA7095E1A3BA4987EC0D500E804AC6/Scope/=004FB10A5C4D41449328DB4C9C27BED3/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=9ACA7095E1A3BA4987EC0D500E804AC6/Scope/=3C1322ECA9DA8846892FCF908DDAFEE7/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Description/@EntryValue">Angular 2 root routes snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Field/=Component/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Field/=Component/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Field/=routePath/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Field/=routePath/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Shortcut/@EntryValue">ng2Routes</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A32C5AD85809B946B9F05E728334BF95/Text/@EntryValue">import { RouterModule, Routes } from "@angular/router";&#xD;
+&#xD;
+const routes: Routes = [&#xD;
+	{ path: "$routePath$", component: $Component$ },$END$&#xD;
+	{ path: "**", pathMatch:"full", redirectTo: "$routePath$" }&#xD;
+];&#xD;
+&#xD;
+export const appRouting = RouterModule.forRoot(routes);&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Description/@EntryValue">Code snippet for writing Gulp tasks</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Field/=file/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Field/=file/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Field/=tasks/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Field/=tasks/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Shortcut/@EntryValue">gulpwatch</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A860464A8F506E4DB160879D685AF620/Text/@EntryValue">gulp.watch("$file$", ["$tasks$"]);$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Categories/=UCodeFirst/@EntryIndexedValue">UCodeFirst</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/CustomProperties/=FileName/@EntryIndexedValue">PageModel</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/CustomProperties/=ValidateFileName/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Description/@EntryValue">UCodeFirst Page Model</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=DisplayName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=DisplayName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=FileName/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=FileName/Expression/@EntryValue">getFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=FileName/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=FileName/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=Icon/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=Icon/Expression/@EntryValue">list("ZoomOut,Truck,ZoomIn,Zip,AxisRotation,YenBag,AxisRotation2,AxisRotation3,Wrench,WineGlass,Wrong,Windows,WindowSizes,WindowPopin,Wifi,Width,Weight,War,Wand,Wallet,WallPlug,Voice,Video,Vcard,Utilities,Users,UsersAlt,User,UserGlasses,UserFemales,UserFemalesAlt,UserFemale,Usb,UsbConnector,Unlocked,Universal,Undo,Umbrella,UmbDeploy,UmbContour,UmbSettings,UmbUsers,UmbMedia,UmbContent,UmbDeveloper,UmbMembers,UmbTranslation,Tv,TvOld,Trophy,Tree,Trash,TrashAlt,TrashAlt2,Train,Trafic,TrafficAlt,Top,Tools,Timer,Time,Tshirt,TabKey,Tab,Tactics,Tag,Tags,TakeawayCup,Target,TemperatrureAlt,Temperature,Terminal,Theater,Theif,ThoughtBubble,ThumbDown,ThumbUp,ThumbnailList,ThumbnailsSmall,Thumbnails,Ticket,Sync,Sweatshirt,Sunny,Stream,Store,Stop,StopHand,StopAlt,Stamp,StackedDisks,Ssd,SquigglyLine,Sprout,Split,SplitAlt,SpeedGauge,Speaker,Sound,Spades,SoundWaves,ShippingBox,Shipping,Shoe,ShoppingBasketAlt2,ShoppingBasket,ShoppingBasketAlt,Shorts,Shuffle,Sience,Simcard,SingleNote,Sitemap,Sleep,Slideshow,SmileyInverted,Smiley,Snow,SoundLow,SoundMedium,SoundOff,Shift,Shield,SharingIphone,Share,ShareAlt,ShareAlt2,Settings,SettingsAlt,SettingsAlt2,Server,ServerAlt,Sensor,SecurityCamera,Search,Scull,Script,ScriptAlt,Screensharing,School,Scan,Refresh,Remote,Remove,RepeatOne,Repeat,Resize,ReplyArrow,ReturnToTop,RightDoubleArrow,Road,Roadsign,Rocket,Rss,RulerAlt,Ruler,SandboxToys,SatelliteDish,Save,Safedial,Safe,Redo,PrinterAlt,Planet,PasteIn,OsX,NavigationLeft,Message,Lock,LayersAlt,Record,Print,Plane,PartlyCloudy,OrderedList,NavigationLast,MessageUnopened,LocationNearby,Laptop,Reception,PriceYen,Piracy,ParentalControl,Operator,NavigationHorizontal,MessageOpen,Lab,LocationNearMe,ReceiptYen,PricePound,PinLocation,ParachuteDrop,OldPhone,Merge,NavigationFirst,Locate,Keyhole,ReceiptPound,PriceEuro,PiggyBank,PaperPlane,OldKey,NavigationDown,Megaphone,Loading,Keychain,ReceiptEuro,PriceDollar,PieChart,PaperPlaneAlt,Notepad,NavigationBottom,Meeting,Keyboard,Load,ReceiptDollar,Previous,Pictures,NotepadAlt,PaperBag,NameBadge,Medicine,List,Key,ReceiptAlt,PreviousMedia,PicturesAlt,Pants,Nodes,Music,Readonly,Presentation,PicturesAlt2,PannelClose,Next,MultipleWindows,MedicalEmergency,Medal,Link,LinuxTux,Junk,ItemArrangement,Iphone,Lightning,Map,MultipleCreditCards,NextMedia,PanelShow,Picture,Power,RePost,Rate,Rain,Radio,RadioReceiver,RadioAlt,Quote,QrCode,Pushpin,Pulse,Projector,Play,PlayingCards,Playlist,Plugin,Podcast,PokerChip,Poll,PostIt,PoundBag,PowerOutlet,PhotoAlbum,Phone,PhoneRing,People,PeopleFemale,PeopleAlt,PeopleAlt2,Pc,Pause,Path,Out,Outbox,Outdent,PageAdd,PageDown,PageRemove,PageRestricted,PageUp,PaintRoller,Palette,Newspaper,NewspaperAlt,NetworkAlt,NavigationalArrow,Navigation,NavigationVertical,NavigationUp,NavigationTop,NavigationRoad,NavigationRight,Microscope,Mindmap,MolecularNetwork,Molecular,Mountain,MouseCursor,Mouse,MovieAlt,MapMarker,Movie,MapLoaction,MapAlt,MaleSymbol,MaleAndFemale,Mailbox,Magnet,Loupe,Mobile,Logout,LogOut,Layers,LeftDoubleArrow,Layout,Legal,Lense,Library,LightDown,LightUp,LightbulbActive,Lightbulb,Ipad,Invoice,Info,Infinity,Indent,Inbox,InboxFull,InactiveLine,Imac,Hourglass,Home,Grid,Food,Favorite,DoorOpenAlt,Diagnostics,Contrast,CoinsDollarAlt,CircleDottedActive,Cinema,Chip,ChipAlt,Chess,Checkbox,CheckboxEmpty,CheckboxDotted,CheckboxDottedActive,Check,Chat,ChatActive,Chart,ChartCurve,Certificate,Categories,CashRegister,Car,CapsLock,Candy,CircleDotted,Circuits,Circus,Client,ClothesHanger,CloudDrive,CloudUpload,Cloud,Cloudy,Clubs,Cocktail,Code,Coffee,CoinDollar,CoinPound,CoinYen,Coin,CoinsAlt,Console,Connection,Compress,Company,Command,CoinEuro,CombinationLock,CombinationLockOpen,Comb,Columns,Colorpicker,ColorBucket,Coins,CoinsYen,CoinsYenAlt,CoinsPound,CoinsPoundAlt,CoinsEuro,CoinsEuroAlt,CoinsDollar,ConversationAlt,Conversation,Coverflow,CreditCardAlt,CreditCard,Crop,Crosshair,CrownAlt,Crown,Cupcake,Curve,Cut,Dashboard,Defrag,Delete,DeleteKey,Departure,Desk,Desktop,Donate,DollarBag,Documents,Document,DocumentDashedLine,DockConnector,Dna,Display,DiskImage,Disc,Directions,DirectionsAlt,Diploma,DiplomaAlt,Dice,Diamonds,Diamond,DiagonalArrow,DiagonalArrowAlt,DoorOpen,DownloadAlt,Download,Drop,Eco,Economy,Edit,Eject,Employee,EnergySavingBulb,Enter,Equalizer,Escape,Ethernet,EuroBag,ExitFullscreen,Eye,FacebookLike,Factory,Font,Folders,Folder,FolderOutline,FolderOpen,Flowerpot,Flashlight,Flash,Flag,FlagAlt,Firewire,Firewall,Fire,Fingerprint,Filter,FilterArrows,Files,FileCabinet,FemaleSymbol,Footprints,Hammer,HandActiveAlt,Forking,HandActive,HandPointerAlt,HandPointer,Handprint,Handshake,Handtool,HardDrive,Help,Graduate,Gps,HelpAlt,Height,Globe,Hearts,GlobeInvertedEuropeAfrica,Headset,GlobeInvertedAsia,Headphones,GlobeInvertedAmerica,Hd,GlobeEuropeAfrica,Hat,GlobeAsia,GlobeAlt,HardDriveAlt,Glasses,Gift,HandtoolAlt,Geometry,Game,Fullscreen,FullscreenAlt,Frame,FrameAlt,CameraRoll,Bookmark,Bill,BabyStroller,AlarmClock,Adressbook,Add,Activity,Untitled,Camcorder,Calendar,CalendarAlt,Calculator,Bus,Burn,BulletedList,Bug,Brush,BrushAlt,BrushAlt2,BrowserWindow,Briefcase,Brick,Brackets,Box,BoxOpen,BoxAlt,Books,Billboard,BillsDollar,BillsEuro,BillsPound,BillsYen,Bills,Binarycode,Binoculars,Bird,BirthdayCake,Blueprint,Block,Bluetooth,BoatShipping,Bomb,BookAlt2,Bones,BookAlt,Book,BillYen,Award,BillPound,Autofill,BillEuro,AuctionHammer,BillDollar,Attachment,Bell,Article,BellOff,ArtEasel,BeerGlass,ArrowUp,BatteryLow,ArrowRight,BatteryFull,ArrowLeft,Bars,ArrowDown,Barcode,Arrivals,BarChart,ApplicationWindow,BandAid,ApplicationWindowAlt,Ball,ApplicationError,BadgeRestricted,App,BadgeRemove,Anchor,BadgeCount,Alt,BadgeAdd,Alert,Backspace,AlertAlt,ChevronUp,ChevronDown")</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=Icon/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Field/=NAMESPACE/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Section/=1A5775E3BE4D6240A539B6C62BA53693/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Section/=1A5775E3BE4D6240A539B6C62BA53693/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig Project="SpecialistHjalpen.UI" Folder="Views" File="$NAME$.cshtml" /&gt;</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Section/=1A5775E3BE4D6240A539B6C62BA53693/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Section/=1A5775E3BE4D6240A539B6C62BA53693/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Section/=1A5775E3BE4D6240A539B6C62BA53693/SectionPlain/Text/@EntryValue">@inherits UmbracoViewPage&lt;$NAMESPACE$.$FileName$&gt;&#xD;
+@{&#xD;
+	Layout = null;&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B21D5068153CE14BBED4B7668485630A/Text/@EntryValue">$HEADER$namespace $NAMESPACE$&#xD;
+{&#xD;
+    using System.Globalization;&#xD;
+&#xD;
+    using BlueLeet.UCodeFirst;&#xD;
+    using BlueLeet.UCodeFirst.ContentTypes;&#xD;
+&#xD;
+    using Umbraco.Core.Models;&#xD;
+&#xD;
+    [ContentType(DisplayName = "$DisplayName$", Icon = Icon.$Icon$)]&#xD;
+    public class $FileName$ : UCodeFirstContentTypeBase&#xD;
+    {&#xD;
+        /// &lt;inheritdoc/&gt;&#xD;
+        public $FileName$(IPublishedContent content, CultureInfo culture) : base(content, culture) {}&#xD;
+&#xD;
+        /// &lt;inheritdoc/&gt;&#xD;
+        public $FileName$(IPublishedContent content) : base(content) {}$END$&#xD;
+    }&#xD;
+}</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Description/@EntryValue">Angular 2 CanDeactivate Routing Guard</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Field/=ComponentToGuard/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Field/=ComponentToGuard/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Field/=filePath/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Field/=filePath/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Shortcut/@EntryValue">ng2CanDeactivateRoutingGuard</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=B7575CF398705441B1E5639C9AD47043/Text/@EntryValue">import { Injectable } from "@angular/core";&#xD;
+import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from "@angular/router";&#xD;
+import { Observable } from "rxjs/Observable";&#xD;
+import { $ComponentToGuard$ } from "$filePath$.component";&#xD;
+&#xD;
+@Injectable()&#xD;
+export class CanDeactivateGuard implements CanDeactivate&lt;$ComponentToGuard$&gt; {&#xD;
+	canDeactivate(&#xD;
+		route: ActivatedRouteSnapshot,&#xD;
+		state: RouterStateSnapshot&#xD;
+	) : Observable&lt;boolean&gt; | Promise&lt;boolean&gt; | boolean {&#xD;
+		$END$&#xD;
+	}&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Description/@EntryValue">Angular 2 ngForm snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Field/=functionName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Field/=functionName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Field/=templateVariableName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Field/=templateVariableName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Shortcut/@EntryValue">ng2Form</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=BC9BDB1B999E864ABCE315007DDCCDCE/Text/@EntryValue">&lt;form #$templateVariableName$="ngForm" (ngSubmit)="$functionName$"&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Description/@EntryValue">Code snippet for writing Gulp tasks</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=files/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=files/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=folder/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=folder/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=plugin/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=plugin/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=tasks/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Field/=tasks/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Shortcut/@EntryValue">gulptaskfull</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C21C6E85C8B50645B1FCB7CB74A15C7B/Text/@EntryValue">gulp.task("$name$",["$tasks$"], function() {&#xD;
+    gulp.src("$files$")&#xD;
+        .pipe($plugin$())&#xD;
+        .pipe(gulp.dest("$folder$"));&#xD;
+});$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Description/@EntryValue">Create a UCodeFirst page model property.</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Content/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Content/Expression/@EntryValue">complete()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Content/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Description/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Description/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=DisplayName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=DisplayName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=PropertyName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=PropertyName/Order/@EntryValue">5</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Textstring/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Textstring/Expression/@EntryValue">complete()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Textstring/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Type/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Field/=Type/Order/@EntryValue">4</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Scope/=C3001E7C0DA78E4487072B7E050D86C5/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Scope/=C3001E7C0DA78E4487072B7E050D86C5/CustomProperties/=minimumLanguageVersion/@EntryIndexedValue">2.0</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Scope/=C3001E7C0DA78E4487072B7E050D86C5/Type/@EntryValue">InCSharpFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Shortcut/@EntryValue">cfprop</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=C8E62D71ABA2C4448482C3C1B13EAC47/Text/@EntryValue">[Property(UmbracoDefaultDataType.$Textstring$, Tab.$Content$, DisplayName = "$DisplayName$", Description = "$Description$")]
+public virtual $Type$ $PropertyName$ { get; set; }$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Description/@EntryValue"> task</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Field/=name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Scope/=FFA15E6CFCBE90499C572A859225B012/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Scope/=FFA15E6CFCBE90499C572A859225B012/CustomProperties/=availableInTypeScript/@EntryIndexedValue">False</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Scope/=FFA15E6CFCBE90499C572A859225B012/Type/@EntryValue">InJavaScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Shortcut/@EntryValue">gulp-task</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CEE5FF123CA5E54F95456D27E2749540/Text/@EntryValue">gulp.task("$name$", function () {&#xD;
+    $END$&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Description/@EntryValue">Angular 2 component snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Field/=ComponentName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Field/=ComponentName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Field/=fileName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Field/=fileName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Field/=selector/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Field/=selector/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Shortcut/@EntryValue">ng2Component</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=D28B75125B7EF343A8C0F1BD2DD90C9B/Text/@EntryValue">import { Component, OnInit } from "@angular/core";&#xD;
+&#xD;
+@Component({&#xD;
+	moduleId: module.id,&#xD;
+	selector: "$selector$",&#xD;
+	templateUrl: "$fileName$.component.html"&#xD;
+})&#xD;
+export class $ComponentName$Component implements OnInit {&#xD;
+	$END$&#xD;
+	constructor() {}&#xD;
+&#xD;
+	ngOnInit() { &#xD;
+&#xD;
+	}&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Description/@EntryValue">Angular 2 bootstrap app module using platformBrowserDynamic snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Field/=appModuleName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Field/=appModuleName/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Field/=fileName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Field/=fileName/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Field/=path/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Field/=path/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Shortcut/@EntryValue">ng2Bootstrap</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=DA50868F5BB58448BF2F6C24C5CCEBAE/Text/@EntryValue">import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";&#xD;
+import { enableProdMode } from "@angular/core";&#xD;
+import { $appModuleName$ } from "./$path$/$fileName$.component";&#xD;
+&#xD;
+//enableProdMode(); //Uncomment for production&#xD;
+&#xD;
+platformBrowserDynamic().bootstrapModule(($appModuleName$);</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Description/@EntryValue">Angular 2 [ngClass] snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Field/=cssClass/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Field/=cssClass/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Field/=expression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Field/=expression/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Shortcut/@EntryValue">ng2Class</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E2722268C3F3944C9185EAF1D8B610B3/Text/@EntryValue">[ngClass]="{$cssClass$: $expression$}"</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Categories/=gulp/@EntryIndexedValue">gulp</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Description/@EntryValue">Code snippet for gulpfile.js</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Field/=name/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Field/=name/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Scope/=CF7C2F2066E462418ABD91975B64021C/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Scope/=CF7C2F2066E462418ABD91975B64021C/CustomProperties/=mask/@EntryIndexedValue">gulpfile.js</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Scope/=CF7C2F2066E462418ABD91975B64021C/Type/@EntryValue">InFileWithMask</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Shortcut/@EntryValue">gulp</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E6DC2D3C9AB2064899405D31AF4EDDCE/Text/@EntryValue">var gulp = require("gulp");&#xD;
+gulp.task("$name$", function () {&#xD;
+    $END$&#xD;
+});</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Description/@EntryValue">Angular 2 route definition snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Field/=Component/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Field/=Component/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Field/=routePath/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Field/=routePath/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Shortcut/@EntryValue">ng2Route</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E7FAD9582822434BB5B048EF950D4393/Text/@EntryValue">{ path: "$routePath$", component: $Component$ }$END$</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Description/@EntryValue">Angular 2 Http service snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Field/=ServiceName/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Field/=ServiceName/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Shortcut/@EntryValue">ng2HttpService</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F18F3E8A8A23A94480B7C3411DAEBBD6/Text/@EntryValue">import { Injectable } from "@angular/core";&#xD;
+import { Http, Response } from "@angular/http";&#xD;
+import { Observable } from "rxjs/Observable";&#xD;
+import "rxjs/add/operator/map";&#xD;
+import "rxjs/add/operator/catch";&#xD;
+&#xD;
+@Injectable()&#xD;
+export class $ServiceName$Service {&#xD;
+	$END$&#xD;
+	constructor(private http: Http) { }&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Description/@EntryValue">Angular 2 [ngSwitch] snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=conditionExpression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=conditionExpression/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=expression/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=expression/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=output/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=output/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=output2/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Field/=output2/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Shortcut/@EntryValue">ng2Switch</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F5451B01710CED4EA2D25DB6149509AD/Text/@EntryValue">&lt;div [ngSwitch]="$conditionExpression$"&gt;&#xD;
+	&lt;div *ngSwitchCase="$expression$"&gt;$output$&lt;/div&gt;&#xD;
+	&lt;div *ngSwitchDefault&gt;$output2$&lt;/div&gt;&#xD;
+&lt;/div&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Description/@EntryValue">Angular 2 &lt;select&gt; control using *ngFor snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=changeFunction/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=changeFunction/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=item/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=item/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=list/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=list/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=selectFunction/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Field/=selectFunction/Order/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Scope/=A14108D8199BD94191FC02A2809F1F3D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Scope/=A14108D8199BD94191FC02A2809F1F3D/Type/@EntryValue">InHtmlLikeFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Shortcut/@EntryValue">ng2Select</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F8937CE9D056ED46BE4DB52D8EEFFFD9/Text/@EntryValue">&lt;select (change)="$changeFunction$($event)"&gt;&#xD;
+	&lt;option *ngFor="let $item$ of $list$" [value]="$item$" [selected]="$selectFunction$($item$)"&gt;{{$item$}}&lt;/option&gt;&#xD;
+&lt;/select&gt;</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Applicability/=Live/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Categories/=angular2/@EntryIndexedValue">angular2</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Description/@EntryValue">Angular 2 Http map snippet</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Field/=errorFunction/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Field/=errorFunction/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Field/=function/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Field/=function/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Field/=url/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Field/=url/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Scope/=5A0CCA3880C9804BAC3D41971816B786/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Scope/=5A0CCA3880C9804BAC3D41971816B786/CustomProperties/=availableInTypeScript/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Scope/=5A0CCA3880C9804BAC3D41971816B786/Type/@EntryValue">InTypeScriptFile</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Shortcut/@EntryValue">ng2HttpMap</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F991DBCF7D2F9947A13D991D4D421AD8/Text/@EntryValue">// ensure imports are included&#xD;
+// import { Http, Response } from "@angular/http";&#xD;
+// import "rxjs/add/operator/map";&#xD;
+return this.http.$function$($url$)&#xD;
+		   .map((res: Response) =&gt; {&#xD;
+				return res.json();&#xD;
+			})&#xD;
+			.catch(this.$errorFunction$);</s:String></wpf:ResourceDictionary>

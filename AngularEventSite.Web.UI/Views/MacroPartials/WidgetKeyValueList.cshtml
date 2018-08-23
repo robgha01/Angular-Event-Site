@@ -1,0 +1,27 @@
+﻿@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.WidgetKeyValueList>
+@{
+    if (Macro.Content.Any() == false)
+    {
+        return;
+    }
+
+}
+<div class="widget table-responsive">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>@Macro.KeyHeading</th>
+            <th>@Macro.ValueHeading</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var value in Macro.Content)
+        {
+            <tr>
+                <td>@value.Key</td>
+                <td>@value.Value</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

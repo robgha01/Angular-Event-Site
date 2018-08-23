@@ -1,0 +1,4 @@
+﻿<ng-template [ngTemplateOutlet]="this.currentTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+<ng-template #AlertEmailConfirmationNeeded>
+   {{ this.emailConfirmationText }} <button type="button" (click)="this.sendConfirmationMail($event)"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{ this.emailConfirmationButtonText }}</button>
+</ng-template>

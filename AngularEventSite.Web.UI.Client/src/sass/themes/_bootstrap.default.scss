@@ -1,0 +1,41 @@
+﻿/// <reference path="../_settings.global.scss" />
+/// <reference path="../_settings.bootstrap.scss" />
+
+/*!
+ *  Theme setting base
+ */
+
+$theme: "$theme is not set!" !default;
+
+//== Main container paddings
+//
+$main-container-padding: 4rem !default;
+$main-container-padding-right: $main-container-padding !default;
+$main-container-padding-left: $main-container-padding !default;
+$main-container-padding-bottom: $main-container-padding !default;
+
+//** Global text color on `<body>`.
+$body-fluid-color: $body-color !default;
+
+/// Header middle margin
+/// @access public
+$header-middle-margin: 6rem !default;
+
+//== Widget Search
+//
+
+// Input colors for search box.
+$widget-search-input-bg: $body-color !default;
+$widget-search-input-color: darken($white, 15%) !default;
+$widget-search-input-placeholder-color: darken($white, 15%) !default;
+
+// Icon colors.
+$widget-search-icon-color: $body-color !default;
+$widget-search-icon-bg: $body-bg !default;
+
+// Active icon colors.
+$widget-search-icon-active-color: $body-color !default;
+$widget-search-icon-active-bg: $body-bg !default;
+
+// IE needs this transperance color is not working set it to the background color of this widget.
+$widget-search-transparent-fix-bg: $body-bg !default;

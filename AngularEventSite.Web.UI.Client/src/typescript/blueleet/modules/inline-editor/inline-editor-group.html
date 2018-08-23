@@ -1,0 +1,27 @@
+﻿<ng-content></ng-content>
+
+<div *ngIf="openInModal" bsModal #editGroupModal="bs-modal" (onShown)="onShown()" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Redigera</h4>
+                <button class="close" (click)="cancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Stäng</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-item" *ngFor="let editor of inlineEditors">
+                    <ng-template [ngTemplateOutlet]="editor.editTemplate" [ngOutletContext]="{ $implicit: editor }">
+                    </ng-template>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" (click)="cancel()"><span class="fa fa-remove"></span> Avbryt</button>
+                <button [disabled]="invalid" class="btn btn-primary" (click)="onSubmit(value)"><span class="fa fa-check"></span> Spara</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button *ngIf="!isEditing" class="btn btn-secondary" (click)="edit()"><span class="fa fa-pencil"></span> Ändra</button>
+<div class="btn-group" role="group" aria-label="Avbryt eller spara" *ngIf="!openInModal && isEditing">
+    <button class="btn btn-secondary" (click)="cancel()"><span class="fa fa-remove"></span> Avbryt</button>
+    <button [disabled]="this.disableSave" class="btn btn-primary" (click)="onSubmit(value)"><span class="fa fa-check"></span> Spara</button>
+</div>

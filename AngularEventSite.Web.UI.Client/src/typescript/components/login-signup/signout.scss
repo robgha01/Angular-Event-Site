@@ -1,0 +1,28 @@
+﻿auth-signout {
+    display: flex !important;
+    width: 100%;
+    list-style: none;
+
+    .signout-heading {
+        color: rgba(255,255,255,.8);
+        transform: translate3d(0,0,0);
+        margin-right: 5px;
+        padding-top: 13px;
+    }
+
+    .auth-signout-toggler {
+        cursor: pointer;
+    }
+
+    .auth-signout-collapse {
+        display: none;
+        position: absolute;
+        background-color: #0b5a9c;
+        list-style: none;
+        right: 0;
+        z-index: 2;
+        box-shadow: 0 1px 2px #0b5a9c;
+        cursor: pointer;
+        min-width: 100px;
+    }
+}

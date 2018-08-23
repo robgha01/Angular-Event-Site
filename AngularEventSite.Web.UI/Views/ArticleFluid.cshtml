@@ -1,0 +1,14 @@
+﻿@using AngularEventSite.Web
+@using AngularEventSite.Web.Enums
+@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<AngularEventSite.Web.Models.ArticlePageModel>
+@{
+    ViewBag.layoutSettings = new ViewLayoutSettings(LayoutType.FluidLayout);
+}
+@section FullContent
+{
+    @Html.Partial("~/Views/Partials/_Header.cshtml", Model)
+    <div id="mainContent" class="container__fluid container__main">
+        @Html.GetTypedGridHtml(Model.Content, "GridFrontPage", "ContentArea")
+    </div>
+}

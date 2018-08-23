@@ -1,0 +1,58 @@
+<div class="umb-contentpicker umb-editor" ng-controller="BlueLeet.PropertyEditors.MultiUrlPickerController as vm">
+    <ng-form name="multiUrlPickerForm">
+        <ul class="unstyled list-icons" ui-sortable="sortableOptions" ng-model="vm.renderModel">
+            <li ng-repeat="node in vm.renderModel" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                <i ng-if="vm.renderModel.length > 1" class="icon icon-navigation handle"></i>
+                <a href="#" prevent-default ng-click="vm.remove(node)"><i class="icon-delete red"></i></a>
+                <a href="#" prevent-default ng-click="vm.edit(node)"><i class="icon icon-edit hover-show"></i><i class="{{node.icon}} hover-hide"></i> {{node.name}}</a>
+            </li>
+        </ul>
+
+        <ul class="unstyled list-icons" ng-show="!vm.cfg.maxNumberOfItems || vm.renderModel.length < vm.cfg.maxNumberOfItems">
+            <li ng-if="vm.contentTreeSources.length">
+                <i class="icon icon-add blue"></i>
+                <a href="#" ng-click="vm.openContentLinkPicker()" prevent-default>
+                    <localize key="blueleetGeneral_add">Add</localize> content
+                </a>
+            </li>
+
+            <li ng-if="vm.mediaTreeSources.length">
+                <i class="icon icon-add blue"></i>
+                <a href="#" ng-click="vm.openMediaLinkPicker()" prevent-default>
+                    <localize key="blueleetGeneral_add">Add</localize> media
+                </a>
+            </li>
+
+            <li ng-if="vm.memberTreeSources.length">
+                <i class="icon icon-add blue"></i>
+                <a href="#" ng-click="vm.openMemberLinkPicker()" prevent-default>
+                    <localize key="blueleetGeneral_add">Add</localize> member
+                </a>
+            </li>
+
+            <li ng-if="vm.cfg.externalPicker">
+                <i class="icon icon-add blue"></i>
+                <a href="#" ng-click="vm.openExternalLinkPicker()" prevent-default>
+                    <localize key="blueleetGeneral_add">Add</localize> external
+                </a>
+            </li>
+        </ul>
+
+        <input type="hidden" name="minCount" ng-model="renderModel" no-Dirty-Check>
+        <input type="hidden" name="maxCount" ng-model="renderModel" no-Dirty-Check>
+
+        <div class="help-inline" val-msg-for="minCount" val-toggle-msg="minCount">
+            You need to add at least {{cfg.minNumberOfItems-renderModel.length}} more item(s)
+        </div>
+
+        <div class="help-inline" val-msg-for="maxCount" val-toggle-msg="maxCount">
+            You can only have {{cfg.maxNumberOfItems}} item(s) selected
+        </div>
+    </ng-form>
+
+    <umb-overlay ng-if="overlay.show"
+                 model="overlay"
+                 view="overlay.view"
+                 position="right">
+    </umb-overlay>
+</div>

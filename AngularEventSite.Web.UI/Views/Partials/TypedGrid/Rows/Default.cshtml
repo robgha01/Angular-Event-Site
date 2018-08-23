@@ -1,0 +1,71 @@
+﻿@using BlueLeet.UComponents.Core
+@using Newtonsoft.Json.Linq
+@using Skybrud.Umbraco.GridData
+@using Skybrud.Umbraco.GridData.Extensions
+
+@inherits UmbracoViewPage<GridRow>
+
+@*<pre>@GridUtils.GetFileVersion()</pre>*@
+
+<div @RenderElementAttributes(Model)>
+    <div class="container">
+        <div class="row clearfix">
+            @foreach (GridArea area in Model.Areas)
+            {
+                <div class="col-md-@area.Grid column">
+                    <div @RenderElementAttributes(area)>
+                        @foreach (GridControl control in area.Controls)
+                        {
+                            switch (control.Editor.Alias)
+                            {
+                                case UComponentsConstants.GridEditors.ImageAndTextAlias:
+                                    //@Html.RenderGridControl(control)
+                                    //@Html.RenderGridControl(control, "ImageText")
+                                    @Html.RenderGridControl(control, "TypedGrid/Editors/BlueLeet.UComponents/ImageText")
+                                    break;
+                                default:
+                                    @Html.RenderGridControl(control)
+                                    break;
+                            }
+
+                            // This is just here for debugging. Also - just for fun - try to comment out all other cases.
+                            @*<pre>@control.Editor.Alias (@(control.Value.GetType()) (@control.Editor.Config)</pre>*@
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@functions
+{
+    public static MvcHtmlString RenderElementAttributes(GridElement element)
+    {
+        List<string> attrs = new List<string>();
+
+        if (element.HasConfig)
+        {
+            foreach (GridDictionaryItem item in element.Config)
+            {
+                attrs.Add(item.Key + "='" + item.Value + "'");
+            }
+        }
+
+        if (element.HasStyles)
+        {
+
+            List<string> cssVals = new List<string>();
+
+            foreach (GridDictionaryItem item in element.Styles)
+            {
+                cssVals.Add(item.Key + ":" + item.Value + ";");
+            }
+
+            attrs.Add("style='" + string.Join(" ", cssVals) + "'");
+
+        }
+
+        return new MvcHtmlString(string.Join(" ", attrs));
+    }
+}

@@ -1,0 +1,37 @@
+/*!
+ *  Module card wins
+ */
+.module-card.card-linked {
+    .card-block, .card-header, .card-footer,
+    .card-img, .card-img-top, .card-title,
+    .card-subtitle, .card-text, .list-group,
+    .list-group-item, .card-blockquote {
+        .btn, a, button, input, textarea {
+            pointer-events: auto; /* IMPORTANT! Include all that should be clickable */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a.btn:hover {
+            text-decoration: inherit;
+        }
+    }
+}
+
+/// Big mobile
+@media (min-width: 480px) {
+}
+
+/// Tablet
+@media (min-width: 768px) {
+}
+
+/// Small desktop
+@media (min-width: 992px) {
+}
+
+/// Large desktop
+@media (min-width: 1200px) {
+}

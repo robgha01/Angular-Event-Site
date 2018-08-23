@@ -1,0 +1,148 @@
+﻿@using BlueLeet.UComponents.Core.Extensions
+@using AngularEventSite.Web.Enums
+@inherits UmbracoViewPage<Skybrud.Umbraco.GridData.GridSection>
+
+@{
+    var groupId = Guid.NewGuid().ToString();
+    var tmpRowGroup = string.Empty;
+    var tmpSectionBackgroundColor = string.Empty;
+    var grouped = Model.Rows.Where(x => x.IsValid).GroupBy(x =>
+        {
+            // Check if this is a group
+            if (x.Name.StartsWith("["))
+            {
+                var groupEnd = x.Name.LastIndexOf(']');
+                if (groupEnd != -1)
+                {
+                    var rowGroup = x.Name.Substring(0, groupEnd + 1);
+
+                    // We need to check last item in the previous row for a separator.
+                    var prev = x.PreviousRow;
+                    var last = prev != null ? prev.Areas.LastOrDefault() : null;
+
+                    // Check if the previous last row control is a separator.
+                    if (last != null && last.HasControls && last.LastControl.Editor.Alias.Equals("BlueLeet.Separator", StringComparison.OrdinalIgnoreCase))
+                    {
+                        // Check if the last is the same group as this.
+                        var lastRowGroupEnd = last.Row.Name.LastIndexOf(']');
+                        if (lastRowGroupEnd != -1)
+                        {
+                            var lastRowGroup = last.Row.Name.Substring(0, lastRowGroupEnd + 1);
+                            if (rowGroup.Equals(lastRowGroup, StringComparison.OrdinalIgnoreCase))
+                            {
+                                // This is whiting the same group force a new group.
+                                return Guid.NewGuid().ToString();
+                            }
+                        }
+                    }
+
+                    if (string.IsNullOrEmpty(tmpRowGroup) || tmpRowGroup.StartsWith(rowGroup) == false)
+                    {
+                        // Force a new row
+                        groupId = Guid.NewGuid().ToString();
+                        tmpRowGroup = rowGroup + "-" + groupId;
+                    }
+
+                    return tmpRowGroup;
+                }
+            }
+            else
+            {
+                // Clear any previus row group.
+                tmpRowGroup = string.Empty;
+
+                // We need to check last item in the previous row for a separator.
+                var prev = x.PreviousRow;
+                var last = prev != null ? prev.Areas.LastOrDefault() : null;
+                if (last != null && last.HasControls && last.LastControl.Editor.Alias.Equals("BlueLeet.Separator", StringComparison.OrdinalIgnoreCase))
+                {
+                    groupId = Guid.NewGuid().ToString();
+                }
+
+                string color;
+                if (tmpSectionBackgroundColor == null)
+                {
+                    if (x.Config.TryGetValue("section-background-color", out color))
+                    {
+                        // New color = new group.
+                        groupId = color + "-" + Guid.NewGuid().ToString();
+                        tmpSectionBackgroundColor = color;
+                    }
+                }
+                else if (tmpSectionBackgroundColor.Equals(string.Empty))
+                {
+                    tmpSectionBackgroundColor = x.Config.TryGetValue("section-background-color", out color) ? color : null;
+                }
+                else if (x.Config.TryGetValue("section-background-color", out color))
+                {
+                    if (tmpSectionBackgroundColor.Equals(color) == false)
+                    {
+                        // New color = new group.
+                        groupId = color + "-" + Guid.NewGuid().ToString();
+                    }
+                }
+                else
+                {
+                    // If we get here it means this row has no color set so lets reset it and make a new group.
+                    groupId = Guid.NewGuid().ToString();
+                    tmpSectionBackgroundColor = string.Empty;
+                }
+            }
+
+            return groupId;
+        });
+}
+
+@foreach (var rowGroup in grouped)
+{
+    string sectionCss = null;
+    var firstRow = rowGroup.FirstOrDefault();
+    if (firstRow != null)
+    {
+        // if (firstRow.Name.StartsWith("[List]", StringComparison.OrdinalIgnoreCase))
+        // {
+        // sectionCss = "athensGray";
+        // }
+        string sectionBackgroundColor;
+        if (firstRow.Config.TryGetValue("section-background-color", out sectionBackgroundColor))
+        {
+            sectionCss = sectionBackgroundColor == "White" ? "white" : sectionBackgroundColor;
+        }
+    }
+
+    <section class="section @sectionCss">
+        @foreach (var row in rowGroup)
+        {
+            var sectionLayout = Attempt<GridLayoutType>.Fail();
+            string sectionLayoutValue;
+            if (row.Config.TryGetValue("section-layout", out sectionLayoutValue))
+            {
+                sectionLayout = sectionLayoutValue.TryConvertTo<GridLayoutType>();
+            }
+
+            if (sectionLayout.Success)
+            {
+                if (sectionLayout.Result == GridLayoutType.Fluid)
+                {
+                    <div class="container-fluid py-4">
+                        @Html.RenderGridRowOrFallback(row, "BlueLeetDefault")
+                    </div>
+                }
+                else if (sectionLayout.Result == GridLayoutType.FluidFullWidth)
+                {
+                    <div class="h-100">
+                        <div class="container-fluid px-0">
+                            @Html.RenderGridRowOrFallback(row, "BlueLeetDefault")
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="container py-4">
+                    @Html.RenderGridRowOrFallback(row, "BlueLeetDefault")
+                </div>
+            }
+        }
+    </section>
+}

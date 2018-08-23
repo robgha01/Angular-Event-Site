@@ -1,0 +1,9 @@
+﻿<ng-template #DefaultPresentation>
+    <div *ngIf="!editing">
+        <a [ngClass]="{'editable-empty': isEmpty }" (click)="edit(value)">{{ presentControl() }}</a>
+    </div>
+</ng-template>
+<ng-template #DefaultEdit>
+    <input #inlineEditControl class="form-control" (blur)="onTouched()" (focusout)="onTouched()" [value]="value" (input)="value = $event.target.value" [required]="required"
+           type="datetime" [disabled]="disabled" [name]="name" [(focuser)]="focusThis" />
+</ng-template>

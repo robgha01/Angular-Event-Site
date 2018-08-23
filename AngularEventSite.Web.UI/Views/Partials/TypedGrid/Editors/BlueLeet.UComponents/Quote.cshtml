@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Skybrud.Umbraco.GridData.Rendering.GridControlWrapper<BlueLeet.UComponents.Core.GridValues.GridControlQuoteValue>>
+<div class="blockquote">
+    <p>@Model.Value.QuoteText</p>
+</div>
+<div class="quoteAuthor">
+    <div class="authorNameSection">
+        <p class="authorName">@Model.Value.AuthorName</p>
+    </div>
+    <p class="authorTitle">@Model.Value.AuthorDescription</p>
+</div>

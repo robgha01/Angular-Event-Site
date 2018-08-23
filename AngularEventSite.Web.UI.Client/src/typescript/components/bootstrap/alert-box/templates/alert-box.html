@@ -1,0 +1,8 @@
+﻿<ng-template [ngTemplateOutlet]="this.currentTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+<ng-template #DefaultTemplate>
+    <div class="alert" [ngClass]="{'alert-info': this.isTypeInfo(), 'alert-success': this.isTypeSuccess(), 'alert-warning': this.isTypeWarning(), 'alert-danger': this.isTypeError() }" style="z-index: 1;">
+        <span *ngIf="this?.options?.showClose" class="close" data-dismiss="alert">&times;</span>
+        <p>{{ this?.options?.message }}</p>
+        <ng-template [ngTemplateOutlet]="this.alertTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+    </div>
+</ng-template>

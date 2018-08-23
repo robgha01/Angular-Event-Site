@@ -1,0 +1,10 @@
+﻿<ng-template #DefaultPresentation>
+    <div *ngIf="!editing">
+        <a [ngClass]="{'editable-empty': isEmpty }" (click)="edit(value)">{{ presentControl() }}</a>
+    </div>
+</ng-template>
+<ng-template #DefaultEdit>
+    <textarea [rows]="rows" [cols]="cols" #inlineEditControl class="form-control" [value]="value" (change)="value = $event.target.value"
+              (blur)="onTouched()" (focusout)="onTouched()"
+              [required]="required" [placeholder]="placeholder" [disabled]="disabled" [(focuser)]="focusThis"></textarea>
+</ng-template>

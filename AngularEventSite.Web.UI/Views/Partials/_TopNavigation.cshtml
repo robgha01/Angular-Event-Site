@@ -1,0 +1,75 @@
+﻿@using AngularEventSite.Web.Models
+@using AngularEventSite.Web.SiteNavigator.Abstraction
+@inherits UmbracoViewPage<BaseContentModel>
+@{
+    var menuFactory = DependencyResolver.Current.GetService<IMenuFactory<UCodeFirstContentTypeBase>>();
+    var pages = menuFactory.Create(Model.StartPage, Model).Where(x => x.Content is BaseContentModel).Where(x => !(x.Content is LoginPageModel) && !(x.Content is ErrorPageModel) && !(x.Content is SearchPageModel)).Where(x => x.IsVisible && Umbraco.MemberHasAccess(x.Content.Path)).OrderBy(x => x.Content.SortOrder).ToList();
+
+    var loginPage = Model.StartPage.Children<LoginPageModel>().FirstOrDefault();
+    //var searchPage = Model.StartPage.Children<SearchPageModel>().FirstOrDefault();
+}
+<div id="top-strap" class="strapbar strapbar-default">
+    <nav class="container py-0 strapbar-list">
+        <div class="d-inline-flex">
+            <a class="brand py-0 d-inline-flex flex-row flex-nowrap" href="@Model.StartPage.Url"></a>
+        </div>
+        @*<div class="d-inline-flex">
+            @if (searchPage != null && searchPage.Content.IsVisible())
+            {
+                <search-box class="d-flex justify-content-end">
+                    <ng-template let-i>
+                        <form (ngSubmit)="i.doSearch($event)" [formGroup]="i.searchForm">
+                            <div widget-search class="widget widget-search widget-default">
+                                <input type="search" class="search-input" placeholder="Enter your search term..." formControlName="searchWord">
+                                <input type="submit" class="search-submit" value="">
+                                <span class="search-icon fa fa-search"></span>
+                            </div>
+                        </form>
+                    </ng-template>
+                </search-box>
+            }
+        </div>*@
+    </nav>
+    @*<div class="d-inline-flex hidden-md-up">
+        <button class="navbar navbar-toggleable-md navbar-light navbar-toggler d-inline-flex ml-auto my-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>*@
+</div>
+<div [waypoint-sticky]="{ scrolledClass: 'navbar-scrolled', stuckClass: 'navbar-stuck' }" class="navbar-top navbar-top-default sticky-top">
+    @if (pages.Any())
+    {
+        <div class="d-inline-flex hidden-md-up pl-2">
+            <button class="navbar navbar-toggleable-md navbar-light navbar-toggler d-inline-flex ml-auto my-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <nav class="container navbar navbar-inverse navbar-toggleable-sm py-0 d-flex w-100">
+            <div class="navbar-collapse collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav flex-sm-column my-sm-auto flex-md-row text-center">
+                    @foreach (var page in pages)
+                    {
+                        <li class="nav-item @(Model.Id.Equals(page.Content.Id) ? "active" : null)">
+                            <a class="nav-link" href="@page.Url">@page.Name</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+    }
+    @if (loginPage != null)
+    {
+        <auth-signout class="justify-content-end">
+            <template let-i>
+                <div class="flex-sm-column my-sm-auto flex-md-row text-center">
+                    <span class="signout-heading">Välkommen tillbaka, <a class="auth-signout-toggler">{{ i?.model?.user?.name }}</a></span>
+                    <ul class="auth-signout-collapse">
+                        <li>
+                            <a class="p-1" (click)="i.signout()"><i class="fa fa-sign-out" aria-hidden="true"></i>Logga ut</a>
+                        </li>
+                    </ul>
+                </div>
+            </template>
+        </auth-signout>
+    }
+</div>

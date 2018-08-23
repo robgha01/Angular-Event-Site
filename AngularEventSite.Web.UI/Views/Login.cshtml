@@ -1,0 +1,396 @@
+﻿@using AngularEventSite.Web.Abstraction
+@using AngularEventSite.Web.Enums
+@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<AngularEventSite.Web.Models.LoginPageModel>
+@{
+    var layoutSettings = ViewBag.layoutSettings as IViewLayoutSettings ?? DependencyResolver.Current.GetService<IViewLayoutSettings>();
+}
+@section FullSite
+{
+    <div class="container-fluid m-0 p-0 loginPage">
+        <div class="container">
+            <div class="row" style="min-height: 100vh;">
+                <div class="col-12 my-auto">
+                    @*<h2 class="text-center text-white mb-4">@Model.Name</h2>*@
+                    <div class="row">
+                        <login-signup class="col-md-6 mx-auto">
+                            <template #Login let-loginSignup>
+                                @if (ViewBag.EmailConfirmed != null && ViewBag.EmailConfirmed)
+                                {
+                                    <div class="alert alert-success col-sm-12">
+                                        <span class="close" data-dismiss="alert">&times;</span>
+                                        Ditt konto är nu aktiverad.
+                                    </div>
+                                }
+                                <simple-login class="card rounded-0 content-frame" emailConfirmationText="Har du inte fått något mail?" emailConfirmationButtonText="Skicka mig ett nytt konfirmations mail">
+                                    <template let-i>
+                                        <div class="card-header">
+                                            <h2 class="mb-0">@Model.Name</h2>
+                                            <div style="float: right; font-size: 80%; position: relative; top: -10px">
+                                                <a href="#" (click)="loginSignup.showForgotPassword($event)">Glömt lösenord?</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <alert-box class="col-sm-12"></alert-box>
+                                            <form class="login-form" *ngIf="i.showForm" [formGroup]="i.loginForm" (ngSubmit)="i.doLogin($event)" role="form" autocomplete="off" ngNoForm>
+                                                <div class="form-group">
+                                                    <label for="uname1">E-post</label>
+                                                    <input type="text" class="form-control form-control-lg rounded-0" name="uname1" id="uname1" formControlName="username">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Lösenord</label>
+                                                    <input type="password" class="form-control form-control-lg rounded-0" id="pwd1" formControlName="password">
+                                                </div>
+                                                <button type="submit" class="btn btn-success btn-lg float-right" [disabled]="!i.loginForm.valid">Logga in</button>
+                                                <span class="clearfix"></span>
+                                                <p class="form-group mt-3">
+                                                    Har du inget konto?
+                                                    <a href="#" (click)="loginSignup.showSignup($event)">
+                                                        Skapa ett här
+                                                    </a>
+                                                </p>
+                                            </form>
+                                        </div>
+                                    </template>
+                                </simple-login>
+                            </template>
+                            <template #Signup let-loginSignup>
+                                @if (ViewBag.EmailConfirmed != null && ViewBag.EmailConfirmed)
+                                {
+                                    <div class="alert alert-success col-sm-12">
+                                        <span class="close" data-dismiss="alert">&times;</span>
+                                        Ditt konto är nu aktiverad.
+                                    </div>
+                                }
+                                <simple-signup class="card rounded-0 content-frame">
+                                    <template let-i>
+                                        <div class="card-header">
+                                            <h2 class="mb-0">Skapa konto</h2>
+                                            <div style="float: right; font-size: 85%; position: relative; top: -10px">
+                                                <a href="#" (click)="loginSignup.showLogin($event)">Logga in</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <alert-box class="col-sm-12"></alert-box>
+                                            <div *ngIf="i.signupSuccess" class="alert alert-success col-sm-12" style="z-index: 10000;">
+                                                <span class="close" data-dismiss="alert">&times;</span>
+                                                {{ i?.payload?.message }}
+                                            </div>
+                                            <div *ngIf="!i.isValid()" class="alert alert-danger col-sm-12" style="z-index: 10000;">
+                                                <span class="close" data-dismiss="alert">&times;</span>
+                                                {{ i?.payload?.message }}
+                                            </div>
+                                            <form *ngIf="!i.signupSuccess" [formGroup]="i.signUpForm" (submit)="i.doSignUp($event)">
+                                                <bs-form-input css="form-control form-control-lg rounded-0" formControlName="firstName" name="firstName" placeholder="First Name" errorRequired="Förnamn är obligatoriskt"></bs-form-input>
+                                                <bs-form-input css="form-control form-control-lg rounded-0" formControlName="lastName" name="lastName" placeholder="Last Name" errorRequired="Efternamn is required"></bs-form-input>
+                                                <bs-form-input css="form-control form-control-lg rounded-0" formControlName="company" name="company" placeholder="Företag" label="Företag" errorRequired="Företag är obligatoriskt"></bs-form-input>
+                                                <bs-form-input css="form-control form-control-lg rounded-0" formControlName="phone" type="tel" name="phone" placeholder="Tel" label="Tel" errorRequired="Tel är obligatoriskt"></bs-form-input>
+                                                <bs-form-input css="form-control form-control-lg rounded-0" formControlName="email" type="email" name="email" placeholder="Email Address" label="Email" errorRequired="Email är obligatoriskt"></bs-form-input>
+                                                <div class="form-group" [formGroup]="i.signUpForm.controls.passwordGroup">
+                                                    <bs-form-input css="form-control form-control-lg rounded-0" formControlName="password" type="password" name="password" placeholder="Password" [validateOnBlur]="false" [showPasswordStrength]="true"></bs-form-input>
+                                                    <bs-form-input css="form-control form-control-lg rounded-0" formControlName="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password"></bs-form-input>
+                                                </div>
+                                                <div class="form-group d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-info" [disabled]="i?.signUpForm.invalid"><i class="icon-hand-right"></i> &nbsp; Skapa konto</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </template>
+                                </simple-signup>
+                            </template>
+                            <template #ForgotPassword let-loginSignup>
+                                @if (ViewBag.EmailConfirmed != null && ViewBag.EmailConfirmed)
+                                {
+                                    <div class="alert alert-success col-sm-12">
+                                        <span class="close" data-dismiss="alert">&times;</span>
+                                        Ditt konto är nu aktiverad.
+                                    </div>
+                                }
+                                <forgot-password class="card rounded-0 content-frame">
+                                    <template let-i>
+                                        <div class="card-header">
+                                            <h2 class="mb-0">Glömt lösenord</h2>
+                                            <div style="float: right; font-size: 85%; position: relative; top: -10px">
+                                                <a href="#" (click)="loginSignup.showLogin($event)">Logga in</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-block">
+                                            <alert-box class="col-sm-12"></alert-box>
+                                            <div *ngIf="!i.isValid()" class="alert alert-danger col-sm-12">
+                                                {{ i?.payload?.message }}
+                                            </div>
+                                            <form [formGroup]="i.forgotPasswordForm" (submit)="i.doSubmit($event)">
+                                                <bs-form-input formControlName="email" type="email" name="email" placeholder="Email Address" label="Email" errorRequired="Email is required"></bs-form-input>
+                                                <div class="form-group d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-info" [disabled]="!i.forgotPasswordForm.valid"><i class="icon-hand-right"></i> &nbsp; Skicka</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </template>
+                                    <template #MailSent>
+                                        <div class="card-header">
+                                            <h2 class="mb-0">Glömt lösenord</h2>
+                                        </div>
+                                        <div class="card-block">
+                                            <p>Mail skickat,</p>
+                                            <p>Kontrollera din email för en glömt lösenordsförfrågan.</p>
+                                        </div>
+                                    </template>
+                                    <template #NewPassword let-i>
+                                        <div class="card-header">
+                                            <h2 class="mb-0">Ändra lösenord</h2>
+                                        </div>
+                                        <div class="card-block">
+                                            <div *ngIf="!i.isValid()" class="alert alert-danger col-sm-12">
+                                                {{ i?.payload?.message }}
+                                            </div>
+                                            <form [formGroup]="i.forgotPasswordForm" (submit)="i.doSubmitNewPassword($event)">
+                                                <bs-form-input formControlName="password" type="password" name="password" placeholder="Password" [validateOnBlur]="false" [showPasswordStrength]="true" errorRequired="Password is required"></bs-form-input>
+                                                <bs-form-input formControlName="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" errorEqualTo="Passwords must match" errorRequired="Password is required"></bs-form-input>
+                                                <div class="form-group d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-info" [disabled]="!i.forgotPasswordForm.valid"><i class="icon-hand-right"></i> &nbsp; Skicka</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </template>
+                                </forgot-password>
+                            </template>
+                            <template #EventCode let-loginSignup>
+                                <div class="card rounded-0 content-frame">
+                                    <div class="card-header">
+                                        <h2 class="mb-0">@Model.EventCodePage.Name</h2>
+                                    </div>
+                                    <div class="card-block">
+                                        <event-code class="d-block">
+                                            <template let-event>
+                                                @*@if (layoutSettings.LayoutType == LayoutType.BoxedLayout)
+                                                {
+                                                    <div id="mainContent" class="container container__main">
+                                                        @Html.GetTypedGridHtml(Model.EventCodePage.Content, "GridFrontPage", "ContentArea")
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    @Html.GetTypedGridHtml(Model.EventCodePage.Content, "GridFrontPage", "ContentArea")
+                                                }*@
+                                            </template>
+                                        </event-code>
+                                    </div>
+                                </div>
+                            </template>
+                        </login-signup>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div id="mainContent" class="container">
+            <div class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <login-signup>
+                    <template #Login let-loginSignup>
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <div class="card-title">Logga in</div>
+                                <div style="float: right; font-size: 80%; position: relative; top: -10px">
+                                    <a href="#" (click)="loginSignup.showForgotPassword($event)">Glömt lösenord?</a>
+                                </div>
+                            </div>
+                            <div style="padding-top: 30px" class="card-block">
+                                <simple-login emailConfirmationText="Har du inte fått något mail?" emailConfirmationButtonText="Skicka mig ett nytt konfirmations mail">
+                                    <template let-i>
+                                        <alert-box class="col-sm-12"></alert-box>
+                                        @if (ViewBag.EmailConfirmed != null && ViewBag.EmailConfirmed)
+                                        {
+                                            <div class="alert alert-success col-sm-12">
+                                                <span class="close" data-dismiss="alert">&times;</span>
+                                                Ditt konto är nu aktiverad.
+                                            </div>
+                                        }
+                                        <form style="z-index: 1;" *ngIf="i.showForm" class="form-horizontal" [formGroup]="i.loginForm" (ngSubmit)="i.doLogin($event)">
+                                            <div style="margin-bottom: 25px" class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user"></i>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="användarnamn eller e-post" formControlName="username">
+                                            </div>
+
+                                            <div style="margin-bottom: 25px" class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+                                                </span>
+                                                <input type="password" class="form-control" placeholder="lösenord" formControlName="password">
+                                            </div>
+
+                                            <div class="input-group hidden">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" formControlName="remember">Kom ihåg mig
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div style="margin-top: 10px" class="form-group row">
+                                                <!-- Button -->
+                                                <div class="col-sm-12 controls">
+                                                    <button type="submit" class="btn btn-success" [disabled]="!i.loginForm.valid">Logga in</button>
+                                                    <facebook-login btn-text="Login with Facebook">
+                                                        <template #FacebookButton let-fb>
+                                                            <a href="#" class="btn btn-primary" (click)="fb.facebookLogin($event)">Logga in med Facebook</a>
+                                                        </template>
+                                                    </facebook-login>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <div class="col-md-12 control">
+                                                    <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+                                                        Har du inget konto?
+                                                        <a href="#" (click)="loginSignup.showSignup($event)">
+                                                            Skapa ett här
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </template>
+                                </simple-login>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template #Signup let-loginSignup>
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <div class="card-title">Skapa konto</div>
+                                <div style="float: right; font-size: 85%; position: relative; top: -10px">
+                                    <a href="#" (click)="loginSignup.showLogin($event)">Logga in</a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <simple-signup>
+                                    <template let-i>
+                                        <div *ngIf="i.signupSuccess" class="alert alert-success col-sm-12" style="z-index: 10000;">
+                                            <span class="close" data-dismiss="alert">&times;</span>
+                                            {{ i?.payload?.message }}
+                                        </div>
+                                        <div *ngIf="!i.isValid()" class="alert alert-danger col-sm-12" style="z-index: 10000;">
+                                            <span class="close" data-dismiss="alert">&times;</span>
+                                            {{ i?.payload?.message }}
+                                        </div>
+                                        <form *ngIf="!i.signupSuccess" class="form-horizontal" [formGroup]="i.signUpForm" (submit)="i.doSignUp($event)">
+                                            <bs-form-input formControlName="email" type="email" name="email" placeholder="Email Address" label="Email" errorRequired="Email is required"></bs-form-input>
+                                            <bs-form-input formControlName="username" name="username" placeholder="Username" errorRequired="Username is required" [validateOnBlur]="true" [lowercase]="true"></bs-form-input>
+                                            <bs-form-input formControlName="firstName" name="firstName" placeholder="First Name" errorRequired="First name is required"></bs-form-input>
+                                            <bs-form-input formControlName="lastName" name="lastName" placeholder="Last Name" errorRequired="Last name is required"></bs-form-input>
+                                            <div class="form-group row">
+                                                <label class="col-md-3 form-control-label">Gender</label>
+                                                <div class="col-md-9">
+                                                    <label class="radio-inline">
+                                                        <input formControlName="gender" type="radio" name="gender" value="0"> Male
+                                                    </label>
+                                                    <label class="radio-inline">
+                                                        <input formControlName="gender" type="radio" name="gender" value="1" checked="checked"> Female
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-horizontal row" [formGroup]="i.signUpForm.controls.passwordGroup">
+                                                <bs-form-input formControlName="password" type="password" name="password" placeholder="Password" [validateOnBlur]="false" [showPasswordStrength]="true"></bs-form-input>
+                                                <bs-form-input formControlName="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password"></bs-form-input>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- Button -->
+                                                <div class="offset-md-3 col-md-9">
+                                                    <button type="submit" class="btn btn-info" [disabled]="i?.signUpForm.invalid"><i class="icon-hand-right"></i> &nbsp; Skapa konto</button>
+                                                </div>
+                                            </div>
+
+                                            <div style="border-top: 1px solid #999; padding-top: 20px" class="form-group">
+                                                <div class="offset-md-3 col-md-9">
+                                                    <facebook-login btn-text="Login with Facebook">
+                                                        <template #FacebookButton let-fb>
+                                                            <button type="button" class="btn btn-primary" (click)="fb.facebookLogin($event)"><i class="icon-facebook"></i> &nbsp; Logga in via Facebook</button>
+                                                        </template>
+                                                    </facebook-login>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </template>
+                                </simple-signup>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template #ForgotPassword let-loginSignup>
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <div class="card-title">Forgot Password</div>
+                                <div style="float: right; font-size: 85%; position: relative; top: -10px">
+                                    <a href="#" (click)="loginSignup.showLogin($event)">Sign In</a>
+                                </div>
+                            </div>
+                            <div class="card-block">
+                                <forgot-password>
+                                    <template let-i>
+                                        <div *ngIf="!i.isValid()" class="alert alert-danger col-sm-12">
+                                            {{ i?.payload?.message }}
+                                        </div>
+                                        <form class="form-horizontal" [formGroup]="i.forgotPasswordForm" (submit)="i.doSubmit($event)">
+                                            <bs-form-input formControlName="email" type="email" name="email" placeholder="Email Address" label="Email" errorRequired="Email is required"></bs-form-input>
+                                            <div class="form-group row">
+                                                <!-- Button -->
+                                                <div class="offset-md-3 col-md-9">
+                                                    <button type="submit" class="btn btn-info" [disabled]="!i.forgotPasswordForm.valid"><i class="icon-hand-right"></i> &nbsp; Continue</button>
+                                                    <span style="margin-left: 8px;">or</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-12 control">
+                                                    <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+                                                        Har du inget konto?
+                                                        <a href="#" (click)="loginSignup.showSignup($event)">
+                                                            Skapa ett här
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </template>
+                                    <template #MailSent>
+                                        <p>Mail sent,</p>
+                                        <p>Check youre email for a forgot password request.</p>
+                                    </template>
+                                    <template #NewPassword let-i>
+                                        <div *ngIf="!i.isValid()" class="alert alert-danger col-sm-12">
+                                            {{ i.payload.message }}
+                                        </div>
+                                        <form class="form-horizontal" [formGroup]="i.forgotPasswordForm" (submit)="i.doSubmitNewPassword($event)">
+                                            <bs-form-input formControlName="password" type="password" name="password" placeholder="Password" [validateOnBlur]="false" [showPasswordStrength]="true" errorRequired="Password is required"></bs-form-input>
+                                            <bs-form-input formControlName="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm Password" errorEqualTo="Passwords must match" errorRequired="Password is required"></bs-form-input>
+                                            <div class="form-group row">
+                                                <!-- Button -->
+                                                <div class="offset-md-3 col-md-9">
+                                                    <button type="submit" class="btn btn-info" [disabled]="!i.forgotPasswordForm.valid"><i class="icon-hand-right"></i> &nbsp; Continue</button>
+                                                    <span style="margin-left: 8px;">or</span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <div class="col-md-12 control">
+                                                    <div style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
+                                                        Har du inget konto?
+                                                        <a href="#" (click)="loginSignup.showSignup($event)">
+                                                            Skapa ett här
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </template>
+                                </forgot-password>
+                            </div>
+                        </div>
+                    </template>
+                </login-signup>
+            </div>
+        </div>*@
+
+}

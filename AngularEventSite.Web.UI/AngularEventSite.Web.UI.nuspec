@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Claremont.Event.Web</id>
+    <version>0.0.0</version>
+    <title>Claremont.Event.Web</title>
+    <authors>Claremont AB</authors>
+    <owners>Claremont AB</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Claremont.Event.Web</description>
+    <copyright>Copyright 2017 Claremont AB</copyright>
+  </metadata>
+  <files>
+    <file src="bin\**\*" target="bin" />
+	<file src="App_Data\packages\**\*" target="App_Data\packages" />
+    <file src="App_Browsers\**\*" target="App_Browsers" />
+	<file src="App_Plugins\**\*" target="App_Plugins" />
+	<file src="Config\**\*" target="Config" />
+	<file src="css\**\*" target="css" />
+	<file src="JS\**\*" target="JS" />
+	<file src="Media\**\*" target="Media" />
+	<file src="sql\**\*" target="sql" />
+	<file src="umbraco\**\*" target="umbraco" />
+	<file src="umbraco_client\**\*" target="umbraco_client" />
+	<file src="Views\**\*" target="Views" />
+	<file src="xslt\**\*" target="xslt" />
+	<file src="web.config" target="" />
+	<file src="robots.txt" target="" />
+	<file src="default.aspx" target="" />
+	<file src="static\**\*" target="static" />
+  </files>
+</package>

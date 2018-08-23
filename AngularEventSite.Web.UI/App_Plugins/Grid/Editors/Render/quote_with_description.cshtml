@@ -1,0 +1,46 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage<dynamic>
+
+@if (Model.editor.config.markup != null)
+{
+    string markup = Model.editor.config.markup.ToString();
+
+    markup = markup.Replace("#value#", Model.value.ToString());
+    markup = markup.Replace("#style#", Model.editor.config.style.ToString());
+
+    <text>
+        @Html.Raw(markup)
+    </text>
+}
+else
+{
+    <div class="module module-quote center-quote">
+        <blockquote class="blockquote">
+            <p>@Model.value.quote</p>           
+        </blockquote>
+        <div class="quote__author">
+            <div class="author__nameSection">
+                <span class="author__name">@Model.value.headline</span>
+            </div>
+            <span class="author__title">@Model.value.description</span>
+        </div>
+    </div>
+
+    @*<text>
+        <div class="equalizer">
+        	<div class="col-sm-8">
+        		<div class="equal center">
+        			<blockquote>@Model.value.quote</blockquote>
+        		</div>
+        	</div>
+        	<div class="col-sm-4">
+        		<div class="equal">
+        			<p class="small vcenter">
+        				<strong>@Model.value.headline</strong>
+        				<br>
+        				@Model.value.description
+        			</p>
+        		</div>
+        	</div>
+        </div>
+    </text>*@
+}

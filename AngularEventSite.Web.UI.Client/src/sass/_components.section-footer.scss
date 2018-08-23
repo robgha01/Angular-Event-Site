@@ -1,0 +1,20 @@
+﻿/// <reference path="_settings.navbar.scss" />
+/// <reference path="_settings.bootstrap.scss" />
+/*!
+ *  Section footer object
+ */
+
+.section-footer {
+    //width: 100%; // Force 100% width of footer.
+    margin-top: $footer-middle-margin;
+    
+    .footer-big .footer-column {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .footer-small .footer-column {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}

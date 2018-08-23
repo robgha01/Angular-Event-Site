@@ -1,0 +1,1 @@
+This content is shown when no search result is found.

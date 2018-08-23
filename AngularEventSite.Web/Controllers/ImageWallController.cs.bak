@@ -1,0 +1,92 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ImageWallController.cs" company="BlueLeet">
+//   Copyright (C) BlueLeet - All Rights Reserved
+//   Unauthorized copying of this file, via any medium is strictly prohibited
+//   Proprietary and confidential
+// </copyright>
+// <summary>
+//   The login register surface controller.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace AngularEventSite.Web.Controllers
+{
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web.Http;
+
+    using BlueLeet.UCodeFirst.Helpers.Abstraction;
+
+    using Examine;
+    using Examine.SearchCriteria;
+
+    using Newtonsoft.Json.Linq;
+
+    using AngularEventSite.Web.Abstraction;
+    using AngularEventSite.Web.Entities.Payloads;
+    using AngularEventSite.Web.MediaTypes;
+
+    using Umbraco.Core;
+
+    using UmbracoExamine;
+
+    /// <summary>
+    /// The login register surface controller.
+    /// </summary>
+    public sealed class ImageWallController : BaseApiController
+    {
+        /// <inheritdoc/>
+        public ImageWallController(IContextService contextService, IMembershipService membershipService, IUCodeFirstHelper codeFirstHelper)
+            : base(contextService, membershipService, codeFirstHelper)
+        {
+        }
+        
+        [HttpPost]
+        public IHttpActionResult FilterPhotosPost(PayloadResult result)
+        {
+            var externalSearcher = ExamineManager.Instance.SearchProviderCollection["ExternalSearcher"];
+            ISearchCriteria criteria = externalSearcher.CreateSearchCriteria(IndexTypes.Media);
+            var query = criteria.NodeTypeAlias(nameof(MemberImageType)).And().Field("isApproved", "1").And().OrderByDescending("createDate");
+            
+            var showAll = result.GetValue("all").TryConvertTo<bool>();
+            if (showAll.Success == false)
+            {
+                // Query any enabled filter:
+                var filterByHairColor = result.GetValue<JArray>("hairColors");
+                if (filterByHairColor != null && filterByHairColor.Any())
+                {
+                    var values = filterByHairColor.Select(x => x.Value<string>()).ToArray();
+                    var fields = new List<string> { "hairColor" };
+                    query.And().GroupedOr(fields, values);
+                }
+
+                var filterByHairLengths = result.GetValue<JArray>("hairLengths");
+                if (filterByHairLengths != null && filterByHairLengths.Any())
+                {
+                    var values = filterByHairLengths.Select(x => x.Value<string>()).ToArray();
+                    var fields = new List<string> { "hairLength" };
+                    query.And().GroupedOr(fields, values);
+                }
+
+                var filterByColorTypes = result.GetValue<JArray>("colorTypes");
+                if (filterByColorTypes != null && filterByColorTypes.Any())
+                {
+                    var values = filterByColorTypes.Select(x => x.Value<string>()).ToArray();
+                    var fields = new List<string> { "colorType" };
+                    query.And().GroupedOr(fields, values);
+                }
+
+                var filterByTextures = result.GetValue<JArray>("textures");
+                if (filterByTextures != null && filterByTextures.Any())
+                {
+                    var values = filterByTextures.Select(x => x.Value<string>()).ToArray();
+                    var fields = new List<string> { "texture" };
+                    query.And().GroupedOr(fields, values);
+                }
+            }
+
+            var results = externalSearcher.Search(query.Compile());
+            return Json(results.Select(x => CodeFirstHelper.TypedMedia(Umbraco.TypedMedia(x.Id))));
+        }
+    }
+}

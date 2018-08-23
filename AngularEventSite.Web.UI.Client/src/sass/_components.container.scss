@@ -1,0 +1,53 @@
+﻿/// <reference path="../bootstrap.scss" />
+
+/*!
+ *  Container object
+ */
+
+// Boxed Layout
+// --------------------------
+.container.container__boxed:first-child {
+    margin-top: $header-middle-margin;
+}
+
+.container.container__boxed {
+    word-wrap: break-word;
+    word-break: break-word;
+    padding-bottom: $main-container-padding-bottom;
+}
+
+.container.container__boxed {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    background: white;
+    border-radius: 2px;
+}
+
+// Fluid Layout
+// --------------------------
+.container__fluid .container__main {
+    min-height: 100vh;
+}
+
+.container__fluid .container:first-child {
+    margin-top: 0;
+}
+
+.container__fluid .section {
+    /*padding: 30px 0;*/
+}
+
+.section .container {
+    margin-top: 0;
+}
+
+.container.container__fluid {
+    /*color: $body-fluid-color;*/
+    .card {
+        color: $body-color;
+    }
+}
+
+.container__fluid .section {
+    background: inherit;
+}

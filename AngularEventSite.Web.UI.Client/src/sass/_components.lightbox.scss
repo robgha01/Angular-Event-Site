@@ -1,0 +1,105 @@
+﻿/*!
+ *  lightbox component
+ */
+
+.lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    line-height: 0;
+    font-weight: normal;
+
+    .lb-frame {
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .lb-frame .lb-item .lb-image {
+        max-width: inherit;
+        max-height: none;
+    }
+
+    .lb-frame .lb-item .lb-nav {
+        display: block;
+        pointer-events: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+
+        .lb-prev,
+        .lb-next {
+            display: block;
+            filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+            opacity: 0;
+            transition: opacity 0.6s;
+        }
+
+        .lb-prev {
+            width: 34%;
+            left: 0;
+            float: left;
+        }
+
+        .lb-next {
+            width: 64%;
+            right: 0;
+            float: right;
+        }
+    }
+
+    .lb-content {
+        margin: 0 auto;
+        padding-top: 5px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+
+        .lb-data .lb-caption {
+            display: inline;
+            font-size: 13px;
+            font-weight: bold;
+            line-height: 1em;
+        }
+
+        .lb-number {
+            display: block;
+            clear: left;
+            padding-bottom: 1em;
+            font-size: 12px;
+            color: #999999;
+        }
+    }
+
+    .lb-content .lb-item {
+        padding: 0 4px;
+        color: #ccc;
+    }
+}
+
+.lightbox.lb-default {
+    .lb-frame {
+        position: relative;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: white;
+    }
+
+    .lb-item .lb-image {
+        max-width: inherit;
+        max-height: none;
+        border-radius: 3px;
+        border: 4px solid white;
+    }
+
+    .lb-item .lb-nav .lb-prev {
+        background: image('prev.png') left 48% no-repeat;
+    }
+
+    .lb-item .lb-nav .lb-next {
+        background: image('next.png') right 48% no-repeat;
+    }
+}

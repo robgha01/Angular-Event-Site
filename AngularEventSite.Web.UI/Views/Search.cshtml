@@ -1,0 +1,12 @@
+﻿@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<AngularEventSite.Web.Models.SearchPageModel>
+<search-wall>
+    <search-result-empty>
+        <ng-template let-search>
+            <div class="col-12 my-2">
+                <h2>No search results found for {{ search.searchWord }}</h2>
+                @Html.GetTypedGridHtml(Model.Content, "GridSearchPageEmptyResult", "ContentArea")
+            </div>
+        </ng-template>
+    </search-result-empty>
+</search-wall>

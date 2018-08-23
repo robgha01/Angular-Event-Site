@@ -1,0 +1,24 @@
+﻿@using AngularEventSite.Web.EventManager.Abstraction
+@using AngularEventSite.Web.Models
+@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.Event.MyEventsMacroType>
+@{
+    var eventRepository = DependencyResolver.Current.GetService<IEventRepository>();
+    var myEvents = eventRepository.GetEventsForMember(Umbraco.MembershipHelper.GetCurrentMemberId()).Where(model => model.StartDate.HasValue).OrderByDescending(model => model.StartDate.Value).ToList();
+    if (myEvents.Any() == false)
+    {
+        return;
+    }
+}
+
+<div class="card-deck">
+    @foreach (var eventPage in myEvents)
+    {
+        <div class="module-card card-linked card" style="max-width: 10rem">
+            <a class="card-link" href="@eventPage.Url"></a>
+            <div class="card-block">
+                <h4 class="card-title">@eventPage.EventName</h4>
+                <p class="card-text">@eventPage.GridFrontPage</p>
+            </div>
+        </div>
+    }
+</div>

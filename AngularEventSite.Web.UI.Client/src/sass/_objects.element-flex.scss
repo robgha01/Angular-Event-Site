@@ -1,0 +1,51 @@
+﻿/*!
+ *  Element flex object
+ */
+
+.element-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &.flex-inline {
+        display: inline-flex;
+    }
+
+    &.flex-fullHight {
+        flex-direction: column;
+        justify-content: space-between;
+                
+        .flex-item {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        .flex-inline-item {
+            display: inline-flex;
+            flex-flow: column nowrap;
+        }
+
+        .align-bottom {
+            margin-top: auto;
+        }
+    }
+
+    &.flex-fullWidth {
+        justify-content: space-between;
+
+        .flex-item {
+            padding: 0;
+            margin-bottom: 0;
+            width: 0; // this ensures that the flex content can grow witout affecting its siblings.
+        }
+
+        .flex-item-center {
+            @extend .flex-item;
+            text-align: center;
+        }
+    }
+
+    .flex-item.flex-align-vertical {
+        align-self: center;
+    }
+}

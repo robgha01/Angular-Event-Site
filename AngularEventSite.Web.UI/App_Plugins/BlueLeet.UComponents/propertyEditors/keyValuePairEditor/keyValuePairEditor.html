@@ -1,0 +1,51 @@
+<div class="umb-contentpicker umb-editor" ng-controller="BlueLeet.PropertyEditors.KeyValuePairEditorController as vm">
+    <table class="table">
+        <thead>
+        <tr>
+            <td>{{model.config.keyTitle | capitalize}}</td>
+            <td>{{model.config.valueTitle | capitalize}}</td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody ui-sortable="sortableOptions" ng-model="model.value">
+        <tr ng-repeat="link in model.value" class="ui-sortable">
+            <td>
+                <span ng-show="!link.edit">{{link.Key}}</span>
+                <input type="text" ng-model="link.Key" ng-show="link.edit" no-Dirty-Check />
+            </td>
+            <td>
+                <span ng-show="!link.edit">{{link.Value}}</span>
+                <input type="text" ng-model="link.Value" ng-show="link.edit && !model.config.useTextarea" no-Dirty-Check />
+                <textarea ng-model="link.Value" ng-show="link.edit && model.config.useTextarea" style="width: 100%; min-height: 100px;" no-Dirty-Check></textarea>
+            </td>
+            <td>
+                <div class="btn-group" ng-show="!link.edit">
+                    <button type="button" class="btn btn-default" ng-click="edit($index)">Edit</button>
+                    <button type="button" class="btn btn-default" ng-click="delete($index)">Delete</button>
+                </div>
+                <div class="btn-group" ng-show="link.edit">
+                    <button type="button" class="btn btn-default" ng-click="cancelEdit($index)">Cancel</button>
+                    <button type="button" class="btn btn-default" ng-click="cancelEdit($index)">Save</button>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>
+                <input type="text" ng-model="newKey" placeholder="Enter a new {{model.config.keyTitle}}" val-highlight="hasError" no-Dirty-Check />
+            </td>
+            <td>
+                <input type="text" ng-model="newValue" ng-show="!model.config.useTextarea" placeholder="Enter the {{model.config.valueTitle}}" no-Dirty-Check />
+                <textarea ng-model="newValue" ng-show="model.config.useTextarea" placeholder="Enter the {{model.config.valueTitle}}" style="width: 50%; min-height: 50px;" no-Dirty-Check></textarea>
+            </td>
+
+            <td>
+                <div class="btn-group">
+                    <input type="button" ng-click="add()" class="btn btn-default" value="Add" />
+                </div>
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>

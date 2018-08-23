@@ -1,0 +1,6 @@
+<div data-ng-controller="BlueLeet.PropertyEditors.ToggleBoxController as vm">
+    <div class="bl-component bl-component-toggleSwitch bl-component-default">
+        <button type="button" class="btn btn-success bl-switch-left" data-ng-class="{active: vm.leftActive}" data-ng-click="vm.setTrue()">{{model.config.onbuttontext}}</button>
+        <button type="button" class="btn btn-danger bl-switch-right" data-ng-class="{active: vm.rightActive}" data-ng-click="vm.setFalse()">{{model.config.offbuttontext}}</button>
+    </div>
+</div>

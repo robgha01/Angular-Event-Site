@@ -1,0 +1,15 @@
+<div class="bl-module bl-module-quote bl-module-default" data-ng-controller="BlueLeet.GridEditors.QuoteController">
+    <div class="bl-quote-block">
+        <div grid-rte
+             configuration="configrte"
+             value="control.value.quotetext"
+             unique-id="control.$uniqueId">
+        </div>
+    </div>
+    <div class="bl-quote-author-block">
+        <div class="bl-column-author-name">
+            <input type="text" class="bl-author-name" data-ng-model="control.value.authorname" localize="placeholder" placeholder="@blueleetGridQuote_placeholderAuthorName" no-Dirty-Check>
+        </div>
+        <input type="text" class="bl-author-title" data-ng-model="control.value.authordescription" localize="placeholder" placeholder="@blueleetGridQuote_placeholderAuthorDescription" no-Dirty-Check>
+    </div>
+</div>

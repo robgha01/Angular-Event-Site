@@ -1,0 +1,45 @@
+﻿/// <reference path="../_bootstrap.space-blue-wallpaper.scss" />
+
+/*!
+ *  Nav tabs component
+ */
+
+// Nav tab container
+// --------------------------
+.nav.nav-tabs.nav-tabs-default {
+    & li.active > a {
+        line-height: 1.428571429;
+    }
+    
+    & li a {
+        border-color: #dbdee0;
+        border-radius: 0;
+        background: #e9ebec; 
+        line-height: 1;               
+    }
+
+    & li a:hover {
+        border-color: #dbdee0;
+        background: #dbdee0;
+    }
+}
+
+// Nav tab content
+// --------------------------
+.nav.nav-tabs.nav-tabs-default + .tab-content {
+    background: white;
+    border: 1px solid #dbdee0;
+    border-top: 0;
+    
+    h2 {
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 300;
+    }
+
+    .tab-pane {
+        .img-thumbnail {
+            background-color: #fff;            
+        }
+    }
+}

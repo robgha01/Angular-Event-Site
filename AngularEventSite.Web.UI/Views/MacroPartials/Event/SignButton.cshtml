@@ -1,0 +1,9 @@
+﻿@*@using AngularEventSite.Web.Models
+@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.Event.EventSignButtonMacroType>
+@{
+    var currentPage = Model.Content.ToModel() as EventPageModel;
+    if (currentPage == null)
+    {
+        return;
+    }
+}*@

@@ -1,0 +1,14 @@
+<div class="bl-module bl-module-googleMaps bl-module-default" data-ng-controller="BlueLeet.GridEditors.GoogleMapsController">
+    <div class="bl-preview bl-preview-clickable" ng-click="openSetting()">
+        <div class="bl-googleMaps-map" data-ng-if="control.value"></div>
+        <div ng-if="!control.value">
+            <i class="icon icon-map-location color-green"></i>
+            <div class="help-text">Google Map</div>
+        </div>
+    </div>
+    <umb-overlay ng-if="overlay.show"
+                 model="overlay"
+                 view="overlay.view"
+                 position="right">
+    </umb-overlay>
+</div>

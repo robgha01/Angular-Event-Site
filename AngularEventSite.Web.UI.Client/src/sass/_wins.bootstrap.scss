@@ -1,0 +1,8 @@
+﻿/*!
+ *  Bootstrap wins
+ */
+
+// This is needed for bootstrap tables in firefox (http://getbootstrap.com/css/#tables)
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}

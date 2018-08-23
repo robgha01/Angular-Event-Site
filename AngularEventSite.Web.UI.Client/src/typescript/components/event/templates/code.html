@@ -1,0 +1,60 @@
+﻿<template [ngTemplateOutlet]="this.currentTemplate" [ngOutletContext]="{ $implicit: this }">
+</template>
+<template #DefaultTemplate>
+    <div *ngIf="alerts?.length > 0" class="row">
+        <div class="col-xs-12" *ngFor="let alert of this?.alerts">
+            <alert [type]="alert.type" dismissOnTimeout="5000" [dismissible]="true"><span [innerHtml]="alert.msg"></span></alert>
+        </div>
+    </div>
+    <template [ngTemplateOutlet]="this?.contentTemplate" [ngOutletContext]="{ $implicit: this }">
+    </template>
+    <form class="unlock-code-form" [formGroup]="unlockCodeForm" (ngSubmit)="performUnlockCode($event)" role="form" autocomplete="off" ngNoForm>
+        <div class="form-group">
+            <label for="event-code">Eventkod</label>
+            <input type="text" class="form-control form-control-lg rounded-0" name="event-code" id="event-code" formControlName="eventcode">
+        </div>
+        <button type="submit" class="btn btn-success btn-lg float-right" [disabled]="!unlockCodeForm.valid">Lås upp</button>
+    </form>
+    <ng-template #SuccessModalTemplate>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-check-circle-o fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-8">
+                        <p>Eventet <a [href]="this?.event.url">{{this?.event.name}}</a> är upplåst!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #WrongCodeModalTemplate>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-times-circle-o fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-8">
+                        <p>Fel eventkod!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #CompanyRegisterModalTemplate>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-times-circle-o fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-8">
+                        <p>Det finns redan en person registerad på eventet för {{ member.company }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</template>

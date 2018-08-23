@@ -1,0 +1,20 @@
+<div class="bl-module bl-module-robots bl-module-default" data-ng-controller="BlueLeet.PropertyEditors.RobotsController as vm">
+    <umb-load-indicator data-ng-if="vm.loading"></umb-load-indicator>
+    <div class="bl-component bl-component-checklist bl-checklist-checkboxes">
+        <div class="bl-checklist-options">
+            <div class="bl-option" data-ng-click="vm.setTo(0)">
+                <span class="bl-statebox checkbox"></span>
+                <label class="bl-statebox-label"><localize key="blueleetRobots_disallowAll">Disallow everything</localize></label>
+            </div>
+            <div class="bl-option" data-ng-click="vm.setTo(1)">
+                <span class="bl-statebox checkbox"></span>
+                <label class="bl-statebox-label"><localize key="blueleetRobots_allowAll">Allow everything</localize></label>
+            </div>
+            <div class="bl-option" data-ng-click="vm.setTo(2)">
+                <span class="bl-statebox checkbox"></span>
+                <label class="bl-statebox-label"><localize key="blueleetRobots_automatic">Automatically generated based on the setting on each page, and disallow umbraco folders as explained above.</localize></label>
+            </div>
+        </div>
+    </div>
+    <textarea class="bl-robots-value-box" data-ng-model="vm.ShowContent" data-ng-keyup="vm.setCustom()" disabled="" no-Dirty-Check></textarea>
+</div>

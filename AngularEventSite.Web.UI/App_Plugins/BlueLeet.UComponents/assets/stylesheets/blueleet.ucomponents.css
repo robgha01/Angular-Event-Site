@@ -1,0 +1,152 @@
+/*!
+ *  Color settings
+ *//*!
+ *  Global settings.
+ *//*!
+ *  Font awsome settings
+ *//*!
+ *  Module settings.
+ *//*!
+ *  Preview settings.
+ *//*!
+ *  Helptext settings.
+ *//*!
+ *  Component toggle switch settings.
+ *//*!
+ *  Tools base (this should get imported before any other tool)
+ *//*!
+ *  Asset helper tools
+ *  Source: https://css-tricks.com/snippets/sass/simple-asset-helper-functions/
+ *//*!
+ *  Mixins
+ *//*!
+ *  Font face settings
+ */@font-face{font-family:'Open Sans';font-display:swap;src:url(../../assets/fonts/opensans-light-webfont.eot);src:url(../../assets/fonts/opensans-light-webfont.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/opensans-light-webfont.woff) format("woff"),url(../../assets/fonts/opensans-light-webfont.ttf) format("truetype"),url(../../assets/fonts/opensans-light-webfont.svg#open_sanslight) format("svg");font-weight:300}@font-face{font-family:'Open Sans';font-display:swap;src:url(../../assets/fonts/opensans-bold-webfont.eot);src:url(../../assets/fonts/opensans-bold-webfont.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/opensans-bold-webfont.woff) format("woff"),url(../../assets/fonts/opensans-bold-webfont.ttf) format("truetype"),url(../../assets/fonts/opensans-bold-webfont.svg#open_sansbold) format("svg");font-weight:700}@font-face{font-family:'Noto Sans';font-display:swap;src:url(../../assets/fonts/notosans-bold-webfont.eot);src:url(../../assets/fonts/notosans-bold-webfont.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/notosans-bold-webfont.woff2) format("woff2"),url(../../assets/fonts/notosans-bold-webfont.woff) format("woff"),url(../../assets/fonts/notosans-bold-webfont.ttf) format("truetype"),url(../../assets/fonts/notosans-bold-webfont.svg#noto_sansbold) format("svg");font-weight:700}@font-face{font-family:aparajitabold;font-display:swap;src:url(../../assets/fonts/aparajb-webfont.eot);src:url(../../assets/fonts/aparajb-webfont.eot?#iefix) format("embedded-opentype"),url(../../assets/fonts/aparajb-webfont.woff2) format("woff2"),url(../../assets/fonts/aparajb-webfont.woff) format("woff"),url(../../assets/fonts/aparajb-webfont.ttf) format("truetype"),url(../../assets/fonts/aparajb-webfont.svg#aparajitabold) format("svg");font-weight:400;font-style:normal}@font-face{font-family:umbracodemoicon;font-display:swap;src:url(/css/fonts/umbracodemoicon.eot?wz13n0);src:url(/css/fonts/umbracodemoicon.eot?#iefixwz13n0) format("embedded-opentype"),url(/css/fonts/umbracodemoicon.ttf?wz13n0) format("truetype"),url(/css/fonts/umbracodemoicon.woff?wz13n0) format("woff"),url(/css/fonts/umbracodemoicon.svg?wz13n0#umbracodemoicon) format("svg");font-weight:400;font-style:normal}/*!
+ *  Range slider imports
+ */.rangeslider,.rangeslider__fill{display:block;-moz-box-shadow:inset 0 1px 3px rgba(0,0,0,.3);-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,.3);box-shadow:inset 0 1px 3px rgba(0,0,0,.3);-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px}.rangeslider{background:#e6e6e6;position:relative}.rangeslider--horizontal{height:20px;width:100%}.rangeslider--vertical{width:20px;min-height:150px;max-height:100%}.rangeslider--disabled{opacity:.4}.rangeslider__fill{background:#0f0;position:absolute}.rangeslider--horizontal .rangeslider__fill{top:0;height:100%}.rangeslider--vertical .rangeslider__fill{bottom:0;width:100%}.rangeslider__handle{background:#fff;border:1px solid #ccc;cursor:pointer;display:inline-block;width:40px;height:40px;position:absolute;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g);background-size:100%;background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0,rgba(255,255,255,0)),color-stop(100%,rgba(0,0,0,.1)));background-image:-moz-linear-gradient(rgba(255,255,255,0),rgba(0,0,0,.1));background-image:-webkit-linear-gradient(rgba(255,255,255,0),rgba(0,0,0,.1));background-image:linear-gradient(rgba(255,255,255,0),rgba(0,0,0,.1));-moz-box-shadow:0 0 8px rgba(0,0,0,.3);-webkit-box-shadow:0 0 8px rgba(0,0,0,.3);box-shadow:0 0 8px rgba(0,0,0,.3);-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%}.rangeslider__handle:after{content:"";display:block;width:18px;height:18px;margin:auto;position:absolute;top:0;right:0;bottom:0;left:0;background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEzIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);background-size:100%;background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0,rgba(0,0,0,.13)),color-stop(100%,rgba(255,255,255,0)));background-image:-moz-linear-gradient(rgba(0,0,0,.13),rgba(255,255,255,0));background-image:-webkit-linear-gradient(rgba(0,0,0,.13),rgba(255,255,255,0));background-image:linear-gradient(rgba(0,0,0,.13),rgba(255,255,255,0));-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%}.rangeslider__handle:active{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);background-size:100%;background-image:-webkit-gradient(linear,50% 0,50% 100%,color-stop(0,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.12)));background-image:-moz-linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.12));background-image:-webkit-linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.12));background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.12))}.rangeslider--horizontal .rangeslider__handle{top:-10px;touch-action:pan-y;-ms-touch-action:pan-y}.rangeslider--vertical .rangeslider__handle{left:-10px;touch-action:pan-x;-ms-touch-action:pan-x}input[type=range]:focus+.rangeslider .rangeslider__handle{-moz-box-shadow:0 0 8px rgba(255,0,255,.9);-webkit-box-shadow:0 0 8px rgba(255,0,255,.9);box-shadow:0 0 8px rgba(255,0,255,.9)}/*!
+ * Headings base
+ *//*!
+ *  Links base
+ *//*!
+ *  Preview object
+ */.bl-component-fileSelector,.bl-preview{display:block;padding:5px;max-width:100%}.bl-component-fileSelector .icon-picture,.bl-preview .icon-picture{position:relative;top:4px;font-size:20px}/*!
+ *  Wrapper objects
+ *//*!
+ *  Helptext object
+ */.bl-helptext{margin-top:15px}/*!
+ *  Image object
+ */.bl-image.bl-image-size-full{width:auto}/*!
+ *  Link component object
+ */.bl-component-link .bl-link{display:inline-block}/*!
+ *  Abstract module object
+ *  all modules should use this as a base class.
+ */.bl-module.bl-module-imageAndText .bl-column-content,.bl-module.bl-module-imageAndText .bl-column-image,.bl-module.bl-module-imageAndText .bl-column-title{width:50%;box-sizing:border-box;display:inline-block}.bl-module.bl-module-card .bl-column-content,.bl-module.bl-module-card .bl-column-image,.bl-module.bl-module-card .bl-column-title{width:100%;box-sizing:border-box;display:inline-block}/*!
+ *  Blueleet module settings object
+ */.bl-module-setting{text-align:left;padding:20px}.bl-module-setting .bl-fullSizeImage{width:auto}.bl-module-setting .btn{margin-top:5px}.bl-module-setting .bl-field{padding:10px 0}.bl-module-setting .bl-field .bl-fieldValue{width:97%}.bl-module-setting .bl-field>.bl-field-label{margin:15px 0 1px 0;display:block}.bl-module-setting .bl-field.bl-field-alignmentPicker .bl-component-button{display:inline-block;margin-top:5px;line-height:30px}.bl-module-setting .bl-field.bl-field-alignmentPicker .bl-field-label{display:block}/*!
+ *  Blueleet module image and text object
+ */.bl-module.bl-module-imageAndText .bl-column-title{position:relative;margin-bottom:2px;max-height:120px;float:left}.bl-module.bl-module-imageAndText .bl-column-title.column-align-right{float:right}.bl-module.bl-module-imageAndText .bl-column-image{padding:0 10px 10px 0;margin-bottom:2px;float:left}.bl-module.bl-module-imageAndText .bl-column-image.column-align-right{float:right;padding-left:10px}.bl-module.bl-module-imageAndText .bl-column-content{position:relative}/*!
+ *  Blueleet module card object
+ */.bl-module.bl-module-card .bl-column-title{position:relative;margin-bottom:2px}.bl-module.bl-module-card .bl-column-image{padding:10px 0 10px 0;margin-bottom:2px}.bl-module.bl-module-card .bl-column-content{position:relative}.bl-module.bl-module-card .bl-column-preview .bl-column-title{max-height:120px}/*!
+ *  Blueleet module image and text object
+ */.bl-module.bl-module-quote .bl-quote-block{position:relative;width:95%;margin:15px;text-align:center}.bl-module.bl-module-quote .bl-quote-author-block{max-width:420px;margin:0 auto;text-align:center}.bl-module.bl-module-quote .bl-quote-author-block .bl-column-author-name{margin-bottom:5px}.bl-module.bl-module-quote .bl-quote-author-block .bl-column-author-name .bl-author-name{display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.bl-module.bl-module-quote .bl-quote-author-block .bl-author-title{padding-left:0;padding-right:0;width:100%;text-align:center}/*!
+ *  Blueleet module headline object
+ */.bl-module.bl-module-headline .bl-headline-value{width:94%;height:90px}/*!
+ *  Blueleet module go to top object
+ */.bl-module.bl-module-goToTop{padding:22px 0 18px;text-align:center}.bl-module.bl-module-goToTop .bl-goToTop-arrow{display:inline-block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;width:33px;height:33px;margin-bottom:9px}.bl-module.bl-module-goToTop .bl-column-text .bl-text{width:95%;max-width:200px;text-align:center}/*!
+ *  Blueleet module google maps object
+ */.bl-module.bl-module-googleMaps{text-align:center;width:100%}.bl-module.bl-module-googleMaps a{display:inline-block;margin-bottom:8px;padding-top:3px;padding-bottom:3px;width:64%}.bl-module.bl-module-googleMaps .bl-googleMaps-map{pointer-events:none;position:relative;display:block;height:0;padding:0;overflow:hidden;padding-bottom:56.25%;margin:0 auto}.bl-module.bl-module-googleMaps .bl-googleMaps-map embed,.bl-module.bl-module-googleMaps .bl-googleMaps-map iframe,.bl-module.bl-module-googleMaps .bl-googleMaps-map object,.bl-module.bl-module-googleMaps .bl-googleMaps-map video{position:absolute;top:0;left:0;bottom:0;height:100%;width:100%;border:0}.bl-module.bl-module-googleMaps .bl-component-fileSelector .icon-map-location,.bl-module.bl-module-googleMaps .bl-preview .icon-map-location{display:block;margin-bottom:10px;font-size:85px;line-height:85px}.bl-module.bl-module-googleMaps .bl-component-fileSelector .help-text,.bl-module.bl-module-googleMaps .bl-preview .help-text{display:inline-block;clear:both;font-size:14px;font-weight:700;color:#000}.bl-module.bl-module-googleMaps .bl-module-setting{padding:unset}.bl-module.bl-module-googleMaps .bl-module-setting .bl-googleMaps-embed{width:90%;height:250px;text-align:left;margin-bottom:30px}/*!
+ *  Blueleet module image and text object
+ */.bl-module.bl-module-advancedSeoPreview .preview-wrapper{width:68%;max-height:110px}/*!
+ *  Blueleet module robots object
+ */.bl-module.bl-module-robots .bl-robots-value-box{min-width:66.6%;padding:4px 6px;min-height:200px}/*!
+ *  Blueleet module text with mode count object
+ */.bl-module.bl-module-textWithModeCount{display:inline-block;width:100%}/*!
+ *  Blueleet module toggle box and slider object
+ *//*!
+ *  Blueleet module multi tree source object
+ */.bl-module-multiTreeSource .bl-link-list{display:flex;flex-wrap:wrap;flex-direction:column}.bl-module-multiTreeSource .bl-link-container{flex-direction:row}.bl-module-multiTreeSource .bl-link{align-content:flex-start;flex:1 1 auto;display:inline-flex;max-width:10em}.bl-module-multiTreeSource .bl-link .bl-link-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}.bl-module-multiTreeSource .bl-link-icon{align-content:flex-start;flex:0 0 100%}.bl-module-multiTreeSource .bl-link-remove{align-content:flex-end;flex:0 0 100%}.bl-module-multiTreeSource .bl-link-handle{align-content:flex-start;flex:0 0 100%}/*!
+ *  Blueleet module separator object
+ */.bl-module-separator .hr-sect{display:flex;flex-basis:100%;align-items:center;color:rgba(0,0,0,.35);margin:8px 0;text-transform:uppercase}.bl-module-separator .hr-sect::after,.bl-module-separator .hr-sect::before{content:"";flex-grow:1;background:rgba(0,0,0,.35);height:1px;font-size:0;line-height:0;margin:0 8px}/*!
+ *  Abstract component object
+ *  all components should reference this class.
+ */.bl-component,.bl-component-inline{display:inline-block}.bl-component-center,.bl-component-fileSelector{margin-left:auto;margin-right:auto}/*!
+ *  Button component object
+ */.bl-component-button{width:100px;height:54px;box-sizing:border-box;padding:3px 3px 3px 3px;cursor:pointer}/*!
+ *  Blueleet module image and text object
+ */.bl-component.bl-component-checklist{display:block}.bl-component.bl-component-checklist .bl-checklist-options{margin-bottom:10px;width:67%;margin-left:-10px}.bl-component.bl-component-checklist .bl-checklist-options .bl-option{display:inline-block;margin-left:10px}.bl-component.bl-component-checklist .bl-checklist-options .bl-option .bl-statebox-label{display:inline-block;padding:0 10px 0 10px;float:left}/*!
+ *  Tagbox component object
+ */.bl-component.bl-component-tagbox{vertical-align:top}.bl-component.bl-component-tagbox.bl-tagbox-vertical{width:100%;margin-left:-5px}.bl-component.bl-component-tagbox .bl-tagbox-tag{float:left;display:inline;padding:5px;margin-left:5px;margin-top:5px;margin-bottom:5px}/*!
+ *  Tagbox component object
+ */.bl-component-toggleSwitch .bl-switch-left,.bl-component-toggleSwitch .bl-switch-right,.bl-component-toggleSwitch.bl-component-default .bl-switch-left,.bl-component-toggleSwitch.bl-component-default .bl-switch-right{display:inline-block;min-width:80px;padding:5px 10px}.bl-component-toggleSwitch .bl-switch-right{margin-left:-6px}/*!
+ *  Slider component object
+ */.bl-component.bl-component-slider{margin-top:20px}.bl-component.bl-component-slider .bl-slider-wrapper{width:158px;display:inline-block;float:left}.bl-component.bl-component-slider .bl-slider-value{display:block;width:35px;float:left}/*!
+ *  file selector object
+ */.bl-component-fileSelector .bl-helptext{font-weight:600}/*!
+ *  Image 86x42 objects
+ */.bl-component-button .bl-button-image-86x42{width:86px;height:42px;border-radius:2px;box-shadow:0 1px 3px;display:block;box-sizing:border-box;margin-left:auto;margin-right:auto}/*!
+ *  Dashboard extending object
+ */.bl-extending.bl-extending-dashboard{max-width:550px;margin:100px auto}.bl-extending.bl-extending-dashboard .bl-dashboard-heading .bl-heading-small{margin-left:10px}.bl-extending.bl-extending-dashboard .bl-dashboard-logo-container{padding:30px 20px}.bl-extending.bl-extending-dashboard .bl-dashboard-contact-text{margin-top:20px}.bl-extending.bl-extending-dashboard .bl-dashboard-services{margin-left:-10px}.bl-extending.bl-extending-dashboard .bl-dashboard-services .bl-service-bullet{margin-left:10px}.bl-extending.bl-extending-dashboard .bl-dashboard-services .bl-service-icon{position:relative;top:2px}/*!
+ *  tinymce component
+ */#tinymce{margin-top:-30px;font-family:'Open Sans';text-rendering:optimizeLegibility;font-weight:300}#tinymce p{font-size:36px}/*!
+ *  Preview component
+ */.bl-component-fileSelector,.bl-preview{border:1px dashed #bababa;color:#ccc}.bl-preview.umb-editor-placeholder,.umb-editor-placeholder.bl-component-fileSelector{border-color:#d9d9d9}.bl-preview-clickable.bl-component-fileSelector,.bl-preview.bl-preview-clickable{cursor:pointer}/*!
+ *  Helptext component
+ */.bl-helptext.bl-helptext-default{font-size:10px;font-weight:700;color:#b3b3b3}/*!
+ *  Link component
+ */.bl-component-link .bl-link.bl-link-default,.bl-component-link .bl-link.bl-link-egyptian-blue,.bl-component-link .bl-link.bl-link-remove{cursor:pointer}.bl-component-link .bl-link.bl-link-remove{color:#9d261d}.bl-component-link .bl-link.bl-link-egyptian-blue{color:#1e0fbe}/*!
+ *  Default module component
+ *//*!
+ *  Blueleet module image and text component
+ */.bl-module.bl-module-imageAndText.bl-module-default .bl-column-content,.bl-module.bl-module-imageAndText.bl-module-default .bl-column-title{border:1px dashed #ccc}.bl-module.bl-module-imageAndText.bl-module-default .bl-column-title{font-size:36px}.bl-module.bl-module-imageAndText.bl-module-default .bl-hightlight-color{color:#9fce67}/*!
+ *  Blueleet module card component
+ */.bl-module-card.bl-module-default .bl-column-content,.bl-module-card.bl-module-default .bl-column-title,.bl-module-card.bl-module-default .bl-module.bl-module-imageAndText.bl-module-default .bl-column-content,.bl-module-card.bl-module-default .bl-module.bl-module-imageAndText.bl-module-default .bl-column-title,.bl-module.bl-module-imageAndText.bl-module-default .bl-module-card.bl-module-default .bl-column-content,.bl-module.bl-module-imageAndText.bl-module-default .bl-module-card.bl-module-default .bl-column-title{border:1px dashed #ccc}.bl-module-card.bl-module-default .bl-column-title{font-size:36px}.bl-module-card.bl-module-default .bl-hightlight-color{color:#9fce67}.bl-module-card.bl-module-default .bl-column-preview .bl-column-title{border:none}.bl-module-card.bl-module-default .bl-column-preview .bl-column-content{border:none}/*!
+ *  Blueleet module image and text component
+ */.bl-module.bl-module-quote.bl-module-default .bl-quote-block:after,.bl-module.bl-module-quote.bl-module-default .bl-quote-block:before{position:absolute;font-family:aparajitabold;color:#212121;font-size:65px;font-style:normal;line-height:normal}.bl-module.bl-module-quote.bl-module-default .bl-quote-block:before{content:'\201C';top:-31px;left:0;z-index:9}.bl-module.bl-module-quote.bl-module-default .bl-quote-block:after{content:'\201D';bottom:-62px;right:-15px}.bl-module.bl-module-quote.bl-module-default .bl-quote-author-block .bl-author-name-column{background:url(../../assets/images/quote-author.png) repeat-x center left}.bl-module.bl-module-quote.bl-module-default .bl-quote-author-block .bl-column-author-name .bl-author-name{font-family:open_sansbold;font-size:14px;color:#a2a2a2;background:#fff;border:none}.bl-module.bl-module-quote.bl-module-default .bl-quote-author-block .bl-author-title{font-family:open_sansregular;font-size:12px;color:#a2a2a2;border:none}.bl-module.bl-module-quote.bl-module-default .bl-module-setting .bl-field input,.bl-module.bl-module-quote.bl-module-default .bl-module-setting .bl-field textarea{width:90%}/*!
+ *  Blueleet module headline component
+ */.bl-module.bl-module-headline .bl-headline-value{border:none;font-family:open_sansregular;color:#363636}.bl-module.bl-module-headline.bl-module-default .bl-headline-value{font-size:40px;line-height:45px}.bl-module.bl-module-headline.bl-module-widgetStyle .bl-headline-value{font-size:28px;line-height:20px}/*!
+ *  Blueleet module go to top component
+ */.bl-module.bl-module-goToTop.bl-module-default .bl-goToTop-arrow{background:#9fce67 url(../../assets/images/arrow-go-top.png) center no-repeat}.bl-module.bl-module-goToTop.bl-module-default .bl-column-text .bl-text{font-family:open_sanssemibold;font-size:14px;text-transform:uppercase;color:#9fce67;border:none;border-bottom:1px dashed #ccc}/*!
+ *  Blueleet module google maps component
+ */.bl-module.bl-module-googleMaps.bl-module-default a{cursor:pointer;text-decoration:none;border-radius:5px;background-color:#f9f9f9}.bl-module.bl-module-googleMaps.bl-module-default a:hover{background-color:#2e8aea;color:#fff}/*!
+ *  Blueleet module advanced seo preview component
+ */.bl-module.bl-module-advancedSeoPreview.bl-module-default{font-family:arial,sans-serif}.bl-module.bl-module-advancedSeoPreview.bl-module-default .preview-title .bl-link.bl-link-title{font-size:18px;font-weight:400;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;text-decoration:none}.bl-module.bl-module-advancedSeoPreview.bl-module-default .preview-info .info-urlPreview{font-size:13px;color:#00802a;font-style:normal;line-height:16px}.bl-module.bl-module-advancedSeoPreview.bl-module-default .preview-info .info-descPreview{line-height:1.4;color:#545454;font-size:small}/*!
+ *  Blueleet module robots component
+ *//*!
+ *  Blueleet module text with mode count component
+ */.bl-module.bl-module-textWithModeCount.bl-module-default .bl-number-counter .bl-counter-invalid{color:red}/*!
+ *  Blueleet module textbox keyword component
+ */.bl-module.bl-module-textboxKeyword.bl-module-default .bl-keyword-wrapper .umb-textstring{text-transform:lowercase}/*!
+ *  Blueleet module toggle box and slider component
+ *//*!
+ *  Component button components
+ */.bl-component-button.bl-button-default{border:2px solid transparent}.bl-component-button.bl-button-default:hover{border:2px dashed #bababa;background-color:transparent}.bl-component-button.bl-button-default.active{border:2px solid #2e8aea;background-color:#2e8aea}/*!
+ *  Blueleet checklist component
+ */.bl-component.bl-component-checklist.bl-checklist-checkboxes .bl-option .bl-statebox{cursor:pointer;background:url(../../assets/images/checkbox.png) no-repeat;width:0;background-position:-44px 0;float:left}.bl-component.bl-component-checklist.bl-checklist-checkboxes .bl-option .bl-statebox-active{background-position:-66px 0}/*!
+ *  Tagbox component component
+ */.bl-component.bl-component-tagbox.bl-component-default .bl-tagbox-tag{background-color:#efefef;color:#343434;padding:5px;border-radius:4px;border:1px solid #ccc;text-transform:lowercase}.bl-component.bl-component-tagbox.bl-component-default .bl-tagbox-tag .fa-remove{cursor:pointer;color:red}/*!
+ *  Toggle switch component component
+ */.bl-component-toggleSwitch.bl-component-default .bl-switch-left,.bl-component-toggleSwitch.bl-component-default .bl-switch-right{text-align:center;cursor:pointer;opacity:.3;color:#fff;background:grey}.bl-component-toggleSwitch.bl-component-default .bl-switch-left.active,.bl-component-toggleSwitch.bl-component-default .bl-switch-right.active{opacity:1}.bl-component-toggleSwitch.bl-component-default .bl-switch-left:hover,.bl-component-toggleSwitch.bl-component-default .bl-switch-right:hover{opacity:1}.bl-component-toggleSwitch.bl-component-default .bl-switch-left{border-bottom-left-radius:15px;border-top-left-radius:15px}.bl-component-toggleSwitch.bl-component-default .bl-switch-left.active{background:#53a93f}.bl-component-toggleSwitch.bl-component-default .bl-switch-left:hover{background:#53a93f}.bl-component-toggleSwitch.bl-component-default .bl-switch-right{border-bottom-right-radius:15px;border-top-right-radius:15px}.bl-component-toggleSwitch.bl-component-default .bl-switch-right.active{background:#bd362f}.bl-component-toggleSwitch.bl-component-default .bl-switch-right:hover{background:#bd362f}/*!
+ *  Slider component component
+ */.bl-component.bl-component-slider.bl-component-default .bl-slider-value{font-size:17px;font-weight:700;text-align:center}/*!
+ *  file selector component
+ */.bl-component-fileSelector.bl-component-default{cursor:pointer}.bl-component-fileSelector.bl-component-default .bl-fileSelector-link{color:#ccc}/*!
+ *  Dashboard extending component
+ */.bl-extending.bl-extending-dashboard .bl-dashboard-heading{font-size:26px;font-weight:700}.bl-extending.bl-extending-dashboard .bl-dashboard-heading .bl-heading-small{font-weight:700}.bl-extending.bl-extending-dashboard .bl-dashboard-contact-text{font-weight:700}.bl-extending.bl-extending-dashboard.bl-extending-default .bl-dashboard-heading .bl-heading-small{color:#949291}.bl-extending.bl-extending-dashboard.bl-extending-default .bl-dashboard-logo-container{border-top:3px #397a44 solid;border-bottom:3px #397a44 solid}.bl-extending.bl-extending-dashboard.bl-extending-default .bl-dashboard-contact-link{color:#1541a9}/*!
+ *  ie8 wins
+ *//*!
+ *  Utilitie wins
+ *//*!
+ *  Tinymce wins
+ */@media (min-width:768px){#tinymce h1{margin-bottom:21px}#tinymce h2{margin-bottom:23px}#tinymce ol,#tinymce p,#tinymce ul{margin-bottom:23px}#tinymce hr{margin-top:30px;margin-bottom:30px}}@media (min-width:992px){#tinymce h1{font-size:40px}}@media (min-width:1200px){#tinymce hr{margin-top:40px;margin-bottom:40px}}/*!
+ *  Blueleet editor image-n-text wins
+ */.bl-module-imageAndText .umb-editor-placeholder{border:1px dashed #d9d9d9!important}@media (max-width:1240px){.bl-module-imageAndText .bl-column-title.column-align-right{float:none}.bl-module-imageAndText .bl-column-image.column-align-right{float:none}.bl-module-imageAndText .bl-column-content.column-align-right{float:none}.bl-module-imageAndText .bl-column-title{width:100%}.bl-module-imageAndText .bl-column-image{width:100%}.bl-module-imageAndText .bl-column-content{width:100%}}/*!
+ *  Blueleet editor card wins
+ */.bl-module-card .umb-editor-placeholder{border:1px dashed #d9d9d9!important}@media (max-width:1240px){.bl-module-card .bl-column-title.column-align-right{float:none}.bl-module-card .bl-column-image.column-align-right{float:none}.bl-module-card .bl-column-content.column-align-right{float:none}.bl-module-card .bl-column-title{width:100%}.bl-module-card .bl-column-image{width:100%}.bl-module-card .bl-column-content{width:100%}}/*!
+ *  Quote wins
+ */.bl-module-quote a{cursor:pointer;display:inline-block;text-decoration:none;background-color:#f9f9f9;margin-bottom:8px;padding-top:3px;padding-bottom:3px;border-radius:5px;width:64%}.bl-module-quote a:hover{background-color:#2e8aea;color:#fff}@media (min-width:768px){.bl-module.bl-module-quote .bl-quote-block{padding:0 47px;font-size:18px;line-height:30px}.bl-module.bl-module-quote .bl-quote-block p{line-height:30px}.bl-module.bl-module-quote .bl-quote-block:before{top:-18px}.bl-module.bl-module-quote .bl-quote-block:after{bottom:-38px}}@media (min-width:992px){.bl-module.bl-module-quote{margin-bottom:33px;margin-top:33px}}@media (min-width:1200px){.bl-module.bl-module-quote{margin-bottom:64px;margin-top:64px}}/*!
+ *  Module advanced seo preview wins
+ */@media (max-width:1610px){.bl-module-advancedSeoPreview .advancedSeoPreview-wrapper{max-height:none}}/*!
+ *  Slider component wins
+ */.bl-component.bl-component-slider.bl-component-default .rangeslider__fill{background:#53a93f!important}/*!
+ *  Dashboard extending wins
+ */@media screen and (max-width:820px){.bl-extending.bl-extending-dashboard{margin:20px auto}}@media screen and (max-width:700px){.bl-extending.bl-extending-dashboard .bl-dashboard-services .bl-service-bullet{display:block}}

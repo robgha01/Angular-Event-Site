@@ -1,0 +1,14 @@
+﻿@using BlueLeet.UComponents.Core.Extensions
+@inherits UmbracoViewPage<Skybrud.Umbraco.GridData.GridDataModel>
+@{
+    // Stop any further rendering since the model isn't valid
+    if (!Model.IsValid)
+    {
+        return;
+    }
+
+    foreach (var section in Model.Sections)
+    {
+        @Html.RenderGridSectionOrFallback(section, "Default")
+    }
+}

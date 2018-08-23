@@ -1,0 +1,89 @@
+﻿<template [ngTemplateOutlet]="this.currentTemplate" [ngOutletContext]="{ $implicit: this }">
+</template>
+<template #DefaultTemplate>
+    <div *ngIf="alerts?.length > 0" class="row">
+        <div class="col-xs-12" *ngFor="let alert of this?.alerts">
+            <alert [type]="alert.type" dismissOnTimeout="5000" [dismissible]="true"><span [innerHtml]="alert.msg"></span></alert>
+        </div>
+    </div>
+    <template [ngTemplateOutlet]="this?.contentTemplate" [ngOutletContext]="{ $implicit: this }">
+    </template>
+    <button class="btn btn-primary d-block mx-auto" *ngIf="this.state && this?.buttonText" [disabled]="!this.activeButtonTemplate" (click)="openModal(activeButtonTemplate)">{{ buttonText }}</button>
+    <ng-template #RegisterModalTemplate>
+        <div class="modal-header">
+            <h5 class="modal-title">Jag anmäler mig till {{ eventPage.eventName }} eventet!</h5>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-center">
+            <p>{{ member?.name }}</p>
+            <p>{{ member?.company }}</p>
+            <p>{{ member?.email }}</p>
+            <p>{{ member?.phone }}</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary d-block mx-auto" (click)="performRegister()">Bekräftar Anmälan</button>
+        </div>
+    </ng-template>
+    <ng-template #RegisteredModalTemplate>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-check-circle-o fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-8">
+                        <p>Du är anmäld!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #CompanyRegisterModalTemplate>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-times-circle-o fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-8">
+                        <p>Det finns redan en person registerad på eventet för {{ member.company }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    
+    <ng-template #UnregisterModalTemplate>
+        <div class="modal-header">
+            <h5 class="modal-title">Jag avanmäler mig till {{ eventPage.eventName }} eventet!</h5>
+            <button type="button" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-center">
+            <p>{{ member?.name }}</p>
+            <p>{{ member?.company }}</p>
+            <p>{{ member?.email }}</p>
+            <p>{{ member?.phone }}</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary d-block mx-auto" (click)="performUnregister()">Bekräftar Avanmälan</button>
+        </div>
+    </ng-template>
+    <ng-template #UnregisteredModalTemplate>
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4">
+                        <i class="fa fa-check-circle-o fa-4x" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-8">
+                        <p>Du är avanmäld!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</template>

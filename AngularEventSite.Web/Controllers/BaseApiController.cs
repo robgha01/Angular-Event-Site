@@ -1,0 +1,150 @@
+﻿namespace AngularEventSite.Web.Controllers
+{
+    using System;
+    using System.Net;
+    using System.Net.Http.Formatting;
+    using System.Web.Http;
+    using System.Web.Mvc;
+
+    using BlueLeet.UCodeFirst.Helpers.Abstraction;
+
+    using AngularEventSite.Web.Abstraction;
+    using AngularEventSite.Web.Entities.Payloads;
+
+    using JetBrains.Annotations;
+
+    using Newtonsoft.Json;
+
+    using Umbraco.Core;
+    using Umbraco.Core.Models;
+    using Umbraco.Web.WebApi;
+
+    /// <summary>
+    /// Defines a base class for surface controllers.
+    /// </summary>
+    public abstract class BaseApiController : UmbracoApiController
+    {
+        /// <summary>
+        /// Get the application context.
+        /// </summary>
+        protected readonly IContextService ContextService;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseApiController"/> class.
+        /// </summary>
+        /// <param name="contextService">
+        /// The context Service.
+        /// </param>
+        /// <param name="membershipService">
+        /// The membership Service.
+        /// </param>
+        /// <param name="codeFirstHelper">
+        /// The code First Helper.
+        /// </param>
+        protected BaseApiController(
+            IContextService contextService,
+            IMembershipService membershipService,
+            IUCodeFirstHelper codeFirstHelper)
+        {
+            ContextService = contextService;
+            MembershipHelper = membershipService;
+            CodeFirstHelper = codeFirstHelper;
+
+            var jsonFormat = new JsonMediaTypeFormatter();
+            jsonFormat.SerializerSettings = DependencyResolver.Current.GetService<JsonSerializerSettings>();
+            MediaTypeFormatter = jsonFormat;
+        }
+
+        public IUCodeFirstHelper CodeFirstHelper { get; }
+
+        /// <summary>
+        /// Gets or sets the membership helper.
+        /// </summary>
+        [UsedImplicitly]
+        public IMembershipService MembershipHelper { get; set; }
+
+        protected virtual IPublishedContent CurrentPage
+        {
+            get
+            {
+                var publishedContent = TryGetCurrentPage();
+                if (!publishedContent.Success)
+                {
+                    throw publishedContent.Exception;
+                }
+
+                return publishedContent.Result;
+            }
+        }
+
+        [UsedImplicitly]
+        protected MediaTypeFormatter MediaTypeFormatter { get; }
+
+        public IHttpActionResult Error(
+            object data,
+            HttpStatusCode statusCode = HttpStatusCode.BadRequest,
+            MediaTypeFormatter formatter = null)
+        {
+            // Bug: We need to use values directly until this bug is fixed: https://github.com/JamesNK/Newtonsoft.Json/issues/868
+            if (data is PayloadResult)
+            {
+                data = ((PayloadResult)data).Values;
+            }
+
+            return Content(statusCode, data, formatter ?? MediaTypeFormatter);
+        }
+
+        public IHttpActionResult Json(
+            object data,
+            HttpStatusCode statusCode = HttpStatusCode.OK,
+            MediaTypeFormatter formatter = null)
+        {
+            // Bug: below is not needed when this is fixed (https://github.com/JamesNK/Newtonsoft.Json/issues/1077, https://github.com/JamesNK/Newtonsoft.Json/issues/868)
+            if (data is PayloadResult)
+            {
+                // ToDo: refactor this to correct location ?
+                var payload = (PayloadResult)data;
+
+                // if (payload.MessageType == GenericMessages.Danger && payload.Values.ContainsKey(nameof(PayloadFields.Raw)))
+                // {
+                // var error = payload.GetValue(nameof(PayloadFields.Raw));
+                // payload.Values.Remove(nameof(PayloadFields.Raw));
+                // payload.SetOrUpdate(nameof(PayloadFields.Error), error);
+                // }
+
+                // if (payload.Values.ContainsKey(nameof(PayloadFields.Raw)))
+                // {
+                // payload.Values.Remove(nameof(PayloadFields.Raw));
+                // }
+
+                // var dataCopy = new Dictionary<string, object>(payload.Values);
+                // payload.SetOrUpdate(nameof(PayloadFields.Raw), dataCopy);
+                data = payload.Values;
+            }
+
+            return Content(statusCode, data, formatter ?? MediaTypeFormatter);
+        }
+
+        protected Attempt<IPublishedContent> TryGetCurrentPage()
+        {
+            if (UmbracoContext.PublishedContentRequest != null
+                && UmbracoContext.PublishedContentRequest.PublishedContent != null)
+            {
+                return Attempt.Succeed(UmbracoContext.PublishedContentRequest.PublishedContent);
+            }
+
+            if (UmbracoContext.PageId.HasValue)
+            {
+                var p = Umbraco.TypedContent(UmbracoContext.PageId.Value);
+                if (p != null)
+                {
+                    return Attempt.Succeed(p);
+                }
+            }
+
+            return Attempt<IPublishedContent>.Fail(
+                new InvalidOperationException(
+                    "Cannot find the current Umbraco page, the request must be made in the context of an Umbraco request"));
+        }
+    }
+}

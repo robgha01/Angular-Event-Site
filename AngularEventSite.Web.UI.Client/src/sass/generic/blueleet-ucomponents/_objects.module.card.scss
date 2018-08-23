@@ -1,0 +1,32 @@
+/// <reference path="_objects.module.scss" />
+/*!
+ *  Module card object
+ */
+
+.module-card.card-linked {
+    position: relative;
+
+    > .card-link { /* This is the link of the entire card */
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        &:hover ~ .card-title, &:hover ~ .card-block .card-title { /* Hints by underlining title that the card is clickable */
+            text-decoration: underline;
+        }
+    }
+    
+    .card-block, .card-header, .card-footer,
+    .card-img, .card-img-top, .card-title,
+    .card-subtitle, .card-text, .list-group,
+    .list-group-item, .card-blockquote { /* Basically all possible content of our card */
+        pointer-events: none;  /* IMPORTANT! Lets clicks fall through (lets the card-link trigger by supressing the all other clicks) */
+        position: relative;
+        z-index: 10; /* IMPORTANT! Makes actual content be on top of linked card */        
+    }
+}
+
+.module-card {
+    margin-top: 1rem;
+}

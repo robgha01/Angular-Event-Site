@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BrowserTabText name" xml:space="preserve">
+    <value>Page Title</value>
+  </data>
+  <data name="BrowserTabText description" xml:space="preserve">
+    <value>Title of the page in the browser tab, bookmarks etc. Should be kept under 70 characters. If this is empty, the "Menu title" from the "Navigation" tab will be used instead. If that is empty too, the document name will be used.</value>
+  </data>
+  <data name="MainBody name" xml:space="preserve">
+    <value>Body text</value>
+  </data>
+  <data name="MainBody description" xml:space="preserve">
+    <value>This is the page body</value>
+  </data>
+  <data name="MainHeader name" xml:space="preserve">
+    <value>Heading</value>
+  </data>
+  <data name="MainHeader description" xml:space="preserve">
+    <value>This is the page's &lt;h1&gt;</value>
+  </data>
+  <data name="MainPreamble name" xml:space="preserve">
+    <value>Preamble</value>
+  </data>
+  <data name="MainPreamble description" xml:space="preserve">
+    <value>This is the page preamble</value>
+  </data>
+  <data name="NotifyOnNewMemberSignup name" xml:space="preserve">
+    <value>Notify member signups</value>
+  </data>
+  <data name="NotifyOnNewMemberSignup description" xml:space="preserve">
+    <value>Notify when a new member have registered</value>
+  </data>
+  <data name="NotificationEmailAddress name" xml:space="preserve">
+    <value>Notification email address</value>
+  </data>
+  <data name="NotificationEmailAddress description" xml:space="preserve">
+    <value>The email address that should receive notifications if any is set.</value>
+  </data>
+  <data name="FooterLogotype name" xml:space="preserve">
+    <value>Footer Logotype</value>
+  </data>
+  <data name="FooterLogotype description" xml:space="preserve">
+    <value>Site footer logotype</value>
+  </data>
+  <data name="EventName name" xml:space="preserve">
+    <value>Course name</value>
+  </data>
+  <data name="EventDescription name" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="EventName description" xml:space="preserve">
+    <value>A name for this course.</value>
+  </data>
+  <data name="EventDescription description" xml:space="preserve">
+    <value>Description of this course.</value>
+  </data>
+  <data name="EventStartDate name" xml:space="preserve">
+    <value>Start date</value>
+  </data>
+  <data name="EventStartDate description" xml:space="preserve">
+    <value>Start date for this course.</value>
+  </data>
+  <data name="EventEndDate name" xml:space="preserve">
+    <value>End date</value>
+  </data>
+  <data name="EventEndDate description" xml:space="preserve">
+    <value>End date of this course (only the time is used)</value>
+  </data>
+  <data name="EventAddress name" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="EventAddress description" xml:space="preserve">
+    <value>Address to this course.</value>
+  </data>
+  <data name="EventZip name" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+  <data name="EventZip description" xml:space="preserve">
+    <value>Course zip code</value>
+  </data>
+  <data name="EventCity name" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="EventCity description" xml:space="preserve">
+    <value>City of the course.</value>
+  </data>
+  <data name="EventAdditionalInfo name" xml:space="preserve">
+    <value>Additional info</value>
+  </data>
+  <data name="EventAdditionalInfo description" xml:space="preserve">
+    <value>Any additional info for the course.</value>
+  </data>
+  <data name="CourseSpots name" xml:space="preserve">
+    <value>Number of places</value>
+  </data>
+  <data name="CourseSpots description" xml:space="preserve">
+    <value>The size of this course.</value>
+  </data>
+  <data name="CompanyName name" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="CompanyName description" xml:space="preserve">
+    <value>The company responsible for this course.</value>
+  </data>
+  <data name="AdvancedSeoPreview description" xml:space="preserve">
+    <value>Search Engine Result Page Preview. This is how the page might look in Google search results, if the content on the page matches the SEO.</value>
+  </data>
+  <data name="AdvancedSeoPreview name" xml:space="preserve">
+    <value>SERP Preview</value>
+  </data>
+  <data name="MetaKeywords name" xml:space="preserve">
+    <value>Keywords</value>
+  </data>
+  <data name="MetaKeywords description" xml:space="preserve">
+    <value>The most important words for this page. Should be a short list, and not include any special characters.</value>
+  </data>
+  <data name="MetaDescription description" xml:space="preserve">
+    <value>A brief summary of the page content. Technically this is the meta description, but it is used in SERP too. Must include the Keywords above.</value>
+  </data>
+  <data name="MetaDescription name" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="GridFrontPage name" xml:space="preserve">
+    <value>Content Modules</value>
+  </data>
+  <data name="GridFrontPage description" xml:space="preserve">
+    <value>This is how the page looks like.</value>
+  </data>
+  <data name="HideInNavigation name" xml:space="preserve">
+    <value>Hide from menu</value>
+  </data>
+  <data name="HideInNavigation description" xml:space="preserve">
+    <value>Hide this page from all menus on the site. The page can still be accessed in all other ways.</value>
+  </data>
+  <data name="Redirect name" xml:space="preserve">
+    <value>Redirect to</value>
+  </data>
+  <data name="Redirect description" xml:space="preserve">
+    <value>Redirect the user from current page to the selected page.</value>
+  </data>
+  <data name="UmbracoUrlAlias name" xml:space="preserve">
+    <value>Url Alias</value>
+  </data>
+  <data name="UmbracoUrlAlias description" xml:space="preserve">
+    <value>Add additional aliases that should go to this page.</value>
+  </data>
+  <data name="UmbracoUrlName name" xml:space="preserve">
+    <value>Url Name</value>
+  </data>
+  <data name="UmbracoUrlName description" xml:space="preserve">
+    <value>Change the url address that go to this page.</value>
+  </data>
+  <data name="ShowInSitemap name" xml:space="preserve">
+    <value>Show in sitemap.xml</value>
+  </data>
+  <data name="ShowInSitemap description" xml:space="preserve">
+    <value>This will allow search engines to easily find the page.</value>
+  </data>
+  <data name="ChangeFrequency name" xml:space="preserve">
+    <value>Sitemap change frequency</value>
+  </data>
+  <data name="ChangeFrequency description" xml:space="preserve">
+    <value>A hint to search engines on how often the page is changed.</value>
+  </data>
+  <data name="SitemapPriority name" xml:space="preserve">
+    <value>Sitemap priority</value>
+  </data>
+  <data name="SitemapPriority description" xml:space="preserve">
+    <value>A hint to search engines on how important this is compared to other pages on the same site.</value>
+  </data>
+  <data name="BlockInRobots name" xml:space="preserve">
+    <value>Block in robots.txt</value>
+  </data>
+  <data name="BlockInRobots description" xml:space="preserve">
+    <value>If this is set to "block", search engines will not index this page.</value>
+  </data>
+  <data name="GridStartPage name" xml:space="preserve">
+    <value>Start Page Modules</value>
+  </data>
+  <data name="GridStartPage description" xml:space="preserve">
+    <value>This is how the page looks like.</value>
+  </data>
+  <data name="UnitPrice name" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="UnitPrice description" xml:space="preserve">
+    <value>Unit price for this service</value>
+  </data>
+  <data name="DiscountRate name" xml:space="preserve">
+    <value>Discount rate</value>
+  </data>
+  <data name="DiscountRate description" xml:space="preserve">
+    <value>Optional: Set a discount rate, 0.5 to 50% -Discount</value>
+  </data>
+  <data name="IncVat name" xml:space="preserve">
+    <value>Including VAT</value>
+  </data>
+  <data name="IncVat description" xml:space="preserve">
+    <value>Is the unit price including VAT?</value>
+  </data>
+  <data name="VatRate name" xml:space="preserve">
+    <value>VAT Rate</value>
+  </data>
+  <data name="VatRate description" xml:space="preserve">
+    <value>What VAT rate will be used in calculating the price? ex Time 0.25</value>
+  </data>
+  <data name="MaterialVat description" xml:space="preserve">
+    <value>How much is the VAT for materials?</value>
+  </data>
+  <data name="MaterialVat name" xml:space="preserve">
+    <value>Material VAT</value>
+  </data>
+  <data name="TravelCost name" xml:space="preserve">
+    <value>Travel cost</value>
+  </data>
+  <data name="TravelCost description" xml:space="preserve">
+    <value>How much is the cost of a trip?</value>
+  </data>
+  <data name="PriceConfiguration name" xml:space="preserve">
+    <value>Service price configuration</value>
+  </data>
+  <data name="PriceConfiguration description" xml:space="preserve">
+    <value>Price configurations for  service specialities</value>
+  </data>
+  <data name="PriceVariations description" xml:space="preserve">
+    <value>Price variations</value>
+  </data>
+  <data name="PriceVariations name" xml:space="preserve">
+    <value>Price modes</value>
+  </data>
+  <data name="HourPriceConfiguration description" xml:space="preserve">
+    <value>Price configuration for hour based services</value>
+  </data>
+  <data name="HourPriceConfiguration name" xml:space="preserve">
+    <value>Service: Price by hour</value>
+  </data>
+  <data name="HomeOccasions name" xml:space="preserve">
+    <value>Cleaning sessions per month</value>
+  </data>
+  <data name="HomeOccasions description" xml:space="preserve">
+    <value>A list of cleaning sessions</value>
+  </data>
+  <data name="HoursSqm name" xml:space="preserve">
+    <value>Hours and Sqm</value>
+  </data>
+  <data name="HoursSqm description" xml:space="preserve">
+    <value>Specify the hours to be used for every square meter level</value>
+  </data>
+  <data name="SQMPriceConfigurationPageModel name" xml:space="preserve">
+    <value>Service: Price by square meters</value>
+  </data>
+  <data name="SQMPriceConfigurationPageModel description" xml:space="preserve">
+    <value>Configuration set for square meter based price calculations</value>
+  </data>
+  <data name="GridSearchPageEmptyResultNote name" xml:space="preserve">
+    <value>Area: Empty Results</value>
+  </data>
+</root>

@@ -1,0 +1,22 @@
+﻿@using AngularEventSite.Web.Extensions
+@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.WidgetVectorMacroType>
+@{
+    if (Macro.Vector == null)
+    {
+        return;
+    }
+
+}
+
+@if (this.IsPreviewMode())
+{
+    <object type="image/svg+xml" data="@Macro.Vector.Url" style="max-width: 100%; height: auto;">
+        Claremont Explore
+    </object>
+
+    return;
+}
+
+<object type="image/svg+xml" data="@Macro.Vector.Url" class="img-fluid">
+    Claremont Explore
+</object>

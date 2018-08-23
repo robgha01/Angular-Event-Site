@@ -1,0 +1,26 @@
+﻿@using AngularEventSite.Web.Models
+@inherits BlueLeet.UCodeFirst.Macros.PartialViewMacroPage<AngularEventSite.Web.MacroTypes.EventActivity.DateTimeLocationMacroType>
+@{
+    var currentPage = Model.Content.ToModel() as EventActivityPageModel;
+    if (currentPage == null)
+    {
+        return;
+    }
+
+}
+<div class="card border-0 card-inherit">
+    <ul class="list-group list-group-flush">
+        @if (currentPage.StartDate.HasValue)
+        {
+            <li class="list-group-item pl-0">
+                <strong>Datum</strong>&nbsp;@currentPage.StartDate.Value.ToString(Umbraco.GetDictionaryValue("Constant.DateFormat"))
+            </li>
+            <li class="list-group-item pl-0">
+                <strong>Tid</strong>&nbsp;@currentPage.StartDate.Value.ToString(Umbraco.GetDictionaryValue("Constant.TimeFormat"))
+            </li>
+        }
+        <li class="list-group-item pl-0">
+            <strong>Plats</strong>&nbsp;@currentPage.Location
+        </li>
+    </ul>
+</div>

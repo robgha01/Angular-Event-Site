@@ -1,0 +1,30 @@
+﻿<ng-template *ngIf="showPresentation()" [ngTemplateOutlet]="this.presentationTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+
+<div class="inlineEditForm" *ngIf="showEdit() && !openInModal">
+    <div class="form-group" [class.row]="formHorizontal">
+        <ng-template [ngTemplateOutlet]="this.editTemplate" [ngOutletContext]="{ $implicit: this }">
+        </ng-template>
+        <div *ngIf="showButtons" class="btn-group" role="saveOrCancel" aria-label="save or cancel">
+            <button [disabled]="invalid" class="btn btn-sm btn-primary" (click)="onSubmit(value)"><span class="fa fa-check"></span></button>
+            <button class="btn btn-sm btn-danger" (click)="cancel()"><span class="fa fa-remove"></span></button>
+        </div>
+    </div>
+</div>
+<div *ngIf="openInModal" bsModal #editModal="bs-modal" #editModalRef (onShown)="onModalShown()" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Redigera</h4>
+                <button class="close" (click)="cancel()"><span aria-hidden="true">&times;</span><span class="sr-only">Stäng</span></button>
+            </div>
+            <div class="modal-body">
+                <ng-template [ngTemplateOutlet]="this.editTemplate" [ngOutletContext]="{ $implicit: this }">
+                </ng-template>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" (click)="cancel()"><span class="fa fa-remove"></span> Avbryt</button>
+                <button [disabled]="invalid" class="btn btn-primary" (click)="onSubmit(value)"><span class="fa fa-check"></span> Spara</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿/// <reference path="_settings.navbar.scss" />
+/// <reference path="_settings.bootstrap.scss" />
+/*!
+ *  Section header object
+ */
+
+.section-header {
+    width: 100%;
+
+    & + .container-main {
+        margin-top: $header-middle-margin;
+    }
+}
+

@@ -1,0 +1,7 @@
+﻿@{
+    Layout = "_LayoutBase.cshtml";
+}
+@model AngularEventSite.Web.ViewModels.NotifyEventStartEmailViewModel
+<p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Hej @Model.Member.Name,</p>
+<p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Snart är det dags för @Model.Event.Name tillfälle @Model.ActivityPageModel.Name.</p>
+<p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Startar den @Model.ActivityPageModel.StartDate.Value.ToString("yyyy-MM-dd")</p>

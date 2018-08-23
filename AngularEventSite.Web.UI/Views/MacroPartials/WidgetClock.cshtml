@@ -1,0 +1,11 @@
+﻿@using AngularEventSite.Web.AssetResolver
+@using AngularEventSite.Web.Extensions
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@if (this.IsPreviewMode())
+{
+    <img class="img-responsive" src="@Html.StaticAssetUrl("images", "clock-preview.png")"/>
+    return;
+}
+
+<widget-clock class="d-flex flex-wrap align-self-center"></widget-clock>

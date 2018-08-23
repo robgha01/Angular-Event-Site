@@ -1,0 +1,59 @@
+﻿<div id="inlineEditWrapper">
+    <!-- presentation state -->
+    <template [ngTemplateOutlet]="this.presentationTemplate" [ngOutletContext]="{ $implicit: this }">
+    </template>
+    <template #DefaultPresentation>
+        <div *ngIf="!editing">
+            <a [ngClass]="{'editable-empty': isEmpty }" (click)="edit(value)">{{ presentControl() }}</a>
+        </div>
+    </template>
+
+    <!-- edit state -->
+    <template [ngTemplateOutlet]="this.editTemplate" [ngOutletContext]="{ $implicit: this }">
+    </template>
+    <template #DefaultEdit>
+        <div class="inlineEditForm form-inline" *ngIf="editing">
+            <div class="form-group">
+                <!-- inline edit control -->
+                <p [ngSwitch]="type">
+                    <template [ngSwitchCase]="'text'">
+                        <input #inlineEditControl class="form-control" [value]="value" (input)="value = $event.target.value" [required]="required"
+                               [disabled]="disabled" [name]="name" [placeholder]="placeholder" [size]="size" />
+                    </template>
+                    <template [ngSwitchCase]="'textarea'">
+                        <textarea [rows]="rows" [cols]="cols" #inlineEditControl class="form-control" [value]="value" (input)="value = $event.target.value"
+                                  [required]="required" [placeholder]="placeholder" [disabled]="disabled"></textarea>
+                    </template>
+                    <template [ngSwitchCase]="'range'">
+                        <input #inlineEditControl class="form-control" [value]="value" (input)="value = $event.target.value" [required]="required"
+                               type="range" [disabled]="disabled" [max]="max" [min]="min" [name]="name" />
+                    </template>
+                    <template [ngSwitchCase]="'select'">
+                        <select #inlineEditControl class="form-control" [value]="value" (select)="value = $event.target.value">
+                            <template ngFor let-item [ngForOf]="options.data">
+                                <optgroup *ngIf="item.children" label="{{item[options.text]}}">
+                                    <option *ngFor="let child of item.children" value="{{child[options.value]}}">
+                                        {{child[options.text]}}
+                                    </option>
+                                </optgroup>
+                                <option *ngIf="!item.children" value="{{item[options.value]}}">{{item[options.text]}}</option>
+                            </template>
+                        </select>
+                    </template>
+                    <template ngSwitchDefault>
+                        <input [type]="type" #inlineEditControl class="form-control" [value]="value" (input)="triggerUpdate($event.target.value, $event)"
+                               [required]="required" [placeholder]="placeholder" [disabled]="disabled" [name]="name"
+                               [size]="size" />
+                    </template>
+
+                    <span class="inline-editor-button-group">
+                        <button [disabled]="invalid" class="btn btn-xs btn-primary" (click)="onSubmit(value)">
+                            <span class="fa fa-check"></span>
+                        </button>
+                        <button class="btn btn-xs btn-danger" (click)="cancel()"><span class="fa fa-remove"></span> </button>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </template>
+</div>

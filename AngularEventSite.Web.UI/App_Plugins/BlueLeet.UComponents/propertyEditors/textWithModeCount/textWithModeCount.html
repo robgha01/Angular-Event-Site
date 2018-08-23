@@ -1,0 +1,10 @@
+<div class="bl-module bl-module-textWithModeCount bl-module-default" data-ng-controller="BlueLeet.PropertyEditors.TextWithModeCountController as vm">
+    <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
+    <div ng-class="usky-editor-placeholder" ng-if="!vm.loading">
+        <div>
+            <input class="umb-editor umb-textstring textstring" type="text" data-ng-if="vm.displayAsTextbox" data-ng-model="model.value" data-ng-change="vm.update()" no-Dirty-Check>
+            <textarea class="umb-editor umb-textarea textstring" rows="{{model.config.rows}}" data-ng-if="vm.displayAsTextbox == false" data-ng-model="model.value" data-ng-change="vm.update()" placeholder="" no-Dirty-Check></textarea>
+        </div>
+        <span class="bl-number-counter"> <span ng-class="{'bl-counter-invalid': vm.isValid == false}" data-ng-bind="vm.remainingCount"></span> / {{vm.maxCount}} <localize data-ng-if="!vm.isPixelCount" key="blueleetTextWithModeCount_labelCharacters">Characters</localize><localize data-ng-if="vm.isPixelCount" key="blueleetTextWithModeCount_labelPixels">Pixel</localize></span>
+    </div>
+</div>

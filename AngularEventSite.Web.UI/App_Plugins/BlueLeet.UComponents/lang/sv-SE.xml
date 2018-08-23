@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="blueleetGeneral">
+    <key alias="add">Lägg till</key>
+  </area>
+  <area alias="blueleetAdvancedSEOPreview">
+    <key alias="placeholderTitlePreview">(Ingen titel skriven)</key>
+    <key alias="placeholderDescriptionsPreview">(Ingen beskrivning skriven)</key>
+  </area>
+  <area alias="blueleetRobots">
+    <key alias="allowAll">Tillåta allt</key>
+    <key alias="disallowAll">Disallow everything</key>
+    <key alias="automatic">Automatic</key>
+    <key alias="automaticDescription">Genereras automatiskt baserat på inställningar på varje sida, och inte tillåta Umbraco mappar som förklarats ovan.</key>
+  </area>
+  <area alias="blueleetTextWithModeCount">
+    <key alias="labelCharacters">Tecken</key>
+    <key alias="labelPixels">Pixlar</key>
+    <key alias="warningHeadline">Varning</key>
+    <key alias="warningMessage">{0} är för lång</key>
+    <key alias="infoHeadline">Info</key>
+    <key alias="infoMessage">{0} är tom</key>
+  </area>
+  <area alias="blueleetTextboxKeyWords">
+    <key alias="warningHeadline">Varning</key>
+    <key alias="warningMessage">Nyckelordet {0} är inte i SEO {1}.</key>
+    <key alias="infoHeadline">Info</key>
+    <key alias="infoMessage">Det finns inga SEO Nyckelord definierade</key>
+  </area>
+  <!-- Grid Properties -->
+  <area alias="blueleetGoogleMaps">
+    <key alias="labelSetting">Google Map</key>
+    <key alias="labelInsert">
+	    Embed code
+	    <![CDATA[<small>example : &lt;iframe src="https://www.google.com/maps/embed?pb=location" width="600" height="450" frameborder="0" style="border:0" allowfullscreen&gt;&lt;/iframe&gt;</small>]]>
+	</key>
+    <key alias="helpText">Insert "Embed map" code from Google Maps</key>
+    <key alias="buttonClose">Stäng</key>
+  </area>
+  <area alias="blueleetGoToTop">
+    <key alias="placeholder">Skriv text här...</key>
+  </area>
+  <area alias="blueleetHeadline">
+    <key alias="placeholder">Skriv text här...</key>
+  </area>
+  <area alias="blueleetHeadlineLead">
+    <key alias="headlinePlaceholder">Skriv text här...</key>
+    <key alias="leadPlaceholder">Skriv undertext här...</key>
+  </area>
+  <area alias="blueleetGridImage">
+    <key alias="settingText">BILD INSTÄLLNING</key>
+    <key alias="labelAddNew">Välj Bild</key>
+    <key alias="labelSelectImage">Klicka för att välja bild</key>
+    <key alias="labelSetAlignment">Orientering</key>
+    <key alias="placeholderCaption">Visas under bilden.</key>
+    <key alias="placeholderTitle">Visas när musen förs över.</key>
+    <key alias="placeholderAlt">Visas om bilden misslyckas. Används för SEO.</key>
+    <key alias="labelAlt">Alternativ text till bilden.</key>
+    <key alias="labelTitle">Titel</key>
+    <key alias="labelCaption">Bildtext</key>
+    <key alias="labelImageLinkTo">Länk</key>
+    <key alias="labelAddLink">Lägg till länk</key>
+    <key alias="buttonClose">Stäng</key>
+    <key alias="textLeft">Vänster</key>
+    <key alias="textCenter">Mitt</key>
+    <key alias="textRight">Höger</key>
+  </area>
+  <area alias="blueleetGridCard">
+    <key alias="settingTitle">Bild Inställningar</key>
+    <key alias="selectImagePicker">Klicka för att välja bild</key>
+    <key alias="imagepickerHelptext">Rekommenderad bildstorleken är 720px x 425px</key>
+    <key alias="textboxImageTitleLabel">Bildtitel</key>
+    <key alias="textboxImageTitlePlaceholder">Visas när musen förs över.</key>
+    <key alias="textboxImageAltLabel">Alternativ text till bilden.</key>
+    <key alias="textboxImageAltPlaceholder">Visas om bilden misslyckas. Används för SEO.</key>
+    <key alias="linkPickerLabel">Länk</key>
+    <key alias="linkPickerAddLabel">Lägg till länk</key>
+    <key alias="buttonClose">Stäng</key>
+  </area>
+  <area alias="blueleetGridTextImage">
+    <key alias="settingTitle">BILD OCH TEXT INSTÄLLNINGAR</key>
+    <key alias="selectImagePicker">Klicka för att välja bild</key>
+    <key alias="imagepickerHelptext">Rekommenderad bildstorleken är 720px x 425px</key>
+    <key alias="textboxImageTitleLabel">Bildtitel</key>
+    <key alias="textboxImageTitlePlaceholder">Visas när musen förs över.</key>
+    <key alias="textboxImageAltLabel">Alternativ text till bilden.</key>
+    <key alias="textboxImageAltPlaceholder">Visas om bilden misslyckas. Används för SEO.</key>
+    <key alias="alignmentPicker">Element Orientering</key>
+    <key alias="linkPickerLabel">Lägg till länk</key>
+    <key alias="linkPickerPlaceholder">Lägg till länk</key>
+    <key alias="buttonClose">Stäng</key>
+  </area>
+  <area alias="blueleetGridQuote">
+    <key alias="placeholderAuthorName">Namn (valfritt)</key>
+    <key alias="placeholderAuthorDescription">Titel (valfritt)</key>
+  </area>
+  <area alias="blueleetDashboard">
+    <key alias="title">Umbraco CMS</key>
+    <key alias="subtitle">Tillhandahålls av</key>
+    <key alias="pleaseContact">Vänligen kontakta</key>
+    <key alias="for">för:</key>
+    <key alias="support">Teknisk support</key>
+    <key alias="extensions">Tillägg eller ändringar</key>
+    <key alias="offers">Erbjuder för nya webbplatser</key>
+    <key alias="companyName">Blueleet</key>
+    <key alias="contactEmail">info@blueleet.com</key>
+    <key alias="contactSupportEmail">support@blueleet.com</key>
+  </area>
+</language>

@@ -1,0 +1,10 @@
+﻿<ng-template #DefaultPresentation>
+    <div *ngIf="!editing">
+        <a [ngClass]="{'editable-empty': isEmpty }" (click)="edit(value)">{{ presentControl() }}</a>
+    </div>
+</ng-template>
+<ng-template #DefaultEdit>
+    <select #inlineEditControl class="form-control" [value]="value" (change)="value = $event.target.value" (blur)="onTouched()" (focusout)="onTouched()" [(focuser)]="focusThis">
+        <option *ngFor="let opt of options" [value]="opt">{{opt}}</option>
+    </select>
+</ng-template>

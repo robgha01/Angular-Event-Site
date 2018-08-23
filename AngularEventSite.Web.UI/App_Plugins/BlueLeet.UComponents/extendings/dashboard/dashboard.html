@@ -1,0 +1,19 @@
+<div class="bl-extending bl-extending-dashboard bl-extending-default" data-ng-controller="BlueLeet.Extendings.DashboardController as vm">
+    <h2 class="bl-dashboard-heading"><localize key="blueleetDashboard_title">Umbraco CMS</localize><small class="bl-heading-small"><localize key="blueleetDashboard_subtitle">Provided by</localize></small></h2>
+    <div class="bl-dashboard-logo-container">
+        <img src="/app_plugins/BlueLeet.UComponents/assets/images/logo.png" alt="blueleet logo" title="BlueLeet Software" />
+    </div>
+    <p class="bl-dashboard-contact-text"><localize key="blueleetDashboard_pleaseContact">Please contact</localize> <localize key="blueleetDashboard_companyName"></localize> <localize key="blueleetDashboard_for">for:</localize></p>
+    <umb-load-indicator data-ng-if="vm.loading"></umb-load-indicator>
+    <div class="bl-dashboard-services" ng-if="!vm.loading">
+        <span class="bl-service-bullet">
+            <a class="bl-dashboard-contact-link" href="mailto:{{ vm.dictionary.contactSupportEmail }}"><i class="icon-whhg-support"></i> <localize key="blueleetDashboard_support">Technical support</localize></a>
+        </span>
+        <span class="bl-service-bullet">
+            <a class="bl-dashboard-contact-link" href="mailto:{{ vm.dictionary.contactEmail }}"><i class="icon-umb-settings"></i> <localize key="blueleetDashboard_extensions">Extensions or modifications</localize></a>
+        </span>
+        <!--<span class="bl-service-bullet">
+            <i class="icon-whhg-trophy"></i> <localize key="blueleetDashboard_offers">Offers for new websites</localize>
+        </span>-->
+    </div>
+</div>

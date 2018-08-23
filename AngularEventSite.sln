@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularEventSite.Web", "AngularEventSite.Web\AngularEventSite.Web.csproj", "{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularEventSite.Web.UI", "AngularEventSite.Web.UI\AngularEventSite.Web.UI.csproj", "{C21865A9-D208-410A-BFF3-7EEC4474F85E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularEventSite.Web.UI.Client", "AngularEventSite.Web.UI.Client\AngularEventSite.Web.UI.Client.csproj", "{6CB335B9-322E-4B22-89D1-744469023F70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E9409016-6368-41F8-B091-BF009969B89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularEventSite.Tests", "AngularEventSite.Tests\AngularEventSite.Tests.csproj", "{AF2214E6-99A9-428C-9348-8C525ED49E18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		webprod|Any CPU = webprod|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.webprod|Any CPU.ActiveCfg = webprod|Any CPU
+		{5879A652-FB54-4BEF-BC58-F24CF0CA5FFE}.webprod|Any CPU.Build.0 = webprod|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.webprod|Any CPU.ActiveCfg = webprod|Any CPU
+		{C21865A9-D208-410A-BFF3-7EEC4474F85E}.webprod|Any CPU.Build.0 = webprod|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.webprod|Any CPU.ActiveCfg = webprod|Any CPU
+		{6CB335B9-322E-4B22-89D1-744469023F70}.webprod|Any CPU.Build.0 = webprod|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.webprod|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2214E6-99A9-428C-9348-8C525ED49E18}.webprod|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF2214E6-99A9-428C-9348-8C525ED49E18} = {E9409016-6368-41F8-B091-BF009969B89D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {919E2785-906C-4D8B-9971-351CFBB92965}
+	EndGlobalSection
+EndGlobal

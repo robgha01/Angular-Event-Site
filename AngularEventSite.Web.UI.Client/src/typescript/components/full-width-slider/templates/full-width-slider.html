@@ -1,0 +1,7 @@
+﻿<ng-template [ngTemplateOutlet]="this.currentTemplate" [ngOutletContext]="{ $implicit: this }"></ng-template>
+<ng-template #DefaultTemplate>
+    <div class="container-fluid container-main">
+        <ng-content></ng-content>
+    </div>
+    <a class="lead-link" href="javascript:void(0)" (click)="scrollContinue()">{{ continueText }} <div class="fa fa-arrow-down" aria-hidden="true"></div></a>
+</ng-template>

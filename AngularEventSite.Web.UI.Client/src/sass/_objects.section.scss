@@ -1,0 +1,17 @@
+﻿/// <reference path="_settings.navbar.scss" />
+/// <reference path="_settings.bootstrap.scss" />
+/*!
+ *  Section object
+ */
+
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+@include media-breakpoint-up(sm) {
+    .section .section .container {
+        padding: 0;
+        width: auto;
+    }
+}

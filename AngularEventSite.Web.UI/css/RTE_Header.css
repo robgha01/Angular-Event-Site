@@ -1,0 +1,58 @@
+﻿.colorHeader {
+    color: #9fce67;
+}
+
+#tinymce {
+    margin-top: -30px;
+    font-family: 'opensans-light-webfont';
+    text-rendering: optimizeLegibility;
+    font-weight: normal;
+}
+
+    #tinymce p {
+        font-size: 36px;
+    }
+
+@media (min-width: 480px) {
+    /*big mobile*/
+}
+
+@media (min-width: 768px) {
+    /*tablet*/
+    #tinymce h1 {
+        margin-bottom: 21px;
+    }
+
+    #tinymce h2 {
+        margin-bottom: 23px;
+    }
+
+    #tinymce p, #tinymce ul, #tinymce ol {
+        margin-bottom: 23px;
+    }
+
+    #tinymce hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    /*small desktop*/
+    #tinymce h1 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    /*large desktop*/
+    #tinymce hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+.colorHeader {
+    color: #9fce67;
+}

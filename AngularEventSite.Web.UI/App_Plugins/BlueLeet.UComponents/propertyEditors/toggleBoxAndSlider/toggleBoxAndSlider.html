@@ -1,0 +1,12 @@
+<div class="bl-module bl-module-toggleBoxAndSlider bl-module-default" data-ng-controller="BlueLeet.PropertyEditors.ToggleBoxAndSliderController as vm">
+    <div class="bl-component-toggleSwitch bl-component-default">
+        <button type="button" class="btn btn-success bl-switch-left" data-ng-class="{active: vm.leftActive}" data-ng-click="vm.setTrue()">{{model.config.onbuttontext}}</button>
+        <button type="button" class="btn btn-danger bl-switch-right" data-ng-class="{active: vm.rightActive}" data-ng-click="vm.setFalse()">{{model.config.offbuttontext}}</button>
+    </div>
+    <div class="bl-component bl-component-slider bl-component-default" data-ng-show="model.value.Enabled">
+        <div class="bl-slider-wrapper">
+            <input type="range" class="range-slider" min="0" max="10" step="1" value="5" data-ng-model="vm.range" data-ng-change="vm.rangeChange()" no-Dirty-Check>
+        </div>
+        <output class="bl-slider-value">{{ vm.range }}</output>
+    </div>
+</div>

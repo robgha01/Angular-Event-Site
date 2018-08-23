@@ -1,0 +1,64 @@
+<div class="bl-module bl-module-imageAndText bl-module-setting bl-module-default" data-ng-controller="BlueLeet.GridEditors.ImageNTextSettingController as vm">
+    <h5><localize key="blueleetGridTextImage_settingTitle">IMAGE SETTING</localize></h5>
+    <div class="bl-field">
+        <a class="bl-remove" href="javascript:void(0)" data-ng-click="vm.removeImage()" data-ng-if="model.value.image.url">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="bl-component-fileSelector bl-component-default" data-ng-if="!model.value.image.url" data-ng-click="vm.selectImage()">
+            <i class="icon icon-picture"></i>
+            <a class="bl-fileSelector-link"><localize key="blueleetGridTextImage_selectImagePicker">Click to select image</localize></a>
+        </div>
+        <div class="bl-component-fileSelector bl-component-default" data-ng-click="vm.selectImage()" data-ng-if="model.value.image.url">
+            <img data-ng-src="{{model.value.image.url}}" alt="{{model.value.image.alt}}" title="{{model.value.image.title}}" />
+        </div>
+        <span class="bl-helptext bl-helptext-default"><localize key="blueleetGridTextImage_imagepickerHelptext"></localize></span>
+    </div>
+
+    <div class="bl-field">
+        <label class="bl-field-label"><localize key="blueleetGridTextImage_textboxImageTitleLabel">Title</localize></label>
+        <input class="bl-fieldValue" type="text" data-ng-model="model.value.image.title" localize="placeholder" placeholder="@blueleetGridTextImage_textboxImageTitlePlaceholder" />
+    </div>
+
+    <div class="bl-field">
+        <label class="bl-field-label"><localize key="blueleetGridTextImage_textboxImageAltLabel">Image alternative text</localize></label>
+        <input class="bl-fieldValue" type="text" data-ng-model="model.value.image.alt" localize="placeholder" placeholder="@blueleetGridTextImage_textboxImageAltPlaceholder" />
+    </div>
+
+    <div class="bl-field bl-field-alignmentPicker">
+        <label class="bl-field-label"><localize key="blueleetGridTextImage_alignmentPicker">Element alignment</localize></label>
+        <div class="bl-component-button bl-button-default {{model.value.align=='left'?'active':''}}" data-ng-click="model.value.align='left'">
+            <div class="bl-button-image-86x42">
+                <img src="/App_Plugins/BlueLeet.UComponents/gridEditors/imageText/img/align-left.jpg" />
+            </div>
+        </div>
+        <div class="bl-component-button bl-button-default {{model.value.align=='right'?'active':''}}" data-ng-click="model.value.align='right'">
+            <div class="bl-button-image-86x42">
+                <img src="/App_Plugins/BlueLeet.UComponents/gridEditors/imageText/img/align-right.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="bl-field">
+        <label class="bl-field-label"><localize key="blueleetGridTextImage_linkPickerLabel">Add link</localize></label>
+        <div class="bl-component bl-component-link">
+            <div class="bl-link bl-link-remove">
+                <a data-ng-if="model.value.link!=null" href="javascript:void(0)" data-ng-click="model.value.link=null">
+                    <i class="fa fa-remove"></i>
+                </a>
+            </div>
+            <div class="bl-link bl-link-default" data-ng-click="vm.editLink()">
+                <a data-ng-if="model.value.link && model.value.link.name">{{model.value.link.name}}</a>
+                <a data-ng-if="model.value.link && !model.value.link.name">{{model.value.link.url}}</a>
+                <i data-ng-if="!model.value.link" class="icon icon-add blue"></i>
+                <a data-ng-if="!model.value.link"><localize key="blueleetGridTextImage_linkPickerPlaceholder">Add link</localize></a>
+            </div>
+        </div>
+    </div>
+    <div class="umb-panel-footer">
+        <div class="umb-el-wrap umb-panel-buttons">
+            <div class="btn-toolbar umb-btn-toolbar pull-right">
+                <a href="" ng-click="close()" class="btn btn-link"><localize key="blueleetGridTextImage_buttonClose">Close</localize></a>
+            </div>
+        </div>
+    </div>
+</div>

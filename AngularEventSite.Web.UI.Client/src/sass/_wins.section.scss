@@ -1,0 +1,35 @@
+﻿/// <reference path="../bootstrap.scss" />
+
+/*!
+ *  section wins
+ */
+
+.theme.space-blue-wallpaper {
+    .section-header + .section {
+        padding-top: 0;
+    }
+
+    /*.section {
+        @include media-breakpoint-up(xl) {
+            padding: 90px 0;
+        }
+
+        @include media-breakpoint-down(xl) {
+            padding: 60px 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding: 30px 0;
+        }
+    }*/
+
+    .section.webdevBlue {
+        padding-bottom: 0;
+
+        @include media-breakpoint-up(md) {
+            img {
+                margin-bottom: 0 !important;
+            }
+        }
+    }
+}

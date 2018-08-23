@@ -1,0 +1,29 @@
+﻿@using AngularEventSite.Web.Abstraction
+@using AngularEventSite.Web.Enums
+@using Skybrud.Umbraco.GridData.Extensions
+@inherits UmbracoViewPage<AngularEventSite.Web.Models.EventPageModel>
+@{
+    var layoutSettings = ViewBag.layoutSettings as IViewLayoutSettings ?? DependencyResolver.Current.GetService<IViewLayoutSettings>();
+}
+@section FullContent
+{
+    @Html.Partial("~/Views/Partials/_Header.cshtml", Model)
+
+    <event [eventId]="@Model.Id" [memberId]="@Members.GetCurrentMemberId()"
+           [updateInterval]="10000" btnRegisterText="Anmäl" btnRegisterReserveText="Anmäl (reserv)" btnEventClosedText="Stängd"
+           btnUnregisterText="Avanmäl" btnUnregisterClosedText="Avanmälan stängd"
+           registeredText="Du är nu anmäld!" unregisteredText="Du är nu avanmäld!">
+        <template let-event>
+            @if (layoutSettings.LayoutType == LayoutType.BoxedLayout)
+            {
+                <div id="mainContent" class="container container__main">
+                    @Html.GetTypedGridHtml(Model.Content, "GridFrontPage", "ContentArea")
+                </div>
+            }
+            else
+            {
+                @Html.GetTypedGridHtml(Model.Content, "GridFrontPage", "ContentArea")
+            }
+        </template>
+    </event>
+}

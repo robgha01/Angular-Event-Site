@@ -1,0 +1,29 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="AdminSurfaceController.cs" company="BlueLeet">
+//   Copyright (C) BlueLeet - All Rights Reserved
+//   Unauthorized copying of this file, via any medium is strictly prohibited
+//   Proprietary and confidential
+// </copyright>
+// <summary>
+//   Defines the AdminSurfaceController type.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace AngularEventSite.Web.Controllers
+{
+    using BlueLeet.UCodeFirst.Helpers.Abstraction;
+
+    using AngularEventSite.Web.Abstraction;
+
+    /// <summary>
+    /// The admin surface controller.
+    /// </summary>
+    public class AdminSurfaceController : BaseSurfaceController
+    {
+        /// <inheritdoc />
+        public AdminSurfaceController(IContextService contextService, IMembershipService membershipService, IUCodeFirstHelper codeFirstHelper)
+            : base(contextService, membershipService, codeFirstHelper)
+        {
+        }
+    }
+}

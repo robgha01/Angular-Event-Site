@@ -1,0 +1,27 @@
+﻿/*!
+ *  Stripbar component
+ */
+
+.strapbar.strapbar-default {
+    background-color: #FFFFFF;
+}
+
+.strapbar {
+    position: relative;
+    height: 77.5px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &.justify-start {
+        justify-content: flex-start;
+        margin-left: 30px;
+    }
+}
+
+.strapbar .strapbar-list {
+    @extend .list-inline;
+    margin-top: 0;
+    margin-bottom: 0;
+}

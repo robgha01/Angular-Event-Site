@@ -1,0 +1,14 @@
+﻿/// <reference path="_tools.asset-helper.scss" />
+/*!
+ *  icon component
+ */
+
+.icon.icon-search {
+    padding-left: 20px;
+    background: image('search-top.png') no-repeat 0 0;
+}
+
+.icon.icon-subscribe {
+    padding-left: 25px;
+    background: image('news-top.png') no-repeat 0 0;
+}

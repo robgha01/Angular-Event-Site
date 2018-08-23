@@ -1,0 +1,105 @@
+﻿/**
+ * ITCSS
+ *
+ * 1. Settings................Global variables, config switches.
+ * 2. Tools...................Default mixins and functions.
+ * 3. Generic.................Ground-zero styles (resets, box-sizing).
+ * 4. Base....................Unclassed HTML elements (type selectors).
+ * 5. Objects.................Abstract (Cosmetic-free design patterns).
+ *                              o-: Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in. Making modifications to these types of class could potentially have knock-on effects in a lot of other unrelated places. Tread carefully.
+ * 6. Components..............Designed components, chunks of UI.
+ *                              c-: Signify that something is a Component. This is a concrete, implementation-specific piece of UI. All of the changes you make to its styles should be detectable in the context you’re currently looking at. Modifying these styles should be safe and have no side effects.
+ * 7  Theme...................Specific theming for components (optional layer)
+ * 8. Trumps..................Helpers and overrides.
+ * 
+ */
+
+// Settings
+// --------------------------
+@import "settings.colors";
+@import "settings.global";
+@import "settings.font-awesome";
+@import "settings.ionicons";
+@import "settings.bootstrap";
+@import "settings.navbar";
+@import "settings.animation";
+@import "settings.widget";
+@import "settings.widget-search";
+@import "themes/space-blue-wallpaper/config";
+
+// Tools
+// --------------------------
+@import "tools.base";
+@import "tools.asset-helper";
+@import "tools.mixins";
+@import "tools.theme-helper";
+@import "tools.rem";
+
+// Generic (Third party)
+// --------------------------
+@import "generic/bootstrap";
+@import "generic/font-awesome";
+@import "generic/font-ionicons";
+@import "generic/font-face";
+@import "generic/blueleet-ucomponents";
+@import "generic/pace-progress";
+
+// Base (element based styles)
+// --------------------------
+@import "base.global";
+@import "base.htmlBody";
+@import "base.app";
+@import "base.headings";
+@import "base.a";
+@import "base.p";
+
+// Objects (class based objects) skin free
+// --------------------------
+@import "objects.animation";
+@import "objects.animation-fadeIn";
+@import "objects.animation-fadeOut";
+@import "objects.section";
+@import "objects.icon";
+@import "objects.link";
+@import "objects.widget";
+@import "objects.widget-list";
+
+// Components (ui components class based) isolated context
+// --------------------------
+@import "components.container";
+/*@import "components.container-fluid-background";*/
+@import "components.section";
+@import "components.section-header";
+@import "components.section-footer";
+@import "components.navbar";
+@import "components.strapbar";
+@import "components.icon";
+@import "components.lightbox";
+@import "components.nav-tabs";
+@import "components.widget-search";
+@import "components.widget-posts";
+@import "components.widget-social";
+@import "components.widget-card-list";
+@import "components.widget-video";
+@import "components.card";
+@import "components.countdown";
+
+// Theme (specific theming for components)
+// --------------------------
+@import "themes/space-blue-wallpaper/components.nav-tabs";
+@import "themes/space-blue-wallpaper/components.navbar";
+@import "themes/space-blue-wallpaper/components.section-footer";
+@import "themes/space-blue-wallpaper/components.widget-list";
+@import "themes/space-blue-wallpaper/components.widget-search";
+@import "themes/space-blue-wallpaper/components.fluid-background";
+@import "themes/space-blue-wallpaper/components.strapbar";
+
+// Wins (trumps) overrides here
+// --------------------------
+@import "wins.bootstrap";
+@import "wins.navbar";
+@import "wins.widget-social";
+@import "wins.mainContent";
+@import "wins.section";
+@import "wins.section-header";
+@import "wins.a";

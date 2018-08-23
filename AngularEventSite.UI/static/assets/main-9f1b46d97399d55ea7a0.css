@@ -1,0 +1,53 @@
+inline-datetime-editor a,inline-numeric-editor a,inline-password-editor a,inline-select-editor a,inline-text-editor a,inline-textarea-editor a{text-decoration:none;color:#428bca;border-bottom:1px dashed #428bca;cursor:pointer;line-height:2;margin-right:5px;margin-left:5px}inline-datetime-editor .editable-empty,inline-datetime-editor .editable-empty:focus,inline-datetime-editor .editable-empty:hover,inline-datetime-editor a.editable-empty,inline-datetime-editor a.editable-empty:focus,inline-datetime-editor a.editable-empty:hover,inline-numeric-editor .editable-empty,inline-numeric-editor .editable-empty:focus,inline-numeric-editor .editable-empty:hover,inline-numeric-editor a.editable-empty,inline-numeric-editor a.editable-empty:focus,inline-numeric-editor a.editable-empty:hover,inline-password-editor .editable-empty,inline-password-editor .editable-empty:focus,inline-password-editor .editable-empty:hover,inline-password-editor a.editable-empty,inline-password-editor a.editable-empty:focus,inline-password-editor a.editable-empty:hover,inline-select-editor .editable-empty,inline-select-editor .editable-empty:focus,inline-select-editor .editable-empty:hover,inline-select-editor a.editable-empty,inline-select-editor a.editable-empty:focus,inline-select-editor a.editable-empty:hover,inline-text-editor .editable-empty,inline-text-editor .editable-empty:focus,inline-text-editor .editable-empty:hover,inline-text-editor a.editable-empty,inline-text-editor a.editable-empty:focus,inline-text-editor a.editable-empty:hover,inline-textarea-editor .editable-empty,inline-textarea-editor .editable-empty:focus,inline-textarea-editor .editable-empty:hover,inline-textarea-editor a.editable-empty,inline-textarea-editor a.editable-empty:focus,inline-textarea-editor a.editable-empty:hover{font-style:italic;color:#d14;text-decoration:none}inline-datetime-editor .inlineEditForm,inline-numeric-editor .inlineEditForm,inline-password-editor .inlineEditForm,inline-select-editor .inlineEditForm,inline-text-editor .inlineEditForm,inline-textarea-editor .inlineEditForm{display:inline-block;white-space:nowrap;margin:0}inline-datetime-editor .editInvalid,inline-numeric-editor .editInvalid,inline-password-editor .editInvalid,inline-select-editor .editInvalid,inline-text-editor .editInvalid,inline-textarea-editor .editInvalid{color:#a94442;margin-bottom:0}inline-datetime-editor .error,inline-numeric-editor .error,inline-password-editor .error,inline-select-editor .error,inline-text-editor .error,inline-textarea-editor .error{border-color:#a94442}inline-editor-group .modal-item{margin-bottom:1em}inline-editor-group .modal-item:last-child{margin-bottom:0}.widget-clock{position:relative;width:200px;height:200px;margin:0 auto;background:url(/./static/assets/blueleet/modules/widgets/widget-clock/clock.png) no-repeat;list-style:none}.widget-clock .ticker-sec{background:url(/./static/assets/blueleet/modules/widgets/widget-clock/analog-seconds.png) 50% no-repeat;z-index:3;background-size:170px}.widget-clock .ticker-min{background:url(/./static/assets/blueleet/modules/widgets/widget-clock/analog-minutes.png) 50% no-repeat;z-index:2;background-size:170px}.widget-clock .ticker-hour{background:url(/./static/assets/blueleet/modules/widgets/widget-clock/analog-hours.png) 50% no-repeat;z-index:1;background-size:170px}.widget-clock .ticker-hour,.widget-clock .ticker-min,.widget-clock .ticker-sec{position:absolute;width:30px;height:200px;top:0;left:87px}/*!
+ * This file contains references to the main sass file for use outside.
+ */
+
+/*!
+ *  Color settings
+ */
+
+/*!
+ *  Global settings.
+ */
+
+/*!
+ *  Font awsome settings
+ */
+
+/*!
+ *  Ionicons settings
+ */
+
+/*!
+ *  Bootstrap settings
+ */
+
+/*!
+ *  Navbar settings.
+ */
+
+/*!
+ *  Widget settings.
+ */
+
+/*!
+ *  Widget search settings.
+ */
+
+/*!
+ *  Tools base (this should get imported before any other tool)
+ */
+
+/*!
+ *  Asset helper tools
+ *  Source: https://css-tricks.com/snippets/sass/simple-asset-helper-functions/
+ */
+
+/*!
+ *  Mixins & functions
+ */.widget-quickNavigator{background:#f7542b;border:1px solid #f7542b;border-top:none;box-shadow:0 0 10px 0 rgba(0,0,0,.25);display:inline-block;list-style:none;margin:0;padding:0;position:fixed;right:10px;top:0;z-index:100000}.widget-quickNavigator>li{box-sizing:border-box;display:block;float:left;line-height:16px!important;position:relative}.widget-quickNavigator a{text-decoration:none}.widget-quickNavigator .quickNavigator-dropdown-arrow{background:#f7542b url("/static/assets/components/widget-quickNavigator/quicknav-arrow.png") 50% no-repeat;border-left:1px solid #e1410e;display:block;height:26px;width:19px}.widget-quickNavigator .quickNavigator-dropdown .quickNavigator-menu{background:#555b61;border:1px solid #666;display:none;list-style:none;padding:6px 0;position:absolute;right:-1px;box-shadow:0 3px 8px rgba(0,0,0,.2)}.widget-quickNavigator .quickNavigator-dropdown .quickNavigator-menu.menu-open{display:block}.widget-quickNavigator .quickNavigator-dropdown .quickNavigator-menu li a{color:#fff;display:block;font-family:Arial,Helvetica,Sans-Serif!important;font-size:13px!important;line-height:16px!important;white-space:nowrap;padding:3px 20px}.widget-quickNavigator .quickNavigator-dropdown .quickNavigator-menu li a:hover{background:#c7d500;color:#333;text-decoration:none}.widget-quickNavigator .quickNavigator-editLink a span{background:url("/static/assets/components/widget-quickNavigator/umbraco.svg") 50% no-repeat;display:block;height:16px;line-height:12px;margin:6px 10px 0;text-indent:-9999em;width:50px}bs-form-input{display:block}bs-form-input .password-progress.form-text{margin-bottom:0}login-signup .mainbox{margin-top:50px}signout{display:inline-block}signout a{cursor:pointer;font-size:2em;margin-left:.2em}signout .signout-heading{color:hsla(0,0%,100%,.8);transform:translateZ(0);margin-right:5px;padding-top:13px}/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */@-ms-viewport{width:device-width}@viewport{width:device-width}
+/*# sourceMappingURL=main-9f1b46d97399d55ea7a0.css.map*/

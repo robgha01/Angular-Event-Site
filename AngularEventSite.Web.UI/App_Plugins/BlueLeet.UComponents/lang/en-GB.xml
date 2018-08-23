@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language>
+  <area alias="blueleetGeneral">
+    <key alias="add">Add</key>
+  </area>
+  <area alias="blueleetAdvancedSEOPreview">
+    <key alias="placeholderTitlePreview">(No Title Added)</key>
+    <key alias="placeholderDescriptionsPreview">(No Description Added)</key>
+  </area>
+  <area alias="blueleetRobots">
+    <key alias="allowAll">Allow everything</key>
+    <key alias="disallowAll">Disallow everything</key>
+    <key alias="automatic">Automatic</key>
+    <key alias="automaticDescription">Automatically generated based on the setting on each page, and disallow umbraco folders as explained above.</key>
+  </area>
+  <area alias="blueleetTextWithModeCount">
+    <key alias="labelCharacters">Characters</key>
+    <key alias="labelPixels">Pixels</key>
+    <key alias="warningHeadline">Warning</key>
+    <key alias="warningMessage">{0} is too long</key>
+    <key alias="infoHeadline">Info</key>
+    <key alias="infoMessage">{0} is empty</key>
+  </area>
+  <area alias="blueleetTextboxKeyWords">
+    <key alias="warningHeadline">Warning</key>
+    <key alias="warningMessage">The keyword {0} is not in SEO {1}.</key>
+    <key alias="infoHeadline">Info</key>
+    <key alias="infoMessage">There are no SEO Keywords defined</key>
+  </area>
+  <!-- Grid Properties -->
+  <area alias="blueleetGoogleMaps">
+    <key alias="labelSetting">Google Map</key>
+    <key alias="labelInsert">Insert "Embed map" code from Google Maps</key>
+    <key alias="helpText">
+	    Embed code
+	    <![CDATA[<small>example : &lt;iframe src="https://www.google.com/maps/embed?pb=location" width="600" height="450" frameborder="0" style="border:0" allowfullscreen&gt;&lt;/iframe&gt;</small>]]>
+	</key>
+    <key alias="buttonClose">Close</key>
+  </area>
+  <area alias="blueleetGoToTop">
+    <key alias="placeholder">Write text here...</key>
+  </area>
+  <area alias="blueleetHeadline">
+    <key alias="placeholder">Write text here...</key>
+  </area>
+  <area alias="blueleetHeadlineLead">
+    <key alias="headlinePlaceholder">Write text here...</key>
+    <key alias="leadPlaceholder">Write lead text here...</key>
+  </area>
+  <area alias="blueleetGridImage">
+    <key alias="settingText">IMAGE SETTING</key>
+    <key alias="labelAddNew">Select Image</key>
+    <key alias="labelSelectImage">Click to select image</key>
+    <key alias="labelSetAlignment">Alignment</key>
+    <key alias="placeholderCaption">Shown below the image.</key>
+    <key alias="placeholderTitle">Shown on mouse over.</key>
+    <key alias="placeholderAlt">Shown if image fails. Used for SEO.</key>
+    <key alias="labelAlt">Image alternative text</key>
+    <key alias="labelTitle">Title</key>
+    <key alias="labelCaption">Caption</key>
+    <key alias="labelImageLinkTo">Link</key>
+    <key alias="labelAddLink">Add link</key>
+    <key alias="buttonClose">Close</key>
+    <key alias="textLeft">Left</key>
+    <key alias="textCenter">Center</key>
+    <key alias="textRight">Right</key>
+  </area>
+  <area alias="blueleetGridCard">
+    <key alias="settingTitle">Image Settings</key>
+    <key alias="selectImagePicker">Click to select image</key>
+    <key alias="imagepickerHelptext">Recommended image size is 720px x 425px</key>
+    <key alias="textboxImageTitleLabel">Image title</key>
+    <key alias="textboxImageTitlePlaceholder">Shown on mouse over.</key>
+    <key alias="textboxImageAltLabel">Image alternative text</key>
+    <key alias="textboxImageAltPlaceholder">Shown if image fails. Used for SEO.</key>
+    <key alias="linkPickerLabel">Link</key>
+    <key alias="linkPickerAddLabel">Add link</key>
+    <key alias="buttonClose">Close</key>
+  </area>
+  <area alias="blueleetGridTextImage">
+    <key alias="settingTitle">IMAGE AND TEXT SETTINGS</key>
+    <key alias="selectImagePicker">Click to select image</key>
+    <key alias="imagepickerHelptext">Recommended image size is 720px x 425px</key>
+    <key alias="textboxImageTitleLabel">Image title</key>
+    <key alias="textboxImageTitlePlaceholder">Shown on mouse over.</key>
+    <key alias="textboxImageAltLabel">Image alternative text</key>
+    <key alias="textboxImageAltPlaceholder">Shown if image fails. Used for SEO.</key>
+    <key alias="alignmentPicker">Element alignment</key>
+    <key alias="linkPickerLabel">Add link</key>
+    <key alias="linkPickerPlaceholder">Add link</key>
+    <key alias="buttonClose">Close</key>
+  </area>
+  <area alias="blueleetGridQuote">
+    <key alias="placeholderAuthorName">Name (optional)</key>
+    <key alias="placeholderAuthorDescription">Title (optional)</key>
+  </area>
+  <area alias="blueleetDashboard">
+    <key alias="title">Umbraco CMS</key>
+    <key alias="subtitle">Provided by</key>
+    <key alias="pleaseContact">Please contact</key>
+    <key alias="for">for:</key>
+    <key alias="support">Technical support</key>
+    <key alias="extensions">Extensions or modifications</key>
+    <key alias="offers">Offers for new websites</key>
+    <key alias="companyName">Blueleet</key>
+    <key alias="contactEmail">info@blueleet.com</key>
+    <key alias="contactSupportEmail">support@blueleet.com</key>
+  </area>
+</language>
